@@ -2,10 +2,12 @@
 #define MAINWINDOW_H
 
 #include <QMainWindow>
+#include <QCloseEvent>
 #include <QDir>
 #include <QFileDialog>
 #include <iostream>
 #include <QTextStream>
+#include <QMessageBox>
 
 namespace Ui {
 class MainWindow;
@@ -36,11 +38,20 @@ private slots:
 
     void on_actionSave_triggered();
 
+    void on_actionSave_as_triggered();
+
+    void on_actionNew_File_triggered();
+
 private:
     Ui::MainWindow *ui;
 
+    bool isSaved;
+
     QString path; // Path of text file
     QString text; // Text of text file
+    QString selFilter; // Text file extension filter
+
+    void closeEvent(QCloseEvent *event) override;
 };
 
 #endif // MAINWINDOW_H

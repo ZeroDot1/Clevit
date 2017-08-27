@@ -6,11 +6,37 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
+
+    isSaved = false;
+
+    selFilter = tr("Text Files (*.txt)");
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::closeEvent(QCloseEvent *event)
+{
+    if(isSaved == false)
+    {
+        QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+
+        if(resBtn == QMessageBox::Yes)
+        {
+            while(isSaved == false)
+                on_actionSave_triggered();
+
+            event->accept();
+        }
+        else
+            if(resBtn == QMessageBox::Cancel)
+                event->ignore();
+            else
+                if(resBtn == QMessageBox::No)
+                    event->accept();
+    }
 }
 
 // QAction Slots and Signals
@@ -57,11 +83,18 @@ void MainWindow::on_actionExit_triggered()
     QApplication::quit();
 }
 
+void MainWindow::on_actionNew_File_triggered()
+{
+    path.clear();
+    text.clear();
+    ui->plainTextEdit->clear();
+}
+
 void MainWindow::on_actionOpen_triggered()
 {
     // Save the path of the text file
 
-    path = QFileDialog::getOpenFileName(this,"Select a text file",QDir::currentPath());
+    path = QFileDialog::getOpenFileName(this,"Select a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
 
     //std::cout << path.toStdString() << std::endl;
 
@@ -76,13 +109,44 @@ void MainWindow::on_actionOpen_triggered()
         ui->plainTextEdit->insertPlainText(text);
     }
     else
-        std::cout << "Error: " << textFile.errorString().toStdString() << std::endl;
+        QMessageBox::warning(this,"Open File Error",textFile.errorString());
 
     textFile.close();
+
+    isSaved = false;
 }
 
 void MainWindow::on_actionSave_triggered()
 {
+    std::cout << path.toStdString() << std::endl;
+
+    if(path.isEmpty())
+        path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
+
+    QFile textFile(path);
+
+    // Open the text File to Write
+
+    if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        text.clear();
+
+        text = ui->plainTextEdit->toPlainText();
+
+        QTextStream textAppend(&textFile);
+
+        textAppend << text;
+    }
+
+    textFile.close();
+
+    isSaved = true;
+}
+
+void MainWindow::on_actionSave_as_triggered()
+{
+    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
+
     QFile textFile(path);
 
     // Open the text File to Write
@@ -100,4 +164,6 @@ void MainWindow::on_actionSave_triggered()
     }
 
     textFile.close();
+
+    isSaved = true;
 }
