@@ -3,13 +3,22 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow)
+    ui(new Ui::MainWindow),
+    timer(this)
 {
     ui->setupUi(this);
 
     isSaved = false;
 
     selFilter = tr("Text Files (*.txt)");
+
+    //when the timer times out the signal is emitted and the ontimeout() private slot is executed
+
+    connect(&timer,SIGNAL(timeout()),this,SLOT(on_timeout()));
+
+    //call the timer every 10 ms
+
+    timer.start(10);
 }
 
 MainWindow::~MainWindow()
@@ -17,25 +26,51 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::on_timeout()
+{
+
+}
+
+bool MainWindow::fileNotChanged()
+{
+    if(path.isEmpty())
+        return false;
+
+    int res = QString::compare(originalText,text,Qt::CaseSensitive);
+
+    if(res == 0)
+        return true;
+    else
+        return false;
+
+}
+
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    if(isSaved == false)
-    {
-        QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+    text = ui->plainTextEdit->toPlainText();
 
-        if(resBtn == QMessageBox::Yes)
+    // If the user doesn't has type text or open any text file, so the program doesn't show the message box
+
+    if(text.isEmpty() == false)
+    {        
+        if(isSaved == false && fileNotChanged() == false)
         {
-            while(isSaved == false)
-                on_actionSave_triggered();
+            QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
-            event->accept();
-        }
-        else
-            if(resBtn == QMessageBox::Cancel)
-                event->ignore();
+            if(resBtn == QMessageBox::Yes)
+            {
+                while(isSaved == false)
+                    on_actionSave_triggered();
+
+                event->accept();
+            }
             else
-                if(resBtn == QMessageBox::No)
-                    event->accept();
+                if(resBtn == QMessageBox::Cancel)
+                    event->ignore();
+                else
+                    if(resBtn == QMessageBox::No)
+                        event->accept();
+        }
     }
 }
 
@@ -106,7 +141,11 @@ void MainWindow::on_actionOpen_triggered()
     {
         text = textFile.readAll();
 
+        originalText = text;
+
         ui->plainTextEdit->insertPlainText(text);
+
+        text.clear();
     }
     else
         QMessageBox::warning(this,"Open File Error",textFile.errorString());
@@ -118,7 +157,6 @@ void MainWindow::on_actionOpen_triggered()
 
 void MainWindow::on_actionSave_triggered()
 {
-    std::cout << path.toStdString() << std::endl;
 
     if(path.isEmpty())
         path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
@@ -136,6 +174,8 @@ void MainWindow::on_actionSave_triggered()
         QTextStream textAppend(&textFile);
 
         textAppend << text;
+
+        text.clear();
     }
 
     textFile.close();
@@ -161,9 +201,17 @@ void MainWindow::on_actionSave_as_triggered()
 
         textAppend << text;
 
+        text.clear();
     }
 
     textFile.close();
 
     isSaved = true;
+}
+
+void MainWindow::on_actionAbout_TPad_triggered()
+{
+    About *about = new About(this);
+
+    about->show();
 }

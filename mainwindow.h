@@ -1,6 +1,8 @@
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
+#include "about.h"
+
 #include <QMainWindow>
 #include <QCloseEvent>
 #include <QDir>
@@ -8,6 +10,7 @@
 #include <iostream>
 #include <QTextStream>
 #include <QMessageBox>
+#include <QTimer>
 
 namespace Ui {
 class MainWindow;
@@ -42,6 +45,10 @@ private slots:
 
     void on_actionNew_File_triggered();
 
+    void on_timeout();
+
+    void on_actionAbout_TPad_triggered();
+
 private:
     Ui::MainWindow *ui;
 
@@ -49,8 +56,12 @@ private:
 
     QString path; // Path of text file
     QString text; // Text of text file
+    QString originalText;
     QString selFilter; // Text file extension filter
 
+    QTimer timer;
+
+    bool fileNotChanged();
     void closeEvent(QCloseEvent *event) override;
 };
 
