@@ -19,11 +19,11 @@ You need install this dependencies before install TPad
 
 ## Installing dependencies on Ubuntu , Linux Mint, Debian ...
 
-`sudo apt-get install make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
+`sudo apt-get install build-essential make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
 
 ## Installing dependencies on RedHat, Fedora ...
 
-`sudo dnf install make cmake qt5 qt5-devel qt5-qtbase qt5-qtbase-devel qt5-qtdeclarative qt5-qtdeclarative-devel`
+`sudo dnf install automake gcc gcc-c++ kernel-devel make cmake qt5 qt5-devel qt5-qtbase qt5-qtbase-devel qt5-qtdeclarative qt5-qtdeclarative-devel`
 
 # Install TPad
 
