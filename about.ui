@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>About PicYou</string>
+   <string>About TPad</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="icons.qrc">
+    <normaloff>:/icons/icons/About.png</normaloff>:/icons/icons/About.png</iconset>
   </property>
   <widget class="QLabel" name="copyright">
    <property name="geometry">
@@ -40,6 +44,8 @@
    </property>
   </widget>
  </widget>
- <resources/>
+ <resources>
+  <include location="icons.qrc"/>
+ </resources>
  <connections/>
 </ui>
