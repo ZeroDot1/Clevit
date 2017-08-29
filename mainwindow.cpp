@@ -8,9 +8,15 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    isSaved = false;
+    text = ui->plainTextEdit->toPlainText();
+
+    isSaved = false, changedTitle = false;
 
     selFilter = tr("Text Files (*.txt)");
+
+    title = QDir::currentPath();
+
+    this->setWindowTitle(title);
 
     //when the timer times out the signal is emitted and the ontimeout() private slot is executed
 
@@ -27,15 +33,35 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::on_timeout()
-{
+{   
+    connect(ui->plainTextEdit,&QPlainTextEdit::textChanged,this,&MainWindow::textChanged);
+}
 
+void MainWindow::textChanged()
+{
+    disconnect(ui->plainTextEdit,&QPlainTextEdit::textChanged,this,&MainWindow::textChanged);
+
+    isSaved = false;
+
+    text = ui->plainTextEdit->toPlainText();
+
+    if(changedTitle == false && fileNotChanged() == false)
+    {
+        this->setWindowTitle(title+"*");
+
+        changedTitle = true;
+    }
+    else
+        if(fileNotChanged() == true)
+        {
+            this->setWindowTitle(title);
+
+            changedTitle = false;
+        }
 }
 
 bool MainWindow::fileNotChanged()
 {
-    if(path.isEmpty())
-        return false;
-
     int res = QString::compare(originalText,text,Qt::CaseSensitive);
 
     if(res == 0)
@@ -53,7 +79,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     if(text.isEmpty() == false)
     {        
-        if(isSaved == false && fileNotChanged() == false)
+        if(isSaved == false && changedTitle == true)
         {
             QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
@@ -66,7 +92,10 @@ void MainWindow::closeEvent(QCloseEvent *event)
             }
             else
                 if(resBtn == QMessageBox::Cancel)
+                {
                     event->ignore();
+                    title = QDir::currentPath();
+                }
                 else
                     if(resBtn == QMessageBox::No)
                         event->accept();
@@ -122,7 +151,13 @@ void MainWindow::on_actionNew_File_triggered()
 {
     path.clear();
     text.clear();
+    originalText.clear();
     ui->plainTextEdit->clear();
+
+    title = QDir::currentPath();
+
+    this->setWindowTitle(title);
+
 }
 
 void MainWindow::on_actionOpen_triggered()
@@ -146,11 +181,21 @@ void MainWindow::on_actionOpen_triggered()
         ui->plainTextEdit->insertPlainText(text);
 
         text.clear();
+
+        changedTitle = false;
+        title = path;
+
     }
     else
+    {
         QMessageBox::warning(this,"Open File Error",textFile.errorString());
 
+        title = QDir::currentPath();
+    }
+
     textFile.close();
+
+    this->setWindowTitle(title);
 
     isSaved = false;
 }
@@ -175,12 +220,25 @@ void MainWindow::on_actionSave_triggered()
 
         textAppend << text;
 
+        originalText = text;
+
         text.clear();
+    }
+    else
+    {
+        QMessageBox::warning(this,"Open File Error",textFile.errorString());
+
+        title = QDir::currentPath();
     }
 
     textFile.close();
 
+    title = path;
+
+    this->setWindowTitle(title);
+
     isSaved = true;
+    changedTitle = false;
 }
 
 void MainWindow::on_actionSave_as_triggered()
@@ -201,12 +259,25 @@ void MainWindow::on_actionSave_as_triggered()
 
         textAppend << text;
 
+        originalText = text;
+
         text.clear();
+    }
+    else
+    {
+        QMessageBox::warning(this,"Open File Error",textFile.errorString());
+
+        title = QDir::currentPath();
     }
 
     textFile.close();
 
+    title = path;
+
+    this->setWindowTitle(title);
+
     isSaved = true;
+    changedTitle = false;
 }
 
 void MainWindow::on_actionAbout_TPad_triggered()

@@ -30,7 +30,7 @@
      <x>0</x>
      <y>0</y>
      <width>400</width>
-     <height>19</height>
+     <height>20</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -70,9 +70,23 @@
    <attribute name="toolBarBreak">
     <bool>false</bool>
    </attribute>
+   <addaction name="actionNew_File"/>
+   <addaction name="actionOpen"/>
+   <addaction name="actionSave"/>
+   <addaction name="actionSave_as"/>
+   <addaction name="actionCopy"/>
+   <addaction name="actionPaste"/>
+   <addaction name="actionCut"/>
+   <addaction name="actionUndo"/>
+   <addaction name="actionRedo"/>
+   <addaction name="actionExit"/>
   </widget>
   <widget class="QStatusBar" name="statusBar"/>
   <action name="actionOpen">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Open.png</normaloff>:/icons/icons/Open.png</iconset>
+   </property>
    <property name="text">
     <string>Open...</string>
    </property>
@@ -81,6 +95,10 @@
    </property>
   </action>
   <action name="actionSave">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Save.png</normaloff>:/icons/icons/Save.png</iconset>
+   </property>
    <property name="text">
     <string>Save</string>
    </property>
@@ -89,6 +107,10 @@
    </property>
   </action>
   <action name="actionSave_as">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Save as.png</normaloff>:/icons/icons/Save as.png</iconset>
+   </property>
    <property name="text">
     <string>Save as...</string>
    </property>
@@ -97,6 +119,10 @@
    </property>
   </action>
   <action name="actionExit">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Exit.png</normaloff>:/icons/icons/Exit.png</iconset>
+   </property>
    <property name="text">
     <string>Exit</string>
    </property>
@@ -105,6 +131,10 @@
    </property>
   </action>
   <action name="actionCopy">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Copy.png</normaloff>:/icons/icons/Copy.png</iconset>
+   </property>
    <property name="text">
     <string>Copy</string>
    </property>
@@ -113,6 +143,10 @@
    </property>
   </action>
   <action name="actionPaste">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Paste.png</normaloff>:/icons/icons/Paste.png</iconset>
+   </property>
    <property name="text">
     <string>Paste</string>
    </property>
@@ -121,6 +155,10 @@
    </property>
   </action>
   <action name="actionCut">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Cut.png</normaloff>:/icons/icons/Cut.png</iconset>
+   </property>
    <property name="text">
     <string>Cut</string>
    </property>
@@ -129,6 +167,10 @@
    </property>
   </action>
   <action name="actionUndo">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Undo.png</normaloff>:/icons/icons/Undo.png</iconset>
+   </property>
    <property name="text">
     <string>Undo</string>
    </property>
@@ -137,6 +179,10 @@
    </property>
   </action>
   <action name="actionRedo">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Redo.png</normaloff>:/icons/icons/Redo.png</iconset>
+   </property>
    <property name="text">
     <string>Redo</string>
    </property>
@@ -145,11 +191,19 @@
    </property>
   </action>
   <action name="actionAbout_TPad">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/About.png</normaloff>:/icons/icons/About.png</iconset>
+   </property>
    <property name="text">
     <string>About TPad</string>
    </property>
   </action>
   <action name="actionNew_File">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/New.png</normaloff>:/icons/icons/New.png</iconset>
+   </property>
    <property name="text">
     <string>New File</string>
    </property>

@@ -45,19 +45,23 @@ private slots:
 
     void on_actionNew_File_triggered();
 
-    void on_timeout();
-
     void on_actionAbout_TPad_triggered();
+
+    void textChanged();
+
+    void on_timeout();
 
 private:
     Ui::MainWindow *ui;
 
     bool isSaved;
+    bool changedTitle;
 
     QString path; // Path of text file
     QString text; // Text of text file
     QString originalText;
     QString selFilter; // Text file extension filter
+    QString title;
 
     QTimer timer;
 
