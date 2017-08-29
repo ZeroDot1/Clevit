@@ -28,7 +28,7 @@ find_package(Qt5 REQUIRED
     Widgets
 )
 
-qt5_wrap_ui( UI_HEADERS mainwindow.ui about.ui)
-qt5_add_resources( QRCS icons.qrc )
-add_executable( ${PROJECT_NAME} main.cpp mainwindow.cpp about.cpp ${QRCS} )
+qt5_wrap_ui( UI_HEADERS src/mainwindow.ui src/about.ui)
+qt5_add_resources( QRCS src/icons.qrc )
+add_executable( ${PROJECT_NAME} src/main.cpp src/mainwindow.cpp src/about.cpp ${QRCS} )
 target_link_libraries( ${PROJECT_NAME} Qt5::Widgets )
