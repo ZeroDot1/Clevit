@@ -1,6 +1,8 @@
 # TPad
 Tpad - A text editor written on C++ with Qt Framework
 
+![travis build](https://img.shields.io/travis/kentcdodds/starwars-names.svg?style=flat-square)
+
 # Future features
 
 * Fonts , color , align options etc ...
