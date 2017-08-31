@@ -1,24 +1,3 @@
-/************************************************************************************************************
-*    											                                                            *
-*    TPad - A pratical text editor									    *
-*											                                                                *
-*    Copyright (C) 2017  Tiago Martins                        				                                *
-*											                                                                *
-*    This program is free software: you can redistribute it and/or modify		                            *
-*    it under the terms of the GNU General Public License as published by                                   *
-*    the Free Software Foundation, either version 3 of the License, or                                      *
-*    (at your option) any later version. 					                                                *
-*											                                                                *
-*    This program is distributed in the hope that it will be useful,			                            *
-*    but WITHOUT ANY WARRANTY; without even the implied warranty of			                                *
-*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			                                *
-*    GNU General Public License for more details.					                                        *
-*											                                                                *
-*    You should have received a copy of the GNU General Public License			                            *
-*    along with this program. If not, see <http://www.gnu.org/licenses/>.                                   *
-*											                                                                *
-*************************************************************************************************************/
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -28,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
     timer(this)
 {
     ui->setupUi(this);
+
+    ui->fontComboBox->setEditable(false);
 
     text = ui->plainTextEdit->toPlainText();
 
@@ -55,7 +36,12 @@ MainWindow::~MainWindow()
 
 void MainWindow::on_timeout()
 {   
+    //Connect signals to slots
+
     connect(ui->plainTextEdit,&QPlainTextEdit::textChanged,this,&MainWindow::textChanged);
+    connect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
+    connect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
+    connect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
 }
 
 void MainWindow::textChanged()
@@ -90,6 +76,16 @@ bool MainWindow::fileNotChanged()
     else
         return false;
 
+}
+
+void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
+{
+    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    if (cursor.hasSelection() == true)
+    {
+        cursor.mergeCharFormat(format);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
@@ -243,6 +239,8 @@ void MainWindow::on_actionSave_triggered()
 
         originalText = text;
 
+        title = path;
+
         text.clear();
     }
     else
@@ -253,8 +251,6 @@ void MainWindow::on_actionSave_triggered()
     }
 
     textFile.close();
-
-    title = path;
 
     this->setWindowTitle(title);
 
@@ -282,6 +278,8 @@ void MainWindow::on_actionSave_as_triggered()
 
         originalText = text;
 
+        title = path;
+
         text.clear();
     }
     else
@@ -292,8 +290,6 @@ void MainWindow::on_actionSave_as_triggered()
     }
 
     textFile.close();
-
-    title = path;
 
     this->setWindowTitle(title);
 
@@ -306,4 +302,69 @@ void MainWindow::on_actionAbout_TPad_triggered()
     About *about = new About(this);
 
     about->show();
+}
+
+void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
+{
+    ui->plainTextEdit->setFont(f);
+}
+
+void MainWindow::bold()
+{
+    disconnect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
+
+    QTextCharFormat format;
+
+    if(ui->boldBtn->isChecked() == true)
+    {
+        format.setFontWeight(QFont::Bold);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+    else
+    {
+        format.setFontWeight(QFont::Normal);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+
+    mergeFormatOnWordOrSelection(format);
+}
+
+void MainWindow::italic()
+{
+    disconnect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
+
+    QTextCharFormat format;
+
+    if(ui->italicBtn->isChecked() == true)
+    {
+        format.setFontItalic(true);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+    else
+    {
+        format.setFontItalic(false);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+
+    mergeFormatOnWordOrSelection(format);
+}
+
+void MainWindow::underline()
+{
+    disconnect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
+
+    QTextCharFormat format;
+
+    if(ui->underlineBtn->isChecked() == true)
+    {
+        format.setFontUnderline(true);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+    else
+    {
+        format.setFontUnderline(false);
+        ui->plainTextEdit->mergeCurrentCharFormat(format);
+    }
+
+    mergeFormatOnWordOrSelection(format);
 }

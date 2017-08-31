@@ -1,24 +1,3 @@
-/************************************************************************************************************
-*    											                                                            *
-*    TPad - A pratical text editor									    *
-*											                                                                *
-*    Copyright (C) 2017  Tiago Martins                        				                                *
-*											                                                                *
-*    This program is free software: you can redistribute it and/or modify		                            *
-*    it under the terms of the GNU General Public License as published by                                   *
-*    the Free Software Foundation, either version 3 of the License, or                                      *
-*    (at your option) any later version. 					                                                *
-*											                                                                *
-*    This program is distributed in the hope that it will be useful,			                            *
-*    but WITHOUT ANY WARRANTY; without even the implied warranty of			                                *
-*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			                                *
-*    GNU General Public License for more details.					                                        *
-*											                                                                *
-*    You should have received a copy of the GNU General Public License			                            *
-*    along with this program. If not, see <http://www.gnu.org/licenses/>.                                   *
-*											                                                                *
-*************************************************************************************************************/
-
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 
@@ -30,6 +9,7 @@
 #include <QFileDialog>
 #include <iostream>
 #include <QTextStream>
+#include <QTextCharFormat>
 #include <QMessageBox>
 #include <QTimer>
 
@@ -68,9 +48,17 @@ private slots:
 
     void on_actionAbout_TPad_triggered();
 
-    void textChanged();
+    void textChanged(); // If text change the program add a '*' in the title
 
-    void on_timeout();
+    void on_timeout(); // Signal and slots in real time
+
+    void bold();
+
+    void italic();
+
+    void underline();
+
+    void on_fontComboBox_currentFontChanged(const QFont &f);
 
 private:
     Ui::MainWindow *ui;
@@ -86,7 +74,8 @@ private:
 
     QTimer timer;
 
-    bool fileNotChanged();
+    bool fileNotChanged(); // Verify if the text of the open file was modified or not
+    void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void closeEvent(QCloseEvent *event) override;
 };
 
