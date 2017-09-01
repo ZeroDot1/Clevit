@@ -37,6 +37,10 @@ You need install this dependencies before install TPad
 * (6) Now double click on the execuable or yet on this terminal write this: `./TPad`
 * (7) Enjoy!  
 
+# Translation
+
+* If you want to help translate the TPad, it's in the zanata: https://translate.zanata.org/project/view/Tpad?dswid=-7688
+
 # Contact
 
 Any doubt or question , send me an email.
