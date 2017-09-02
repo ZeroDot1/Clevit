@@ -8,6 +8,7 @@
 #include <QDir>
 #include <QFileDialog>
 #include <iostream>
+#include <QPlainTextEdit>
 #include <QTextStream>
 #include <QTextCharFormat>
 #include <QMessageBox>

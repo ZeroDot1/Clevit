@@ -17,6 +17,9 @@
    <iconset resource="icons.qrc">
     <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QVBoxLayout" name="verticalLayout">
     <item>
@@ -46,7 +49,7 @@
            <string>Bold</string>
           </property>
           <property name="text">
-           <string>...</string>
+           <string>Bold</string>
           </property>
           <property name="icon">
            <iconset theme="format-text-bold">
@@ -61,7 +64,7 @@
            <string>Italic</string>
           </property>
           <property name="text">
-           <string>...</string>
+           <string>Italic</string>
           </property>
           <property name="icon">
            <iconset theme="format-text-italic">
@@ -75,8 +78,11 @@
           <property name="toolTip">
            <string>Underline</string>
           </property>
+          <property name="locale">
+           <locale language="English" country="UnitedStates"/>
+          </property>
           <property name="text">
-           <string>...</string>
+           <string>Underline</string>
           </property>
           <property name="icon">
            <iconset theme="format-text-underline">
@@ -92,7 +98,7 @@
      </widget>
     </item>
     <item>
-     <widget class="QPlainTextEdit" name="plainTextEdit"/>
+     <widget class="QTextEdit" name="textEdit"/>
     </item>
    </layout>
   </widget>
