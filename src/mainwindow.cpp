@@ -10,7 +10,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->fontComboBox->setEditable(false);
 
-    text = ui->plainTextEdit->toPlainText();
+    text = ui->textEdit->toPlainText();
 
     isSaved = false, changedTitle = false;
 
@@ -38,7 +38,7 @@ void MainWindow::on_timeout()
 {   
     //Connect signals to slots
 
-    connect(ui->plainTextEdit,&QPlainTextEdit::textChanged,this,&MainWindow::textChanged);
+    connect(ui->textEdit,&QTextEdit::textChanged,this,&MainWindow::textChanged);
     connect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
     connect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
     connect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
@@ -46,11 +46,11 @@ void MainWindow::on_timeout()
 
 void MainWindow::textChanged()
 {
-    disconnect(ui->plainTextEdit,&QPlainTextEdit::textChanged,this,&MainWindow::textChanged);
+    disconnect(ui->textEdit,&QTextEdit::textChanged,this,&MainWindow::textChanged);
 
     isSaved = false;
 
-    text = ui->plainTextEdit->toPlainText();
+    text = ui->textEdit->toPlainText();
 
     if(changedTitle == false && fileNotChanged() == false)
     {
@@ -80,17 +80,17 @@ bool MainWindow::fileNotChanged()
 
 void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
 {
-    QTextCursor cursor = ui->plainTextEdit->textCursor();
+    QTextCursor cursor = ui->textEdit->textCursor();
     if (cursor.hasSelection() == true)
     {
         cursor.mergeCharFormat(format);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
 {
-    text = ui->plainTextEdit->toPlainText();
+    text = ui->textEdit->toPlainText();
 
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
@@ -126,35 +126,35 @@ void MainWindow::on_actionCopy_triggered()
 {
     // Copy
 
-    ui->plainTextEdit->copy();
+    ui->textEdit->copy();
 }
 
 void MainWindow::on_actionPaste_triggered()
 {
     // Paste
 
-    ui->plainTextEdit->paste();
+    ui->textEdit->paste();
 }
 
 void MainWindow::on_actionCut_triggered()
 {
     // Cut
 
-    ui->plainTextEdit->cut();
+    ui->textEdit->cut();
 }
 
 void MainWindow::on_actionUndo_triggered()
 {
     // Undo
 
-    ui->plainTextEdit->undo();
+    ui->textEdit->undo();
 }
 
 void MainWindow::on_actionRedo_triggered()
 {
     // Redo
 
-    ui->plainTextEdit->redo();
+    ui->textEdit->redo();
 }
 
 void MainWindow::on_actionExit_triggered()
@@ -169,7 +169,7 @@ void MainWindow::on_actionNew_File_triggered()
     path.clear();
     text.clear();
     originalText.clear();
-    ui->plainTextEdit->clear();
+    ui->textEdit->clear();
 
     title = QDir::currentPath();
 
@@ -195,7 +195,7 @@ void MainWindow::on_actionOpen_triggered()
 
         originalText = text;
 
-        ui->plainTextEdit->insertPlainText(text);
+        ui->textEdit->setHtml(text);
 
         text.clear();
 
@@ -231,7 +231,7 @@ void MainWindow::on_actionSave_triggered()
     {
         text.clear();
 
-        text = ui->plainTextEdit->toPlainText();
+        text = ui->textEdit->toHtml();
 
         QTextStream textAppend(&textFile);
 
@@ -270,7 +270,7 @@ void MainWindow::on_actionSave_as_triggered()
     {
         text.clear();
 
-        text = ui->plainTextEdit->toPlainText();
+        text = ui->textEdit->toHtml();
 
         QTextStream textAppend(&textFile);
 
@@ -306,7 +306,7 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
 {
-    ui->plainTextEdit->setFont(f);
+    ui->textEdit->setFont(f);
 }
 
 void MainWindow::bold()
@@ -318,12 +318,12 @@ void MainWindow::bold()
     if(ui->boldBtn->isChecked() == true)
     {
         format.setFontWeight(QFont::Bold);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
     else
     {
         format.setFontWeight(QFont::Normal);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
 
     mergeFormatOnWordOrSelection(format);
@@ -338,12 +338,12 @@ void MainWindow::italic()
     if(ui->italicBtn->isChecked() == true)
     {
         format.setFontItalic(true);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
     else
     {
         format.setFontItalic(false);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
 
     mergeFormatOnWordOrSelection(format);
@@ -358,12 +358,12 @@ void MainWindow::underline()
     if(ui->underlineBtn->isChecked() == true)
     {
         format.setFontUnderline(true);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
     else
     {
         format.setFontUnderline(false);
-        ui->plainTextEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->mergeCurrentCharFormat(format);
     }
 
     mergeFormatOnWordOrSelection(format);

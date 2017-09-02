@@ -40,6 +40,7 @@ You need install this dependencies before install TPad
 # Translation
 
 * If you want to help translate the TPad, it's in the zanata: https://translate.zanata.org/project/view/Tpad?dswid=-7688
+* Please read the translation guide before translating: http://docs.zanata.org/en/release/user-guide/translator-guide/
 
 # Contact
 
