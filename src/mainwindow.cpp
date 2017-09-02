@@ -44,6 +44,72 @@ void MainWindow::on_timeout()
     connect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
 }
 
+void MainWindow::createLanguageMenu(void)
+{
+    // we create the menu entries dynamically, dependent on the existing translations.
+
+    QActionGroup* langGroup = new QActionGroup(ui->menuLanguage);
+    langGroup->setExclusive(true);
+
+    connect(langGroup,SIGNAL(triggered(QAction*)),this,SLOT(slotLanguageChanged(QAction*)));
+
+    // format system language
+
+    QString defaultLocale = QLocale::system().name();
+    defaultLocale.truncate(defaultLocale.lastIndexOf('_'));
+
+    m_langPath = QApplication::applicationDirPath();
+    m_langPath.append("/languages");
+    QDir dir(m_langPath);
+    QStringList fileNames = dir.entryList(QStringList("TranslationTpad_*.qm"));
+
+    for(int i = 0; i < fileNames.size(); ++i)
+    {
+        QString locale;
+
+        locale = fileNames[i];
+
+        locale.truncate(locale.lastIndexOf('.'));
+
+        locale.remove(0, locale.indexOf('_') + 1);
+
+        QString lang = QLocale::languageToString(QLocale(locale).language());
+        QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
+
+        QAction *action = new QAction(ico,lang,this);
+        action->setCheckable(true);
+        action->setData(locale);
+
+        ui->menuLanguage->addAction(action);
+        langGroup->addAction(locale);
+
+        if(defaultLocale == locale)
+            action->setChecked(true);
+    }
+}
+
+void MainWindow::switchTranslator(QTranslator &translator, const QString &filename)
+{
+    qApp->removeTranslator(&translator);
+
+    if(translator.load(filename))
+        qApp->installTranslator(&translator);
+}
+
+void MainWindow::loadLanguage(const QString &rLanguage)
+{
+    if(m_currLang != rLanguage)
+    {
+        m_currLang = rLanguage;
+
+        QLocale locale = QLocale(m_currLang);
+        QLocale::setDefault(locale);
+        QString languageName = QLocale::languageToString(locale.language());
+        switchTranslator(m_translator,QString("TranslationTPad_%1.qm").arg(rLanguage));
+        switchTranslator(m_translatorQt,QString("qt%1.qm").arg(rLanguage));
+    }
+}
+
 void MainWindow::textChanged()
 {
     disconnect(ui->textEdit,&QTextEdit::textChanged,this,&MainWindow::textChanged);
@@ -86,6 +152,24 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
         cursor.mergeCharFormat(format);
         ui->textEdit->mergeCurrentCharFormat(format);
     }
+}
+
+void MainWindow::changeEvent(QEvent *event)
+{
+    if(0 != event)
+    {
+        if(event->type() == QEvent::LanguageChange)
+            ui->retranslateUi(this);
+        else
+            if(event->type() == QEvent::LocaleChange)
+            {
+                QString locale = QLocale::system().name();
+                locale.truncate(locale.lastIndexOf('_'));
+                loadLanguage(locale);
+            }
+    }
+
+    QMainWindow::changeEvent(event);
 }
 
 void MainWindow::closeEvent(QCloseEvent *event)
@@ -307,6 +391,15 @@ void MainWindow::on_actionAbout_TPad_triggered()
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
 {
     ui->textEdit->setFont(f);
+}
+
+void MainWindow::slotLanguageChanged(QAction *action)
+{
+    if(0 != action)
+    {
+        loadLanguage(action->data().toString());
+        setWindowIcon(action->icon());
+    }
 }
 
 void MainWindow::bold()

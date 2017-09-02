@@ -13,6 +13,7 @@
 #include <QTextCharFormat>
 #include <QMessageBox>
 #include <QTimer>
+#include <QTranslator>
 
 namespace Ui {
 class MainWindow;
@@ -25,6 +26,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+    void switchTranslator(QTranslator& translator,const QString& filename);
 
 private slots:
     void on_actionCopy_triggered();
@@ -49,15 +51,17 @@ private slots:
 
     void on_actionAbout_TPad_triggered();
 
-    void textChanged(); // If text change the program add a '*' in the title
-
-    void on_timeout(); // Signal and slots in real time
-
     void bold();
 
     void italic();
 
     void underline();
+
+    void textChanged(); // If text change the program add a '*' in the title
+
+    void on_timeout(); // Signal and slots in real time
+
+    void slotLanguageChanged(QAction* action);
 
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
@@ -72,12 +76,21 @@ private:
     QString originalText;
     QString selFilter; // Text file extension filter
     QString title;
+    QString m_currLang;
+    QString m_langPath;
+
+    QTranslator m_translator;
+    QTranslator m_translatorQt;
+
 
     QTimer timer;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
+    void createLanguageMenu(void);
+    void loadLanguage(const QString& rLanguage);
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void closeEvent(QCloseEvent *event) override;
+    void changeEvent(QEvent *) override;
 };
 
 #endif // MAINWINDOW_H
