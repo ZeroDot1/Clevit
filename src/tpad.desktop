@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Version=1.1.4
+Name=TPad
+Comment=A pratical text editor
+Path=/usr/local/bin/TPad
+Exec=TPad
+Icon=icons/icon.png
+Terminal=false
+Categories=Office;
