@@ -1,0 +1,28 @@
+# Maintainer: Tiago Martins <thebigger018@protonmail.com>
+# Maintainer: ZeroDot1 <zerodot1@bk.ru>
+pkgname=tpad
+pkgver=1.1.3
+pkgrel=1
+pkgdesc="TPad - A text editor written on C++ with Qt Framework."
+url='https://github.com/TigaxMT/TPad'
+license=('GPL3')
+arch=('x86_64')
+depends=('qt5-base' 'qt5-translations' 'qt5-graphicaleffects' 'xdg-utils' 'qt5-quickcontrols2' 'qt5-quickcontrols' 'libevent')
+makedepends=('qt5-tools' 'cmake')
+source=("https://github.com/TigaxMT/TPad/archive/${pkgver}.tar.gz")
+md5sums=('8dedd36ef05512c67868329dc15d8f08')
+
+build() {
+  cd $srcdir/TPad-${pkgver}
+
+  cmake -DCMAKE_INSTALL_PREFIX=/usr \
+    -DCMAKE_BUILD_TYPE=Release \
+    -DCMAKE_INSTALL_LIBDIR=lib
+  make
+}
+
+package() {
+  cd $srcdir/TPad-${pkgver}
+
+  make DESTDIR=${pkgdir} install
+}
