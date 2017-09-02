@@ -54,6 +54,6 @@ popd
 popd
 echo 'Run TPad . . . have fun!'
 echo 'If you find a bug while testing TPad, please report it.'
-echo 'https://github.com/Aztorius/magicfountain/issues'
+echo 'https://github.com/TigaxMT/TPad/issues'
 sleep 2s
 TPad-master/TPad-master/TPad
