@@ -386,7 +386,7 @@ void MainWindow::createLanguageMenu(void)
     defaultLocale.truncate(defaultLocale.lastIndexOf('_'));
 
     m_langPath = QApplication::applicationDirPath();
-    m_langPath.append("/src/languages/");
+    m_langPath.append("/src/languages/"); //
 
     QDir dir(m_langPath);
     QStringList fileNames = dir.entryList(QStringList("TranslationTPad_*.qm"));
@@ -430,11 +430,8 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
     qApp->removeTranslator(&translator);
 
     // load the new translator
-     if(translator.load(QString(QDir::currentPath()+"/src/languages/%1").arg(filename)))
-     {
+     if(translator.load(QString(QDir::currentPath()+"/src/languages/%1").arg(filename))) //
          qApp->installTranslator(&translator);
-        this->setWindowTitle(title);
-     }
 }
 
 void MainWindow::loadLanguage(const QString& rLanguage)
@@ -446,7 +443,6 @@ void MainWindow::loadLanguage(const QString& rLanguage)
         QLocale::setDefault(locale);
         QString languageName = QLocale::languageToString(locale.language());
         switchTranslator(m_translator, QString("TranslationTPad_%1.qm").arg(rLanguage));
-        //ui->statusBar->showMessage(tr("Current Language changed to %1").arg(languageName));
     }
 }
 

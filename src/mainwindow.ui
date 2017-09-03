@@ -52,8 +52,8 @@
            <string>Bold</string>
           </property>
           <property name="icon">
-           <iconset theme="format-text-bold">
-            <normaloff>.</normaloff>.</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/icons/Bold.png</normaloff>:/icons/icons/Bold.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -67,8 +67,8 @@
            <string>Italic</string>
           </property>
           <property name="icon">
-           <iconset theme="format-text-italic">
-            <normaloff>.</normaloff>.</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/icons/Italic.png</normaloff>:/icons/icons/Italic.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -85,8 +85,8 @@
            <string>Underline</string>
           </property>
           <property name="icon">
-           <iconset theme="format-text-underline">
-            <normaloff>.</normaloff>.</iconset>
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/icons/Underline.png</normaloff>:/icons/icons/Underline.png</iconset>
           </property>
           <property name="checkable">
            <bool>true</bool>
