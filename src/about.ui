@@ -17,6 +17,9 @@
    <iconset resource="icons.qrc">
     <normaloff>:/icons/icons/About.png</normaloff>:/icons/icons/About.png</iconset>
   </property>
+  <property name="locale">
+   <locale language="English" country="UnitedStates"/>
+  </property>
   <widget class="QLabel" name="copyright">
    <property name="geometry">
     <rect>

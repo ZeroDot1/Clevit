@@ -27,15 +27,6 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void switchTranslator(QTranslator& translator, const QString& filename);
-
-protected:
-    // this event is called, when a new translator is loaded or the system language is changed
-    void changeEvent(QEvent*);
-
-protected slots:
-    // this slot is called by the language menu actions
-    void slotLanguageChanged(QAction* action);
 
 private slots:
     void on_actionCopy_triggered();
@@ -72,6 +63,8 @@ private slots:
 
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
+    void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
+
 private:
     Ui::MainWindow *ui;
 
@@ -89,13 +82,17 @@ private:
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
 
+    QActionGroup* langGroup;
+
     QTimer timer;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)
     void createLanguageMenu(void); // creates the language menu dynamically from the content of m_langPath
+    void switchTranslator(QTranslator& translator, const QString& filename);
     void closeEvent(QCloseEvent *event) override;
+    void changeEvent(QEvent*);// this event is called, when a new translator is loaded or the system language is changed
 };
 
 #endif // MAINWINDOW_H
