@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QTimer>
 #include <QTranslator>
+#include <QActionGroup>
 
 namespace Ui {
 class MainWindow;
@@ -26,7 +27,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-    void switchTranslator(QTranslator& translator,const QString& filename);
+    void switchTranslator(QTranslator& translator, const QString& filename);
+
+protected:
+    // this event is called, when a new translator is loaded or the system language is changed
+    void changeEvent(QEvent*);
+
+protected slots:
+    // this slot is called by the language menu actions
+    void slotLanguageChanged(QAction* action);
 
 private slots:
     void on_actionCopy_triggered();
@@ -61,8 +70,6 @@ private slots:
 
     void on_timeout(); // Signal and slots in real time
 
-    void slotLanguageChanged(QAction* action);
-
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
 private:
@@ -76,21 +83,19 @@ private:
     QString originalText;
     QString selFilter; // Text file extension filter
     QString title;
-    QString m_currLang;
-    QString m_langPath;
 
-    QTranslator m_translator;
-    QTranslator m_translatorQt;
-
+    QTranslator m_translator; // contains the translations for this application
+    QTranslator m_translatorQt; // contains the translations for qt
+    QString m_currLang; // contains the currently loaded language
+    QString m_langPath; // Path of language files. This is always fixed to /languages.
 
     QTimer timer;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
-    void createLanguageMenu(void);
-    void loadLanguage(const QString& rLanguage);
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
+    void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)
+    void createLanguageMenu(void); // creates the language menu dynamically from the content of m_langPath
     void closeEvent(QCloseEvent *event) override;
-    void changeEvent(QEvent *) override;
 };
 
 #endif // MAINWINDOW_H
