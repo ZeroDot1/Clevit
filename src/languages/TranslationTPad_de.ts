@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About TPad</source>
-        <translation type="unfinished">Über TPad</translation>
+        <translation>Über TPad</translation>
     </message>
     <message>
         <location filename="../about.ui" line="30"/>
@@ -122,7 +122,7 @@
     <message>
         <location filename="../mainwindow.ui" line="235"/>
         <source>Paste</source>
-        <translation type="unfinished">Einfügen</translation>
+        <translation>Einfügen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="238"/>
