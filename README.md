@@ -9,6 +9,10 @@ Tpad - A text editor written on C++ with Qt Framework
 
 * A search bar to find a specific word
 
+### Maybe...
+
+* Add a smart spell checker
+
 # Dependencies
 
 You need install this dependencies before install TPad
