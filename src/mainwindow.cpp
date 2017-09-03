@@ -22,6 +22,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setWindowTitle(title);
 
+
     //when the timer times out the signal is emitted and the ontimeout() private slot is executed
 
     connect(&timer,SIGNAL(timeout()),this,SLOT(on_timeout()));
@@ -44,6 +45,7 @@ void MainWindow::on_timeout()
     connect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
     connect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
     connect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
+    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
 }
 
 
@@ -376,10 +378,8 @@ void MainWindow::underline()
 
 void MainWindow::createLanguageMenu(void)
 {
-    QActionGroup* langGroup = new QActionGroup(ui->menuLanguage);
+    langGroup = new QActionGroup(ui->menuLanguage);
     langGroup->setExclusive(true);
-
-    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
 
     // format systems language
     QString defaultLocale = QLocale::system().name();
@@ -387,8 +387,6 @@ void MainWindow::createLanguageMenu(void)
 
     m_langPath = QApplication::applicationDirPath();
     m_langPath.append("/src/languages/");
-
-    std::cout << m_langPath.toStdString() << std::endl;
 
     QDir dir(m_langPath);
     QStringList fileNames = dir.entryList(QStringList("TranslationTPad_*.qm"));
@@ -429,12 +427,14 @@ void MainWindow::slotLanguageChanged(QAction* action)
 
 void MainWindow::switchTranslator(QTranslator& translator, const QString& filename)
 {
-     // remove the old translator
-     qApp->removeTranslator(&translator);
+    qApp->removeTranslator(&translator);
 
-     // load the new translator
-     if(translator.load(filename))
-      qApp->installTranslator(&translator);
+    // load the new translator
+     if(translator.load(QString(QDir::currentPath()+"/src/languages/%1").arg(filename)))
+     {
+         qApp->installTranslator(&translator);
+        this->setWindowTitle(title);
+     }
 }
 
 void MainWindow::loadLanguage(const QString& rLanguage)
@@ -456,6 +456,7 @@ void MainWindow::changeEvent(QEvent* event)
     {
         if(event->type() == QEvent::LanguageChange)
             ui->retranslateUi(this);
+
         else
             if(event->type() == QEvent::LocaleChange)
             {
