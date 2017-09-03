@@ -3,11 +3,11 @@
 
 #include "about.h"
 
+#include <iostream>
 #include <QMainWindow>
 #include <QCloseEvent>
 #include <QDir>
 #include <QFileDialog>
-#include <iostream>
 #include <QPlainTextEdit>
 #include <QTextStream>
 #include <QTextCharFormat>

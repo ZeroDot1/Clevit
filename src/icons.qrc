@@ -12,5 +12,8 @@
         <file>icons/Save as.png</file>
         <file>icons/Undo.png</file>
         <file>icons/About.png</file>
+        <file>icons/Underline.png</file>
+        <file>icons/Italic.png</file>
+        <file>icons/Bold.png</file>
     </qresource>
 </RCC>
