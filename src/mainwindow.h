@@ -12,7 +12,6 @@
 #include <QTextStream>
 #include <QTextCharFormat>
 #include <QMessageBox>
-#include <QTimer>
 #include <QTranslator>
 #include <QActionGroup>
 
@@ -59,9 +58,9 @@ private slots:
 
     void textChanged(); // If text change the program add a '*' in the title
 
-    void on_timeout(); // Signal and slots in real time
-
     void on_fontComboBox_currentFontChanged(const QFont &f);
+
+    void on_fontSizeBox_currentIndexChanged(int index);
 
     void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
 
@@ -78,16 +77,18 @@ private:
     QString title;
 
     QTranslator m_translator; // contains the translations for this application
-    QTranslator m_translatorQt; // contains the translations for qt
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
 
     QActionGroup* langGroup;
 
-    QTimer timer;
+    QTextCharFormat format;
+
+    QFont font;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
+    void configFontSizeBox();
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)
     void createLanguageMenu(void); // creates the language menu dynamically from the content of m_langPath
     void switchTranslator(QTranslator& translator, const QString& filename);

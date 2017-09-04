@@ -3,14 +3,25 @@
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::MainWindow),
-    timer(this)
+    ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 
     createLanguageMenu();
 
+    configFontSizeBox();
+
+    ui->fontSizeBox->setCurrentText("12");
+
     ui->fontComboBox->setEditable(false);
+
+    font.setStyleHint(QFont::Monospace);
+    font.setStyleName("Monospace");
+
+    ui->fontComboBox->setFont(font);
+    ui->fontComboBox->setCurrentText("Monospace");
+
+    ui->textEdit->setFont(font);
 
     text = ui->textEdit->toPlainText();
 
@@ -22,14 +33,11 @@ MainWindow::MainWindow(QWidget *parent) :
 
     this->setWindowTitle(title);
 
-
-    //when the timer times out the signal is emitted and the ontimeout() private slot is executed
-
-    connect(&timer,SIGNAL(timeout()),this,SLOT(on_timeout()));
-
-    //call the timer every 10 ms
-
-    timer.start(10);
+    connect(ui->textEdit,SIGNAL(textChanged()),this,SLOT(textChanged()));
+    connect(ui->boldBtn,SIGNAL(clicked(bool)),this,SLOT(bold()));
+    connect(ui->italicBtn,SIGNAL(clicked(bool)),this,SLOT(italic()));
+    connect(ui->underlineBtn,SIGNAL(clicked(bool)),this,SLOT(underline()));
+    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
 }
 
 MainWindow::~MainWindow()
@@ -37,22 +45,8 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
-void MainWindow::on_timeout()
-{   
-    //Connect signals to slots
-
-    connect(ui->textEdit,&QTextEdit::textChanged,this,&MainWindow::textChanged);
-    connect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
-    connect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
-    connect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
-    connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
-}
-
-
 void MainWindow::textChanged()
 {
-    disconnect(ui->textEdit,&QTextEdit::textChanged,this,&MainWindow::textChanged);
-
     isSaved = false;
 
     text = ui->textEdit->toPlainText();
@@ -74,7 +68,7 @@ void MainWindow::textChanged()
 
 bool MainWindow::fileNotChanged()
 {
-    int res = QString::compare(originalText,text,Qt::CaseSensitive);
+    int res = QString::compare(text,originalText,Qt::CaseSensitive);
 
     if(res == 0)
         return true;
@@ -90,6 +84,21 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
     {
         cursor.mergeCharFormat(format);
         ui->textEdit->mergeCurrentCharFormat(format);
+    }
+}
+
+void MainWindow::configFontSizeBox()
+{
+    for(int i = 1;i <= 70;i++)
+    {
+        if(i >= 18)
+        {
+            i = i+4;
+
+            ui->fontSizeBox->addItem(QString::number(i));
+        }
+        else
+            ui->fontSizeBox->addItem(QString::number(i));
     }
 }
 
@@ -125,7 +134,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     }
 }
 
-// QAction Slots and Signals
+/// QAction Slots and Signals
 
 void MainWindow::on_actionCopy_triggered()
 {
@@ -188,8 +197,6 @@ void MainWindow::on_actionOpen_triggered()
 
     path = QFileDialog::getOpenFileName(this,"Select a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
 
-    //std::cout << path.toStdString() << std::endl;
-
     QFile textFile(path);
 
     // Open the text file to read/write
@@ -228,44 +235,65 @@ void MainWindow::on_actionSave_triggered()
     if(path.isEmpty())
         path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
 
-    QFile textFile(path);
-
-    // Open the text File to Write
-
-    if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
+    if(path.isEmpty() == false)
     {
-        text.clear();
+        QFile textFile(path);
 
-        text = ui->textEdit->toHtml();
+        // Open the text File to Write
 
-        QTextStream textAppend(&textFile);
+        if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
+        {
+            text.clear();
 
-        textAppend << text;
+            text = ui->textEdit->toPlainText(); // You need to copy the text in plaintext to compare with the originaltext
 
-        originalText = text;
+            originalText = text;
 
-        title = path;
+            text.clear();
 
-        text.clear();
+            text = ui->textEdit->toHtml();
+
+            QTextStream textAppend(&textFile);
+
+            textAppend << text;
+
+            title = path;
+
+            text.clear();
+
+            isSaved = true;
+            changedTitle = false;
+        }
+
+        else
+        {
+            QMessageBox::warning(this,"Save File Error",textFile.errorString());
+
+            textChanged();
+
+            if(path.isEmpty())
+                title = QDir::currentPath();
+            else
+                title = path;
+        }
+
+        textFile.close();
+
+        this->setWindowTitle(title);
     }
     else
-    {
-        QMessageBox::warning(this,"Open File Error",textFile.errorString());
-
-        title = QDir::currentPath();
-    }
-
-    textFile.close();
-
-    this->setWindowTitle(title);
-
-    isSaved = true;
-    changedTitle = false;
+        QMessageBox::warning(this,"Save File Error","Save canceled");
 }
 
 void MainWindow::on_actionSave_as_triggered()
 {
+    //QString tmp = path; // In case of the user cancel the saving we save the last path
+
     path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
+
+    if(path.isEmpty())
+        return;
+
 
     QFile textFile(path);
 
@@ -275,31 +303,39 @@ void MainWindow::on_actionSave_as_triggered()
     {
         text.clear();
 
+        text = ui->textEdit->toPlainText(); // You need to copy the text in plaintext to compare with the originaltext
+
+        originalText = text;
+
+        text.clear();
+
         text = ui->textEdit->toHtml();
 
         QTextStream textAppend(&textFile);
 
         textAppend << text;
 
-        originalText = text;
-
         title = path;
 
         text.clear();
+
+        isSaved = true;
+        changedTitle = false;
     }
     else
     {
         QMessageBox::warning(this,"Open File Error",textFile.errorString());
 
-        title = QDir::currentPath();
+        if(path.isEmpty())
+            title = QDir::currentPath();
+        else
+            title = path;
     }
 
     textFile.close();
 
     this->setWindowTitle(title);
 
-    isSaved = true;
-    changedTitle = false;
 }
 
 void MainWindow::on_actionAbout_TPad_triggered()
@@ -310,22 +346,36 @@ void MainWindow::on_actionAbout_TPad_triggered()
 }
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
-{
-    QFont ft;
+{      
+    font = f;
 
-    ft = f;
+    font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
 
-    ft.setPointSize(18);
+    format.setFont(font);
 
-    ui->textEdit->setFont(ft);
+    ui->textEdit->mergeCurrentCharFormat(format);
+
+    mergeFormatOnWordOrSelection(format);
+
+    f.cleanup();
 }
+
+void MainWindow::on_fontSizeBox_currentIndexChanged(int index)
+{
+    Q_UNUSED(index);
+
+    font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
+
+    format.setFont(font);
+
+    ui->textEdit->mergeCurrentCharFormat(format);
+
+    mergeFormatOnWordOrSelection(format);
+}
+
 
 void MainWindow::bold()
 {
-    disconnect(ui->boldBtn,&QToolButton::clicked,this,&MainWindow::bold);
-
-    QTextCharFormat format;
-
     if(ui->boldBtn->isChecked() == true)
     {
         format.setFontWeight(QFont::Bold);
@@ -342,10 +392,6 @@ void MainWindow::bold()
 
 void MainWindow::italic()
 {
-    disconnect(ui->italicBtn,&QToolButton::clicked,this,&MainWindow::italic);
-
-    QTextCharFormat format;
-
     if(ui->italicBtn->isChecked() == true)
     {
         format.setFontItalic(true);
@@ -362,10 +408,6 @@ void MainWindow::italic()
 
 void MainWindow::underline()
 {
-    disconnect(ui->underlineBtn,&QToolButton::clicked,this,&MainWindow::underline);
-
-    QTextCharFormat format;
-
     if(ui->underlineBtn->isChecked() == true)
     {
         format.setFontUnderline(true);
@@ -378,102 +420,4 @@ void MainWindow::underline()
     }
 
     mergeFormatOnWordOrSelection(format);
-}
-
-/// Translate functions and slots
-
-void MainWindow::createLanguageMenu(void)
-{
-    langGroup = new QActionGroup(ui->menuLanguage);
-    langGroup->setExclusive(true);
-
-    // format systems language
-    QString defaultLocale = QLocale::system().name();
-    defaultLocale.truncate(defaultLocale.lastIndexOf('_'));
-
-    m_langPath = QApplication::applicationDirPath();
-    m_langPath.append("/src/languages/"); //
-
-    QDir dir(m_langPath);
-    QStringList fileNames = dir.entryList(QStringList("TranslationTPad_*.qm"));
-
-    for (int i = 0; i < fileNames.size(); ++i)
-    {
-        // get locale extracted by filename
-        QString locale;
-        locale = fileNames[i];
-        locale.truncate(locale.lastIndexOf('.'));
-        locale.remove(0, locale.indexOf('_') + 1);
-
-         QString lang = QLocale::languageToString(QLocale(locale).language());
-         QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
-
-         QAction *action = new QAction(ico, lang, this);
-         action->setCheckable(true);
-         action->setData(locale);
-
-         ui->menuLanguage->addAction(action);
-         langGroup->addAction(action);
-
-         // set default translators and language checked
-         if (defaultLocale == locale)
-            action->setChecked(true);
-     }
-}
-
-void MainWindow::slotLanguageChanged(QAction* action)
-{
-    if(0 != action)
-    {
-      // load the language dependant on the action content
-      loadLanguage(action->data().toString());
-      setWindowIcon(action->icon());
-    }
-}
-
-void MainWindow::switchTranslator(QTranslator& translator, const QString& filename)
-{
-    qApp->removeTranslator(&translator);
-
-    // load the new translator
-     if(translator.load(QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename))) //
-     {
-         qApp->installTranslator(&translator);
-
-         std::cout << "Loaded translations successfuly!" << std::endl;
-         std::cout << "Path: " << (QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename)).toStdString() << std::endl;
-     }
-    else
-        std::cout << "Cannot load translations." << std::endl;
-}
-
-void MainWindow::loadLanguage(const QString& rLanguage)
-{
-    if(m_currLang != rLanguage)
-    {
-        m_currLang = rLanguage;
-        QLocale locale = QLocale(m_currLang);
-        QLocale::setDefault(locale);
-        QString languageName = QLocale::languageToString(locale.language());
-        switchTranslator(m_translator, QString("TranslationTPad_%1.qm").arg(rLanguage));
-    }
-}
-
-void MainWindow::changeEvent(QEvent* event)
-{
-    if(0 != event)
-    {
-        if(event->type() == QEvent::LanguageChange)
-            ui->retranslateUi(this);
-
-        else
-            if(event->type() == QEvent::LocaleChange)
-            {
-                QString locale = QLocale::system().name();
-                locale.truncate(locale.lastIndexOf('_'));
-                loadLanguage(locale);
-            }
-    }
-
-    QMainWindow::changeEvent(event);
 }

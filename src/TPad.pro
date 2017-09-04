@@ -27,7 +27,8 @@ TRANSLATIONS = languages/TranslationTPad_en.ts  languages/TranslationTPad_de.ts 
 SOURCES += \
         main.cpp \
         mainwindow.cpp \
-    about.cpp
+    about.cpp \
+    translation.cpp
 
 HEADERS += \
         mainwindow.h \
