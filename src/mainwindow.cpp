@@ -311,7 +311,13 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
 {
-    ui->textEdit->setFont(f);
+    QFont ft;
+
+    ft = f;
+
+    ft.setPointSize(18);
+
+    ui->textEdit->setFont(ft);
 }
 
 void MainWindow::bold()
@@ -430,8 +436,15 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
     qApp->removeTranslator(&translator);
 
     // load the new translator
-     if(translator.load(QString(QDir::currentPath()+"/src/languages/%1").arg(filename))) //
+     if(translator.load(QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename))) //
+     {
          qApp->installTranslator(&translator);
+
+         std::cout << "Loaded translations successfuly!" << std::endl;
+         std::cout << "Path: " << (QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename)).toStdString() << std::endl;
+     }
+    else
+        std::cout << "Cannot load translations." << std::endl;
 }
 
 void MainWindow::loadLanguage(const QString& rLanguage)
