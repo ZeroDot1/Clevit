@@ -440,7 +440,7 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
      {
          qApp->installTranslator(&translator);
 
-         std::cout << "Loaded translarions successfuly!" << std::endl;
+         std::cout << "Loaded translations successfuly!" << std::endl;
          std::cout << "Path: " << (QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename)).toStdString() << std::endl;
      }
     else
