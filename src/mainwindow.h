@@ -63,6 +63,8 @@ private slots:
 
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
+    void on_fontSizeBox_currentIndexChanged(int index);
+
     void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
 
 private:
@@ -84,10 +86,13 @@ private:
 
     QActionGroup* langGroup;
 
+    QFont font;
+
     QTimer timer;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
+    void configFontSizeBox();
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)
     void createLanguageMenu(void); // creates the language menu dynamically from the content of m_langPath
     void switchTranslator(QTranslator& translator, const QString& filename);

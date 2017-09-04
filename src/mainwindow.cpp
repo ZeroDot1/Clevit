@@ -10,7 +10,19 @@ MainWindow::MainWindow(QWidget *parent) :
 
     createLanguageMenu();
 
+    configFontSizeBox();
+
+    ui->fontSizeBox->setCurrentText("12");
+
     ui->fontComboBox->setEditable(false);
+
+    font.setStyleHint(QFont::Monospace);
+    font.setStyleName("Monospace");
+
+    ui->fontComboBox->setFont(font);
+    ui->fontComboBox->setCurrentText("Monospace");
+
+    ui->textEdit->setFont(font);
 
     text = ui->textEdit->toPlainText();
 
@@ -93,6 +105,21 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
     }
 }
 
+void MainWindow::configFontSizeBox()
+{
+    for(int i = 1;i <= 70;i++)
+    {
+        if(i >= 18)
+        {
+            i = i+4;
+
+            ui->fontSizeBox->addItem(QString::number(i));
+        }
+        else
+            ui->fontSizeBox->addItem(QString::number(i));
+    }
+}
+
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     text = ui->textEdit->toPlainText();
@@ -125,7 +152,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     }
 }
 
-// QAction Slots and Signals
+/// QAction Slots and Signals
 
 void MainWindow::on_actionCopy_triggered()
 {
@@ -238,11 +265,11 @@ void MainWindow::on_actionSave_triggered()
 
         text = ui->textEdit->toHtml();
 
+        originalText = text;
+
         QTextStream textAppend(&textFile);
 
         textAppend << text;
-
-        originalText = text;
 
         title = path;
 
@@ -277,11 +304,12 @@ void MainWindow::on_actionSave_as_triggered()
 
         text = ui->textEdit->toHtml();
 
+        originalText = text;
+
+
         QTextStream textAppend(&textFile);
 
         textAppend << text;
-
-        originalText = text;
 
         title = path;
 
@@ -311,14 +339,34 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
 {
-    QFont ft;
+    QTextCharFormat format;
 
-    ft = f;
+    font = f;
 
-    ft.setPointSize(18);
+    font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
 
-    ui->textEdit->setFont(ft);
+    format.setFont(font);
+
+    ui->textEdit->mergeCurrentCharFormat(format);
+
+    mergeFormatOnWordOrSelection(format);
 }
+
+void MainWindow::on_fontSizeBox_currentIndexChanged(int index)
+{
+    Q_UNUSED(index);
+
+    QTextCharFormat format;
+
+    font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
+
+    format.setFont(font);
+
+    ui->textEdit->mergeCurrentCharFormat(format);
+
+    mergeFormatOnWordOrSelection(format);
+}
+
 
 void MainWindow::bold()
 {
@@ -378,102 +426,4 @@ void MainWindow::underline()
     }
 
     mergeFormatOnWordOrSelection(format);
-}
-
-/// Translate functions and slots
-
-void MainWindow::createLanguageMenu(void)
-{
-    langGroup = new QActionGroup(ui->menuLanguage);
-    langGroup->setExclusive(true);
-
-    // format systems language
-    QString defaultLocale = QLocale::system().name();
-    defaultLocale.truncate(defaultLocale.lastIndexOf('_'));
-
-    m_langPath = QApplication::applicationDirPath();
-    m_langPath.append("/src/languages/"); //
-
-    QDir dir(m_langPath);
-    QStringList fileNames = dir.entryList(QStringList("TranslationTPad_*.qm"));
-
-    for (int i = 0; i < fileNames.size(); ++i)
-    {
-        // get locale extracted by filename
-        QString locale;
-        locale = fileNames[i];
-        locale.truncate(locale.lastIndexOf('.'));
-        locale.remove(0, locale.indexOf('_') + 1);
-
-         QString lang = QLocale::languageToString(QLocale(locale).language());
-         QIcon ico(QString("%1/%2.png").arg(m_langPath).arg(locale));
-
-         QAction *action = new QAction(ico, lang, this);
-         action->setCheckable(true);
-         action->setData(locale);
-
-         ui->menuLanguage->addAction(action);
-         langGroup->addAction(action);
-
-         // set default translators and language checked
-         if (defaultLocale == locale)
-            action->setChecked(true);
-     }
-}
-
-void MainWindow::slotLanguageChanged(QAction* action)
-{
-    if(0 != action)
-    {
-      // load the language dependant on the action content
-      loadLanguage(action->data().toString());
-      setWindowIcon(action->icon());
-    }
-}
-
-void MainWindow::switchTranslator(QTranslator& translator, const QString& filename)
-{
-    qApp->removeTranslator(&translator);
-
-    // load the new translator
-     if(translator.load(QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename))) //
-     {
-         qApp->installTranslator(&translator);
-
-         std::cout << "Loaded translations successfuly!" << std::endl;
-         std::cout << "Path: " << (QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename)).toStdString() << std::endl;
-     }
-    else
-        std::cout << "Cannot load translations." << std::endl;
-}
-
-void MainWindow::loadLanguage(const QString& rLanguage)
-{
-    if(m_currLang != rLanguage)
-    {
-        m_currLang = rLanguage;
-        QLocale locale = QLocale(m_currLang);
-        QLocale::setDefault(locale);
-        QString languageName = QLocale::languageToString(locale.language());
-        switchTranslator(m_translator, QString("TranslationTPad_%1.qm").arg(rLanguage));
-    }
-}
-
-void MainWindow::changeEvent(QEvent* event)
-{
-    if(0 != event)
-    {
-        if(event->type() == QEvent::LanguageChange)
-            ui->retranslateUi(this);
-
-        else
-            if(event->type() == QEvent::LocaleChange)
-            {
-                QString locale = QLocale::system().name();
-                locale.truncate(locale.lastIndexOf('_'));
-                loadLanguage(locale);
-            }
-    }
-
-    QMainWindow::changeEvent(event);
 }
