@@ -385,7 +385,7 @@ void MainWindow::underline()
 void MainWindow::createLanguageMenu(void)
 {
     langGroup = new QActionGroup(ui->menuLanguage);
-    //langGroup->setExclusive(true);
+    langGroup->setExclusive(true);
 
     // format systems language
     QString defaultLocale = QLocale::system().name();
