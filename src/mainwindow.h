@@ -12,7 +12,6 @@
 #include <QTextStream>
 #include <QTextCharFormat>
 #include <QMessageBox>
-#include <QTimer>
 #include <QTranslator>
 #include <QActionGroup>
 
@@ -59,8 +58,6 @@ private slots:
 
     void textChanged(); // If text change the program add a '*' in the title
 
-    void on_timeout(); // Signal and slots in real time
-
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
     void on_fontSizeBox_currentIndexChanged(int index);
@@ -80,15 +77,14 @@ private:
     QString title;
 
     QTranslator m_translator; // contains the translations for this application
-    QTranslator m_translatorQt; // contains the translations for qt
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
 
     QActionGroup* langGroup;
 
-    QFont font;
+    QTextCharFormat format;
 
-    QTimer timer;
+    QFont font;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);

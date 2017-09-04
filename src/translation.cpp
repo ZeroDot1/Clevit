@@ -63,9 +63,7 @@ void MainWindow::loadLanguage(const QString& rLanguage)
     if(m_currLang != rLanguage)
     {
         m_currLang = rLanguage;
-        QLocale locale = QLocale(m_currLang);
-        QLocale::setDefault(locale);
-        QString languageName = QLocale::languageToString(locale.language());
+        QLocale::setDefault(QLocale(m_currLang));
         switchTranslator(m_translator, QString("TranslationTPad_%1.qm").arg(rLanguage));
     }
 }
