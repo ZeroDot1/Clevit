@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -21,7 +21,7 @@
     <message>
         <location filename="../about.ui" line="59"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Credits</translation>
     </message>
 </context>
 <context>
@@ -29,37 +29,37 @@
     <message>
         <location filename="../credits.ui" line="14"/>
         <source>Credits</source>
-        <translation type="unfinished"></translation>
+        <translation>Credits</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="24"/>
         <source>Written by</source>
-        <translation type="unfinished"></translation>
+        <translation>Geschrieben von</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="36"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="42"/>
         <source>Translated by</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzt von</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="54"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="60"/>
         <source>Tested by</source>
-        <translation type="unfinished"></translation>
+        <translation>Getestet von</translation>
     </message>
     <message>
         <location filename="../credits.ui" line="72"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
 <context>
@@ -109,7 +109,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="154"/>
