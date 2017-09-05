@@ -9,6 +9,7 @@ license=('GPL3')
 arch=('x86_64')
 depends=('qt5-base' 'qt5-translations' 'qt5-graphicaleffects' 'xdg-utils' 'qt5-quickcontrols2' 'qt5-quickcontrols' 'libevent')
 makedepends=('qt5-tools' 'cmake')
+install=tpad.install
 source=("https://github.com/TigaxMT/TPad/archive/${pkgver}.tar.gz")
 md5sums=('f718fb0325768ea7198ccda730c0423f')
 
@@ -16,8 +17,7 @@ build() {
   cd $srcdir/TPad-${pkgver}
 
   cmake -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release \
-    -DCMAKE_INSTALL_LIBDIR=lib
+    -DCMAKE_BUILD_TYPE=Release
   make
 }
 
