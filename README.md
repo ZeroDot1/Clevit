@@ -1,7 +1,7 @@
 # TPad
 Tpad - A text editor written on C++ with Qt Framework
 
-![travis build](https://travis-ci.org/TigaxMT/TPad.svg?branch=master)
+![[travis build](https://travis-ci.org/TigaxMT/TPad.svg?branch=master)][https://travis-ci.org/TigaxMT/TPad]
 
 # Future features
 
