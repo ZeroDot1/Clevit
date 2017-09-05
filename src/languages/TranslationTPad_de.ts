@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -34,7 +34,7 @@
     <message>
         <location filename="../mainwindow.ui" line="55"/>
         <source>Font Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Schriftgröße</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -66,12 +66,12 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="154"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Hilfe</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mainwindow.ui" line="319"/>
         <source>Report Bugs</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler oder Ideen melden</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="30"/>
