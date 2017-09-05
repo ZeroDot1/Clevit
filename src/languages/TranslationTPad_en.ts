@@ -18,6 +18,49 @@
         <source>Close</source>
         <translation>Close</translation>
     </message>
+    <message>
+        <location filename="../about.ui" line="59"/>
+        <source>Credits</source>
+        <translation>Credits</translation>
+    </message>
+</context>
+<context>
+    <name>Credits</name>
+    <message>
+        <location filename="../credits.ui" line="14"/>
+        <source>Credits</source>
+        <translation>Credits</translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="24"/>
+        <source>Written by</source>
+        <translation>Written by</translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="36"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="42"/>
+        <source>Translated by</source>
+        <translation>Translated by</translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="54"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="60"/>
+        <source>Tested by</source>
+        <translation>Tested by</translation>
+    </message>
+    <message>
+        <location filename="../credits.ui" line="72"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation></translation>
+    </message>
 </context>
 <context>
     <name>MainWindow</name>
