@@ -22,6 +22,8 @@
 #include "about.h"
 #include "ui_about.h"
 
+#include "credits.h"
+
 About::About(QWidget *parent) :
     QDialog(parent),
     ui(new Ui::About)
@@ -39,4 +41,10 @@ About::~About()
 void About::on_closeBtn_clicked()
 {
     this->close();
+}
+void About::on_creditsBtn_clicked()
+{
+    credits = new Credits(this);
+
+    credits->show();
 }

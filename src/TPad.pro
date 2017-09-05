@@ -4,7 +4,7 @@
 #
 #-------------------------------------------------
 
-QT       += core gui
+QT       += core gui widgets
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -28,15 +28,18 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     about.cpp \
-    translation.cpp
+    translation.cpp \
+    credits.cpp
 
 HEADERS += \
         mainwindow.h \
-    about.h
+    about.h \
+    credits.h
 
 FORMS += \
         mainwindow.ui \
-    about.ui
+    about.ui \
+    credits.ui
 
 RESOURCES += \
     icons.qrc

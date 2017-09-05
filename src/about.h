@@ -22,6 +22,8 @@
 #ifndef ABOUT_H
 #define ABOUT_H
 
+#include "credits.h"
+
 #include <QDialog>
 
 namespace Ui {
@@ -40,8 +42,11 @@ public:
 private slots:
     void on_closeBtn_clicked();
 
+    void on_creditsBtn_clicked();
+
 private:
     Ui::About *ui;
+    Credits *credits;
 };
 
 #endif // ABOUT_H
