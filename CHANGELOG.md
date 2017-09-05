@@ -1,5 +1,14 @@
 # TPad CHANGELOG.md
 - - -
+### 1.2.0
+
+- Interface translated into multiple languages
+- Now the TPad can be translated into any language, just open the .ts file in qt5 linguist, translate, release and put the .qm file in the languages ​​folder
+- A variety of font types and sizes
+- Some bugs and memory leak fixed
+- Improvements on performance
+- An easy Arch Linux installation
+
 ### 1.1.3
 
 - The basic features of a Text Editor like New file , open , save , copy , cut , paste , undo , redo etc...
