@@ -345,6 +345,12 @@ void MainWindow::on_actionAbout_TPad_triggered()
     about->show();
 }
 
+void MainWindow::on_actionReport_Bugs_triggered()
+{
+    if(QDesktopServices::openUrl(QUrl("https://github.com/TigaxMT/TPad/issues")) == false)
+        QMessageBox::warning(this,"Error opening the link","TPad could not open link ");
+}
+
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
 {      
     font = f;
