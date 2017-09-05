@@ -14,6 +14,7 @@
 #include <QMessageBox>
 #include <QTranslator>
 #include <QActionGroup>
+#include <QDesktopServices>
 
 namespace Ui {
 class MainWindow;
@@ -63,6 +64,8 @@ private slots:
     void on_fontSizeBox_currentIndexChanged(int index);
 
     void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
+
+    void on_actionReport_Bugs_triggered();
 
 private:
     Ui::MainWindow *ui;
