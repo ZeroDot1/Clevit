@@ -34,7 +34,7 @@
     <message>
         <location filename="../mainwindow.ui" line="55"/>
         <source>Font Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Font Size</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="67"/>
@@ -71,7 +71,7 @@
     <message>
         <location filename="../mainwindow.ui" line="154"/>
         <source>Help</source>
-        <translation type="unfinished"></translation>
+        <translation>Help</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="161"/>
@@ -186,7 +186,7 @@
     <message>
         <location filename="../mainwindow.ui" line="319"/>
         <source>Report Bugs</source>
-        <translation type="unfinished"></translation>
+        <translation>Report Bugs</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="30"/>
