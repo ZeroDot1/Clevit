@@ -49,7 +49,7 @@ MainWindow::~MainWindow()
 
 void MainWindow::textChanged()
 {
-    isSaved = false;
+   isSaved = false;
 
     text = ui->textEdit->toPlainText();
 
@@ -72,6 +72,9 @@ bool MainWindow::fileNotChanged()
 {
     int res = QString::compare(text,originalText,Qt::CaseSensitive);
 
+    std::cout << "Text: " << text.toStdString() << std::endl;
+    std::cout << "OriginalText: " << originalText.toStdString() << std::endl;
+
     if(res == 0)
         return true;
     else
@@ -88,6 +91,7 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
         ui->textEdit->mergeCurrentCharFormat(format);
     }
 }
+
 
 void MainWindow::configFontSizeBox()
 {
@@ -207,9 +211,9 @@ void MainWindow::on_actionOpen_triggered()
     {
         text = textFile.readAll();
 
-        originalText = text;
-
         ui->textEdit->setHtml(text);
+
+        originalText = ui->textEdit->toPlainText();
 
         text.clear();
 
@@ -348,6 +352,8 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
         about->show();
     }
+    else
+        about->show();
 }
 
 void MainWindow::on_actionReport_Bugs_triggered()
