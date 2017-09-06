@@ -43,7 +43,7 @@ void About::on_closeBtn_clicked()
     this->close();
 }
 void About::on_creditsBtn_clicked()
-{
+{   
     credits = new Credits(this);
 
     credits->show();

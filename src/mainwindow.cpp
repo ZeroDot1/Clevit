@@ -25,6 +25,8 @@ MainWindow::MainWindow(QWidget *parent) :
 
     text = ui->textEdit->toPlainText();
 
+    about = NULL;
+
     isSaved = false, changedTitle = false;
 
     selFilter = tr("Text Files (*.txt)");
@@ -340,9 +342,12 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionAbout_TPad_triggered()
 {
-    About *about = new About(this);
+    if(about == NULL)
+    {
+        about = new About(this);
 
-    about->show();
+        about->show();
+    }
 }
 
 void MainWindow::on_actionReport_Bugs_triggered()

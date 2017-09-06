@@ -69,6 +69,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+    About *about;
 
     bool isSaved;
     bool changedTitle;
