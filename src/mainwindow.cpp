@@ -113,7 +113,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
-    if(text.isEmpty() == false)
+    if(fileNotChanged() == false)
     {        
         if(isSaved == false && changedTitle == true)
         {
@@ -189,6 +189,9 @@ void MainWindow::on_actionNew_File_triggered()
     text.clear();
     originalText.clear();
     ui->textEdit->clear();
+
+    ui->textEdit->setTextColor(Qt::black);
+    ui->colorBtn->setStyleSheet("background-color: black");
 
     title = QDir::currentPath();
 
@@ -390,6 +393,27 @@ void MainWindow::on_fontSizeBox_currentIndexChanged(int index)
 }
 
 
+void MainWindow::on_colorBtn_clicked()
+{
+    color = QColorDialog::getColor(Qt::black,this,"Select a Font Color");
+
+    if(color.isValid())
+    {
+        ui->textEdit->setTextColor(color);
+
+        colorBtn_str = QString("background-color: %1").arg(color.name());
+
+        ui->colorBtn->setStyleSheet(colorBtn_str);
+    }
+    else
+    {
+        ui->textEdit->setTextColor(Qt::black);
+        ui->colorBtn->setStyleSheet("background-color: black");
+    }
+
+}
+
+
 void MainWindow::bold()
 {
     if(ui->boldBtn->isChecked() == true)
@@ -436,24 +460,4 @@ void MainWindow::underline()
     }
 
     mergeFormatOnWordOrSelection(format);
-}
-
-void MainWindow::on_colorBtn_clicked()
-{
-    color = QColorDialog::getColor(Qt::black,this,"Select a Font Color");
-
-    if(color.isValid())
-    {
-        ui->textEdit->setTextColor(color);
-
-        colorBtn_str = QString("background-color: %1").arg(color.name());
-
-        ui->colorBtn->setStyleSheet(colorBtn_str);
-    }
-    else
-    {
-        ui->textEdit->setTextColor(Qt::black);
-        ui->colorBtn->setStyleSheet("background-color: black");
-    }
-
 }
