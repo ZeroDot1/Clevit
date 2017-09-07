@@ -29,7 +29,8 @@ SOURCES += \
         mainwindow.cpp \
     about.cpp \
     translation.cpp \
-    credits.cpp
+    credits.cpp \
+    save_load_files.cpp
 
 HEADERS += \
         mainwindow.h \

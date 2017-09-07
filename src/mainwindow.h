@@ -60,6 +60,8 @@ private slots:
 
     void textChanged(); // If text change the program add a '*' in the title
 
+    bool htmlFileVerifier();
+
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
     void on_fontSizeBox_currentIndexChanged(int index);
@@ -85,6 +87,7 @@ private:
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
+    QString tmp; // A auxilar qstring to verify if a file is or not a Html file
 
     QTranslator m_translator; // contains the translations for this application
 
