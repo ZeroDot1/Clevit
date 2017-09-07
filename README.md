@@ -5,9 +5,11 @@ Tpad - A text editor written on C++ with Qt Framework
 
 # Future features
 
-* Fonts , color , align options etc ...
-
 * A search bar to find a specific word
+
+* Line Number
+
+* Real-time translation of text being written
 
 ### Maybe...
 
