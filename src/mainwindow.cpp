@@ -22,6 +22,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->fontComboBox->setCurrentText("Monospace");
 
     ui->textEdit->setFont(font);
+    ui->textEdit->setTextColor(Qt::black);
+    ui->colorBtn->setStyleSheet("background-color: black");
 
     text = ui->textEdit->toPlainText();
 
@@ -71,9 +73,6 @@ void MainWindow::textChanged()
 bool MainWindow::fileNotChanged()
 {
     int res = QString::compare(text,originalText,Qt::CaseSensitive);
-
-    std::cout << "Text: " << text.toStdString() << std::endl;
-    std::cout << "OriginalText: " << originalText.toStdString() << std::endl;
 
     if(res == 0)
         return true;
@@ -437,4 +436,24 @@ void MainWindow::underline()
     }
 
     mergeFormatOnWordOrSelection(format);
+}
+
+void MainWindow::on_colorBtn_clicked()
+{
+    color = QColorDialog::getColor(Qt::black,this,"Select a Font Color");
+
+    if(color.isValid())
+    {
+        ui->textEdit->setTextColor(color);
+
+        colorBtn_str = QString("background-color: %1").arg(color.name());
+
+        ui->colorBtn->setStyleSheet(colorBtn_str);
+    }
+    else
+    {
+        ui->textEdit->setTextColor(Qt::black);
+        ui->colorBtn->setStyleSheet("background-color: black");
+    }
+
 }
