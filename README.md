@@ -1,6 +1,6 @@
-# TPad
-Tpad - A text editor written on C++ with Qt Framework
-
+# ![img](http://basic1.moy.su/Fotos/TPad-New-Icon.png)[TPad](https://goo.gl/LAVDSm "TPad Offical Site")
+A text editor written on C++ with Qt Framework
+- - -
 [![travis build](https://travis-ci.org/TigaxMT/TPad.svg?branch=master)](https://travis-ci.org/TigaxMT/TPad)
 
 # Future features
@@ -45,8 +45,7 @@ You need install this dependencies before install TPad
 
 # Translation
 
-* If you want to help translate the TPad, it's in the zanata: https://translate.zanata.org/project/view/Tpad?dswid=-7688
-* Please read the translation guide before translating: http://docs.zanata.org/en/release/user-guide/translator-guide/
+* Now the TPad can be translated into any language, just open the .ts file in qt5 linguist, translate, release and put the .qm file in the languages ​​folder
 
 # Contact
 
