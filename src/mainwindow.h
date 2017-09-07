@@ -15,6 +15,7 @@
 #include <QTranslator>
 #include <QActionGroup>
 #include <QDesktopServices>
+#include <QColorDialog>
 
 namespace Ui {
 class MainWindow;
@@ -67,6 +68,8 @@ private slots:
 
     void on_actionReport_Bugs_triggered();
 
+    void on_colorBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -79,14 +82,17 @@ private:
     QString originalText;
     QString selFilter; // Text file extension filter
     QString title;
-
-    QTranslator m_translator; // contains the translations for this application
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
+    QString colorBtn_str; // convert QColor in QString to create a stylesheet
+
+    QTranslator m_translator; // contains the translations for this application
 
     QActionGroup* langGroup;
 
     QTextCharFormat format;
+
+    QColor color;
 
     QFont font;
 
