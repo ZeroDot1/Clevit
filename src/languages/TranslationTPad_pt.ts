@@ -236,26 +236,34 @@
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="339"/>
+        <location filename="../mainwindow.ui" line="343"/>
         <source>Report Bugs</source>
         <translation>Reportar bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="34"/>
         <source>Text Files (*.txt)</source>
-        <translation>Ficheiros de texto (*.txt)</translation>
+        <translation type="vanished">Ficheiros de texto (*.txt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="120"/>
+        <location filename="../mainwindow.cpp" line="34"/>
+        <source>Text Files (*.txt);; Html File(*.html)</source>
+        <translation>Ficheiros de texto (*.txt);; Ficheiros Html(*.html)</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="138"/>
         <source>Do you want to save the text file?</source>
         <translation>Deseja guardar o ficheiro de texto?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="206"/>
-        <location filename="../mainwindow.cpp" line="244"/>
-        <location filename="../mainwindow.cpp" line="300"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
-        <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt)</translation>
+        <translation type="vanished">Todos os ficheiros (*.*);;Ficheiros de texto (*.txt)</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="25"/>
+        <location filename="../save_load_files.cpp" line="66"/>
+        <location filename="../save_load_files.cpp" line="126"/>
+        <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
+        <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html)</translation>
     </message>
 </context>
 </TS>
