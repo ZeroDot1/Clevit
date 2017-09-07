@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>416</width>
+    <width>428</width>
     <height>378</height>
    </rect>
   </property>
@@ -145,7 +145,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>416</width>
+     <width>428</width>
      <height>20</height>
     </rect>
    </property>
@@ -335,6 +335,10 @@
    </property>
   </action>
   <action name="actionReport_Bugs">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Bug.png</normaloff>:/icons/icons/Bug.png</iconset>
+   </property>
    <property name="text">
     <string>Report Bugs</string>
    </property>

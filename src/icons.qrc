@@ -11,9 +11,11 @@
         <file>icons/Save.png</file>
         <file>icons/Save as.png</file>
         <file>icons/Undo.png</file>
-        <file>icons/About.png</file>
         <file>icons/Underline.png</file>
         <file>icons/Italic.png</file>
         <file>icons/Bold.png</file>
+        <file>icons/Language.png</file>
+        <file>icons/Bug.png</file>
+        <file>icons/About.png</file>
     </qresource>
 </RCC>
