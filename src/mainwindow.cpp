@@ -404,6 +404,9 @@ void MainWindow::on_colorBtn_clicked()
         colorBtn_str = QString("background-color: %1").arg(color.name());
 
         ui->colorBtn->setStyleSheet(colorBtn_str);
+
+        std::cout << "Color Name: "+colorBtn_str.toStdString() << std::endl;
+        std::cout << "Style Sheet: "+ui->colorBtn->styleSheet().toStdString() << std::endl;
     }
     else
     {
