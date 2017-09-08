@@ -7,6 +7,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    ui->htmlSourceCheckBox->setVisible(false);
+
     createLanguageMenu();
 
     configFontSizeBox();
@@ -322,4 +324,22 @@ void MainWindow::underline()
     }
 
     mergeFormatOnWordOrSelection(format);
+}
+void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
+{
+    Q_UNUSED(arg1);
+
+
+    if(ui->htmlSourceCheckBox->isChecked() == true)
+    {
+        text = ui->textEdit->toPlainText();
+        ui->textEdit->setHtml(text);
+    }
+    else
+    {
+        text = ui->textEdit->toHtml();
+        ui->textEdit->setPlainText(text);
+    }
+
+    text.clear();
 }

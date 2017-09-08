@@ -72,6 +72,8 @@ private slots:
 
     void on_colorBtn_clicked();
 
+    void on_htmlSourceCheckBox_stateChanged(int arg1);
+
 private:
     Ui::MainWindow *ui;
     About *about;
