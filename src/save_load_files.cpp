@@ -23,6 +23,8 @@ void MainWindow::on_actionNew_File_triggered()
     ui->textEdit->setTextColor(Qt::black);
     ui->colorBtn->setStyleSheet("background-color: black");
 
+    ui->htmlSourceCheckBox->setVisible(false);
+
     title = QDir::currentPath();
 
     this->setWindowTitle(title);
@@ -45,11 +47,17 @@ void MainWindow::on_actionOpen_triggered()
         text = textFile.readAll();
 
         if(htmlFileVerifier() == true)
-            ui->textEdit->setHtml(text);
+        {
+            ui->textEdit->setPlainText(text);
+            ui->htmlSourceCheckBox->setVisible(true);
+            originalText = ui->textEdit->toPlainText();
+        }
         else
+        {
             ui->textEdit->setHtml(text);
-
-        originalText = ui->textEdit->toPlainText();
+            ui->htmlSourceCheckBox->setVisible(false);
+            originalText = ui->textEdit->toPlainText();
+        }
 
         text.clear();
 
@@ -87,7 +95,7 @@ void MainWindow::on_actionSave_triggered()
         {
             text.clear();
 
-            if(htmlFileVerifier() == true)
+            if(htmlFileVerifier() == true && ui->htmlSourceCheckBox->isChecked() == true)
                 text = ui->textEdit->toHtml();
             else
                 text = ui->textEdit->toPlainText(); // You need to copy the text in plaintext to compare with the originaltext
@@ -96,10 +104,7 @@ void MainWindow::on_actionSave_triggered()
 
             text.clear();
 
-            if(htmlFileVerifier() == true)
-                text = ui->textEdit->toHtml();
-            else
-                text = ui->textEdit->toHtml();
+            text = ui->textEdit->toHtml();
 
             QTextStream textAppend(&textFile);
 
@@ -157,10 +162,7 @@ void MainWindow::on_actionSave_as_triggered()
 
         text.clear();
 
-        if(htmlFileVerifier() == true)
-            text = ui->textEdit->toPlainText();
-        else
-            text = ui->textEdit->toHtml();
+        text = ui->textEdit->toHtml();
 
         QTextStream textAppend(&textFile);
 

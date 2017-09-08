@@ -136,6 +136,13 @@
      </widget>
     </item>
     <item>
+     <widget class="QCheckBox" name="htmlSourceCheckBox">
+      <property name="text">
+       <string>View Html</string>
+      </property>
+     </widget>
+    </item>
+    <item>
      <widget class="QTextEdit" name="textEdit"/>
     </item>
    </layout>
