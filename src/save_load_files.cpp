@@ -45,7 +45,7 @@ void MainWindow::on_actionOpen_triggered()
         text = textFile.readAll();
 
         if(htmlFileVerifier() == true)
-            ui->textEdit->setPlainText(text);
+            ui->textEdit->setHtml(text);
         else
             ui->textEdit->setHtml(text);
 
@@ -97,7 +97,7 @@ void MainWindow::on_actionSave_triggered()
             text.clear();
 
             if(htmlFileVerifier() == true)
-                text = ui->textEdit->toPlainText();
+                text = ui->textEdit->toHtml();
             else
                 text = ui->textEdit->toHtml();
 
