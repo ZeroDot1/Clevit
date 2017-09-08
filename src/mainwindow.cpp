@@ -31,7 +31,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     isSaved = false, changedTitle = false;
 
-    selFilter = tr("Text Files (*.txt)");
+    selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 
     title = QDir::currentPath();
 
@@ -79,6 +79,31 @@ bool MainWindow::fileNotChanged()
     else
         return false;
 
+}
+
+bool MainWindow::htmlFileVerifier()
+{
+    tmp.clear();
+
+    for(int i = 0; i < path.length();i++)
+    {
+        if(i == 0)
+            ;
+        else
+            if(i == path.lastIndexOf('.'))
+                for(int j = i+1;j < path.length();j++)
+                    tmp += path[j];
+    }
+
+    if(QString::compare(tmp,"html") == 0)
+    {
+        tmp.clear();
+
+        return true;
+    }
+
+    tmp.clear();
+    return false;
 }
 
 void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
@@ -181,169 +206,6 @@ void MainWindow::on_actionExit_triggered()
     // Quit
 
     QApplication::quit();
-}
-
-void MainWindow::on_actionNew_File_triggered()
-{
-    path.clear();
-    text.clear();
-    originalText.clear();
-    ui->textEdit->clear();
-
-    ui->textEdit->setTextColor(Qt::black);
-    ui->colorBtn->setStyleSheet("background-color: black");
-
-    title = QDir::currentPath();
-
-    this->setWindowTitle(title);
-
-}
-
-void MainWindow::on_actionOpen_triggered()
-{
-    // Save the path of the text file
-
-    path = QFileDialog::getOpenFileName(this,"Select a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
-
-    QFile textFile(path);
-
-    // Open the text file to read/write
-
-    if(textFile.open(QIODevice::ReadWrite))
-    {
-        text = textFile.readAll();
-
-        ui->textEdit->setHtml(text);
-
-        originalText = ui->textEdit->toPlainText();
-
-        text.clear();
-
-        changedTitle = false;
-        title = path;
-
-    }
-    else
-    {
-        QMessageBox::warning(this,"Open File Error",textFile.errorString());
-
-        title = QDir::currentPath();
-    }
-
-    textFile.close();
-
-    this->setWindowTitle(title);
-
-    isSaved = false;
-}
-
-void MainWindow::on_actionSave_triggered()
-{
-
-    if(path.isEmpty())
-        path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
-
-    if(path.isEmpty() == false)
-    {
-        QFile textFile(path);
-
-        // Open the text File to Write
-
-        if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
-        {
-            text.clear();
-
-            text = ui->textEdit->toPlainText(); // You need to copy the text in plaintext to compare with the originaltext
-
-            originalText = text;
-
-            text.clear();
-
-            text = ui->textEdit->toHtml();
-
-            QTextStream textAppend(&textFile);
-
-            textAppend << text;
-
-            title = path;
-
-            text.clear();
-
-            isSaved = true;
-            changedTitle = false;
-        }
-
-        else
-        {
-            QMessageBox::warning(this,"Save File Error",textFile.errorString());
-
-            textChanged();
-
-            if(path.isEmpty())
-                title = QDir::currentPath();
-            else
-                title = path;
-        }
-
-        textFile.close();
-
-        this->setWindowTitle(title);
-    }
-    else
-        QMessageBox::warning(this,"Save File Error","Save canceled");
-}
-
-void MainWindow::on_actionSave_as_triggered()
-{
-    //QString tmp = path; // In case of the user cancel the saving we save the last path
-
-    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
-
-    if(path.isEmpty())
-        return;
-
-
-    QFile textFile(path);
-
-    // Open the text File to Write
-
-    if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
-    {
-        text.clear();
-
-        text = ui->textEdit->toPlainText(); // You need to copy the text in plaintext to compare with the originaltext
-
-        originalText = text;
-
-        text.clear();
-
-        text = ui->textEdit->toHtml();
-
-        QTextStream textAppend(&textFile);
-
-        textAppend << text;
-
-        title = path;
-
-        text.clear();
-
-        isSaved = true;
-        changedTitle = false;
-    }
-    else
-    {
-        QMessageBox::warning(this,"Open File Error",textFile.errorString());
-
-        if(path.isEmpty())
-            title = QDir::currentPath();
-        else
-            title = path;
-    }
-
-    textFile.close();
-
-    this->setWindowTitle(title);
-
 }
 
 void MainWindow::on_actionAbout_TPad_triggered()
