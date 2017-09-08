@@ -83,19 +83,26 @@ bool MainWindow::fileNotChanged()
 
 bool MainWindow::htmlFileVerifier()
 {
+    tmp.clear();
+
     for(int i = 0; i < path.length();i++)
     {
         if(i == 0)
             ;
         else
-            if(path[i-1] == '.')
-                for(int j = i;j < path.length();j++)
+            if(i == path.lastIndexOf('.'))
+                for(int j = i+1;j < path.length();j++)
                     tmp += path[j];
     }
 
     if(QString::compare(tmp,"html") == 0)
-        return true;
+    {
+        tmp.clear();
 
+        return true;
+    }
+
+    tmp.clear();
     return false;
 }
 

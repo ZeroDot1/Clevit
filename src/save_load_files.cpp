@@ -11,6 +11,18 @@ void MainWindow::on_actionNew_File_triggered()
     ui->textEdit->setTextColor(Qt::black);
     ui->colorBtn->setStyleSheet("background-color: black");
 
+    font.setStyleHint(QFont::Monospace);
+    font.setStyleName("Monospace");
+    font.setPixelSize(12);
+    ui->fontSizeBox->setCurrentText("12");
+
+    ui->fontComboBox->setFont(font);
+    ui->fontComboBox->setCurrentText("Monospace");
+
+    ui->textEdit->setFont(font);
+    ui->textEdit->setTextColor(Qt::black);
+    ui->colorBtn->setStyleSheet("background-color: black");
+
     title = QDir::currentPath();
 
     this->setWindowTitle(title);
@@ -127,7 +139,6 @@ void MainWindow::on_actionSave_as_triggered()
 
     if(path.isEmpty())
         return;
-
 
     QFile textFile(path);
 
