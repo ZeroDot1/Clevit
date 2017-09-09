@@ -73,6 +73,8 @@ void MainWindow::on_actionOpen_triggered()
 
 
         text.clear();
+        data.clear();
+        codec = nullptr;
 
         changedTitle = false;
         title = path;
@@ -202,4 +204,31 @@ void MainWindow::on_actionSave_as_triggered()
 
     this->setWindowTitle(title);
 
+}
+
+void MainWindow::on_actionExport_to_PDF_triggered()
+{
+    if(path.isEmpty() == true)
+        path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+    if(path.isEmpty() == true)
+        return;
+    if (QFileInfo(path).suffix().isEmpty())
+    {
+        path.append(".pdf");
+    }
+    else
+    {
+        path.truncate(path.lastIndexOf('.'));
+        path.append(".pdf");
+    }
+
+    printer.setOutputFormat(QPrinter::PdfFormat);
+    printer.setPageSize(QPrinter::Letter);
+    printer.setColorMode(QPrinter::GrayScale);
+    printer.setFullPage(true);
+    printer.setResolution(96);
+    printer.setPageMargins(1.0, 1.0, 1.0, 1.0, QPrinter::Inch);
+    printer.setOutputFileName(path);
+
+    ui->textEdit->document()->print(&printer);
 }
