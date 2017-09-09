@@ -208,8 +208,8 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_PDF_triggered()
 {
-    if(path.isEmpty() == true)
-        path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+
     if(path.isEmpty() == true)
         return;
     if (QFileInfo(path).suffix().isEmpty())
