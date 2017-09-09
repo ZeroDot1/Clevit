@@ -44,7 +44,11 @@ void MainWindow::on_actionOpen_triggered()
 
     if(textFile.open(QIODevice::ReadWrite))
     {
-        text = textFile.readAll();
+        data = textFile.readAll();
+
+        codec = Qt::codecForHtml(data);
+
+        text = codec->toUnicode(data);
 
         if(htmlFileVerifier() == true)
         {
@@ -53,11 +57,20 @@ void MainWindow::on_actionOpen_triggered()
             originalText = ui->textEdit->toPlainText();
         }
         else
-        {
-            ui->textEdit->setHtml(text);
-            ui->htmlSourceCheckBox->setVisible(false);
-            originalText = ui->textEdit->toPlainText();
-        }
+            if(Qt::mightBeRichText(text) == true)
+            {
+                ui->textEdit->setHtml(text);
+                ui->htmlSourceCheckBox->setVisible(false);
+                originalText = ui->textEdit->toPlainText();
+            }
+            else
+            {
+                text = QString::fromLocal8Bit(data);
+                ui->textEdit->setPlainText(text);
+                ui->htmlSourceCheckBox->setVisible(false);
+                originalText = ui->textEdit->toPlainText();
+            }
+
 
         text.clear();
 

@@ -16,6 +16,7 @@
 #include <QActionGroup>
 #include <QDesktopServices>
 #include <QColorDialog>
+#include <QTextCodec>
 
 namespace Ui {
 class MainWindow;
@@ -97,6 +98,9 @@ private:
 
     QTextCharFormat format;
 
+    QByteArray data;
+
+    QTextCodec *codec;
     QColor color;
 
     QFont font;
