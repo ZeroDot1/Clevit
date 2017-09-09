@@ -16,6 +16,8 @@
 #include <QActionGroup>
 #include <QDesktopServices>
 #include <QColorDialog>
+#include <QTextCodec>
+#include <QPrinter>
 
 namespace Ui {
 class MainWindow;
@@ -74,6 +76,8 @@ private slots:
 
     void on_htmlSourceCheckBox_stateChanged(int arg1);
 
+    void on_actionExport_to_PDF_triggered();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -97,7 +101,13 @@ private:
 
     QTextCharFormat format;
 
+    QByteArray data;
+
+    QTextCodec *codec;
+
     QColor color;
+
+    QPrinter printer;
 
     QFont font;
 
