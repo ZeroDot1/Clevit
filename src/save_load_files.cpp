@@ -224,7 +224,7 @@ void MainWindow::on_actionExport_to_PDF_triggered()
 
     printer.setOutputFormat(QPrinter::PdfFormat);
     printer.setPageSize(QPrinter::Letter);
-    printer.setColorMode(QPrinter::GrayScale);
+    printer.setColorMode(QPrinter::Color);
     printer.setFullPage(true);
     printer.setResolution(96);
     printer.setPageMargins(1.0, 1.0, 1.0, 1.0, QPrinter::Inch);
