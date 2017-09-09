@@ -22,25 +22,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-TRANSLATIONS = languages/TranslationTPad_en.ts  languages/TranslationTPad_de.ts languages/TranslationTPad_pt.ts
+TRANSLATIONS = src/languages/TranslationTPad_en.ts  src/languages/TranslationTPad_de.ts src/languages/TranslationTPad_pt.ts
 
 SOURCES += \
-        main.cpp \
-        mainwindow.cpp \
-    about.cpp \
-    translation.cpp \
-    credits.cpp \
-    save_load_files.cpp
+        src/main.cpp \
+        src/mainwindow.cpp \
+    src/about.cpp \
+    src/translation.cpp \
+    src/credits.cpp \
+    src/save_load_files.cpp
 
 HEADERS += \
-        mainwindow.h \
-    about.h \
-    credits.h
+        src/mainwindow.h \
+    src/about.h \
+    src/credits.h
 
 FORMS += \
-        mainwindow.ui \
-    about.ui \
-    credits.ui
+        src/mainwindow.ui \
+    src/about.ui \
+    src/credits.ui
 
 RESOURCES += \
-    icons.qrc
+    src/icons.qrc

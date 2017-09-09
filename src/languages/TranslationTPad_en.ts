@@ -266,7 +266,7 @@
         <translation>Report Bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="356"/>
+        <location filename="../mainwindow.ui" line="360"/>
         <source>Export to PDF...</source>
         <translation>Export to PDF...</translation>
     </message>
@@ -292,9 +292,13 @@
         <location filename="../save_load_files.cpp" line="39"/>
         <location filename="../save_load_files.cpp" line="101"/>
         <location filename="../save_load_files.cpp" line="158"/>
-        <location filename="../save_load_files.cpp" line="211"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="211"/>
+        <source>All Files (*.*);;Pdf Files (*.pdf)</source>
+        <translation>All Files (*.*);;Pdf Files (*.pdf)</translation>
     </message>
 </context>
 </TS>

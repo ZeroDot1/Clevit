@@ -17,5 +17,6 @@
         <file>icons/Language.png</file>
         <file>icons/Bug.png</file>
         <file>icons/About.png</file>
+        <file>icons/pdf.png</file>
     </qresource>
 </RCC>
