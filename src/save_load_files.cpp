@@ -274,9 +274,9 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 {
-    int res = QMessageBox::question(this,"Formatting TextFile export","When exporting the formatted text file, you can only open it with TPad "
+    QMessageBox::StandardButton res = QMessageBox::question(this,"Formatting TextFile export",tr("When exporting the formatted text file, you can only open it with TPad "
                                                                "\nor other software that can read html code. "
-                                                               "\nAre you sure you want to continue?\n",QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+                                                               "\nAre you sure you want to continue?\n"),QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
     if(res == QMessageBox::No)
         return;

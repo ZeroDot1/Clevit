@@ -89,6 +89,7 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
     if (cursor.hasSelection() == true)
     {
         cursor.mergeCharFormat(format);
+
         ui->textEdit->mergeCurrentCharFormat(format);
     }
 }
@@ -210,6 +211,13 @@ void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
     font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
 
     format.setFont(font);
+
+    if(ui->boldBtn->isChecked() == true)
+        format.setFontWeight(QFont::Bold);
+    if(ui->italicBtn->isChecked() == true)
+        format.setFontItalic(true);
+    if(ui->underlineBtn->isChecked() == true)
+        format.setFontUnderline(true);
 
     ui->textEdit->mergeCurrentCharFormat(format);
 
