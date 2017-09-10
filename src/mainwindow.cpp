@@ -1,3 +1,4 @@
+
 /************************************************************************************************************
 *    											                                                            *
 *    TPad -  A text editor written on C++ with Qt Framework                                                 *
@@ -344,13 +345,24 @@ void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
     if(ui->htmlSourceCheckBox->isChecked() == true)
     {
         text = ui->textEdit->toPlainText();
+
+        tmp = text;
+
         ui->textEdit->setHtml(text);
     }
     else
     {
-        text = ui->textEdit->toHtml();
+        text = tmp;
+
+        data = text.toUtf8();
+
+        codec = Qt::codecForHtml(data);
+
+        text = codec->toUnicode(data);
+
         ui->textEdit->setPlainText(text);
     }
 
     text.clear();
+    tmp.clear();
 }

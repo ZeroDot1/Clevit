@@ -1,3 +1,4 @@
+
 /************************************************************************************************************
 *    											                                                            *
 *    TPad -  A text editor written on C++ with Qt Framework                                                 *
@@ -121,8 +122,7 @@ private:
     QString m_currLang; // contains the currently loaded language
     QString m_langPath; // Path of language files. This is always fixed to /languages.
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
-    QString tmp; // A auxilar qstring to verify if a file is or not a Html file
-
+    QString tmp;
     QTranslator m_translator; // contains the translations for this application
 
     QActionGroup* langGroup;

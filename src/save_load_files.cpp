@@ -1,3 +1,4 @@
+
 /************************************************************************************************************
 *    											                                                            *
 *    TPad -  A text editor written on C++ with Qt Framework                                                 *
@@ -157,7 +158,11 @@ void MainWindow::on_actionSave_triggered()
             else
                 if(htmlFileVerifier() == true)
                 {
-                    text = ui->textEdit->toHtml();
+                    data = ui->textEdit->toPlainText().toUtf8();
+
+                    codec = Qt::codecForHtml(data);
+
+                    text = codec->toUnicode(data);
 
                     QTextStream textAppend(&textFile);
 
@@ -244,7 +249,11 @@ void MainWindow::on_actionSave_as_triggered()
         else
             if(htmlFileVerifier() == true)
             {
-                text = ui->textEdit->toHtml();
+                data = ui->textEdit->toPlainText().toUtf8();
+
+                codec = Qt::codecForHtml(data);
+
+                text = codec->toUnicode(data);
 
                 QTextStream textAppend(&textFile);
 
