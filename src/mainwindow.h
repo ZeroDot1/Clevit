@@ -18,6 +18,7 @@
 #include <QColorDialog>
 #include <QTextCodec>
 #include <QPrinter>
+#include <QTextDocumentWriter>
 
 namespace Ui {
 class MainWindow;
@@ -64,6 +65,10 @@ private slots:
 
     bool htmlFileVerifier();
 
+    bool textFileVerifier();
+
+    bool odfFileVerifier();
+
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
     void on_fontSizeBox_currentIndexChanged(int index);
@@ -77,6 +82,8 @@ private slots:
     void on_htmlSourceCheckBox_stateChanged(int arg1);
 
     void on_actionExport_to_PDF_triggered();
+
+    void on_actionExport_to_Formatting_Txt_File_triggered();
 
 private:
     Ui::MainWindow *ui;
@@ -108,6 +115,8 @@ private:
     QColor color;
 
     QPrinter printer;
+
+    QTextDocumentWriter writer;
 
     QFont font;
 
