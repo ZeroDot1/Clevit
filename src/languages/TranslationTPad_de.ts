@@ -253,7 +253,7 @@
     <message>
         <location filename="../mainwindow.ui" line="372"/>
         <source>Export to Formatting Txt File</source>
-        <translation type="unfinished"></translation>
+        <translation>Exportieren als Formatierte Txt Datei</translation>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
