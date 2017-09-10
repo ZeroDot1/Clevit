@@ -15,14 +15,11 @@ md5sums=('f718fb0325768ea7198ccda730c0423f')
 
 build() {
   cd $srcdir/TPad-${pkgver}
-
-  cmake -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release
+  qmake-qt5 PREFIX='/usr' LIBDIR='/usr/lib' TPad.pro
   make
 }
 
 package() {
   cd $srcdir/TPad-${pkgver}
-
   make DESTDIR=${pkgdir} install
 }
