@@ -1,3 +1,24 @@
+/************************************************************************************************************
+*    											                                                            *
+*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*											                                                                *
+*    Copyright (C) 2017  Tiago Martins                        				                                *
+*											                                                                *
+*    This program is free software: you can redistribute it and/or modify		                            *
+*    it under the terms of the GNU General Public License as published by                                   *
+*    the Free Software Foundation, either version 3 of the License, or                                      *
+*    (at your option) any later version. 					                                                *
+*											                                                                *
+*    This program is distributed in the hope that it will be useful,			                            *
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of			                                *
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			                                *
+*    GNU General Public License for more details.					                                        *
+*											                                                                *
+*    You should have received a copy of the GNU General Public License			                            *
+*    along with this program. If not, see <http://www.gnu.org/licenses/>.                                   *
+*											                                                                *
+*************************************************************************************************************/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -89,6 +110,7 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
     if (cursor.hasSelection() == true)
     {
         cursor.mergeCharFormat(format);
+
         ui->textEdit->mergeCurrentCharFormat(format);
     }
 }
@@ -116,7 +138,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
     if(fileNotChanged() == false)
-    {        
+    {
         if(isSaved == false && changedTitle == true)
         {
             QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
@@ -204,12 +226,19 @@ void MainWindow::on_actionReport_Bugs_triggered()
 }
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
-{      
+{
     font = f;
 
     font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
 
     format.setFont(font);
+
+    if(ui->boldBtn->isChecked() == true)
+        format.setFontWeight(QFont::Bold);
+    if(ui->italicBtn->isChecked() == true)
+        format.setFontItalic(true);
+    if(ui->underlineBtn->isChecked() == true)
+        format.setFontUnderline(true);
 
     ui->textEdit->mergeCurrentCharFormat(format);
 
@@ -225,6 +254,13 @@ void MainWindow::on_fontSizeBox_currentIndexChanged(int index)
     font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
 
     format.setFont(font);
+
+    if(ui->boldBtn->isChecked() == true)
+        format.setFontWeight(QFont::Bold);
+    if(ui->italicBtn->isChecked() == true)
+        format.setFontItalic(true);
+    if(ui->underlineBtn->isChecked() == true)
+        format.setFontUnderline(true);
 
     ui->textEdit->mergeCurrentCharFormat(format);
 
@@ -318,5 +354,3 @@ void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
 
     text.clear();
 }
-
-

@@ -1,3 +1,24 @@
+/************************************************************************************************************
+*    											                                                            *
+*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*											                                                                *
+*    Copyright (C) 2017  Tiago Martins                        				                                *
+*											                                                                *
+*    This program is free software: you can redistribute it and/or modify		                            *
+*    it under the terms of the GNU General Public License as published by                                   *
+*    the Free Software Foundation, either version 3 of the License, or                                      *
+*    (at your option) any later version. 					                                                *
+*											                                                                *
+*    This program is distributed in the hope that it will be useful,			                            *
+*    but WITHOUT ANY WARRANTY; without even the implied warranty of			                                *
+*    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the			                                *
+*    GNU General Public License for more details.					                                        *
+*											                                                                *
+*    You should have received a copy of the GNU General Public License			                            *
+*    along with this program. If not, see <http://www.gnu.org/licenses/>.                                   *
+*											                                                                *
+*************************************************************************************************************/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 
@@ -106,7 +127,7 @@ void MainWindow::on_actionSave_triggered()
 {
 
     if(path.isEmpty())
-        path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+        path = QFileDialog::getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
     if(path.isEmpty() == false)
     {
@@ -192,7 +213,7 @@ void MainWindow::on_actionSave_triggered()
 
 void MainWindow::on_actionSave_as_triggered()
 {
-    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)"),&selFilter);
 
     if(path.isEmpty())
         return;
@@ -274,9 +295,9 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 {
-    int res = QMessageBox::question(this,"Formatting TextFile export","When exporting the formatted text file, you can only open it with TPad "
+    QMessageBox::StandardButton res = QMessageBox::question(this,"Formatting TextFile export",tr("When exporting the formatted text file, you can only open it with TPad "
                                                                "\nor other software that can read html code. "
-                                                               "\nAre you sure you want to continue?\n",QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+                                                               "\nAre you sure you want to continue?\n"),QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
     if(res == QMessageBox::No)
         return;
