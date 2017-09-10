@@ -18,5 +18,6 @@
         <file>icons/Bug.png</file>
         <file>icons/About.png</file>
         <file>icons/pdf.png</file>
+        <file>icons/Textcolor.png</file>
     </qresource>
 </RCC>

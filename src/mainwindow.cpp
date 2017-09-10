@@ -83,31 +83,6 @@ bool MainWindow::fileNotChanged()
 
 }
 
-bool MainWindow::htmlFileVerifier()
-{
-    tmp.clear();
-
-    for(int i = 0; i < path.length();i++)
-    {
-        if(i == 0)
-            ;
-        else
-            if(i == path.lastIndexOf('.'))
-                for(int j = i+1;j < path.length();j++)
-                    tmp += path[j];
-    }
-
-    if(QString::compare(tmp,"html") == 0)
-    {
-        tmp.clear();
-
-        return true;
-    }
-
-    tmp.clear();
-    return false;
-}
-
 void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
 {
     QTextCursor cursor = ui->textEdit->textCursor();
@@ -343,3 +318,5 @@ void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
 
     text.clear();
 }
+
+

@@ -64,12 +64,20 @@ void MainWindow::on_actionOpen_triggered()
                 originalText = ui->textEdit->toPlainText();
             }
             else
-            {
-                text = QString::fromLocal8Bit(data);
-                ui->textEdit->setPlainText(text);
-                ui->htmlSourceCheckBox->setVisible(false);
-                originalText = ui->textEdit->toPlainText();
-            }
+                if(textFileVerifier() == true)
+                {
+                    text = QString::fromLocal8Bit(data);
+                    ui->textEdit->setPlainText(text);
+                    ui->htmlSourceCheckBox->setVisible(false);
+                    originalText = ui->textEdit->toPlainText();
+                }
+                else
+                {
+                    text = QString::fromLocal8Bit(data);
+                    ui->textEdit->setPlainText(text);
+                    ui->htmlSourceCheckBox->setVisible(false);
+                    originalText = ui->textEdit->toPlainText();
+                }
 
 
         text.clear();
@@ -119,11 +127,40 @@ void MainWindow::on_actionSave_triggered()
 
             text.clear();
 
-            text = ui->textEdit->toHtml();
+            if(odfFileVerifier() == true)
+            {
+                writer.setFileName(path);
+                writer.setFormat("odf");
+                writer.write(ui->textEdit->document());
+            }
+            else
+                if(htmlFileVerifier() == true)
+                {
+                    text = ui->textEdit->toHtml();
 
-            QTextStream textAppend(&textFile);
+                    QTextStream textAppend(&textFile);
 
-            textAppend << text;
+                    textAppend << text;
+                }
+                else
+                    if(QString::compare(QFileInfo(path).suffix(),"html.txt") == 0)
+                    {
+                        text = ui->textEdit->toHtml();
+                        ui->htmlSourceCheckBox->setVisible(false);
+                        originalText = ui->textEdit->toPlainText();
+
+                        QTextStream textAppend(&textFile);
+
+                        textAppend << text;
+                    }
+                    else
+                    {
+                        text = ui->textEdit->toPlainText();
+
+                        QTextStream textAppend(&textFile);
+
+                        textAppend << text;
+                    }
 
             title = path;
 
@@ -177,11 +214,40 @@ void MainWindow::on_actionSave_as_triggered()
 
         text.clear();
 
-        text = ui->textEdit->toHtml();
+        if(odfFileVerifier() == true)
+        {
+            writer.setFileName(path);
+            writer.setFormat("odf");
+            writer.write(ui->textEdit->document());
+        }
+        else
+            if(htmlFileVerifier() == true)
+            {
+                text = ui->textEdit->toHtml();
 
-        QTextStream textAppend(&textFile);
+                QTextStream textAppend(&textFile);
 
-        textAppend << text;
+                textAppend << text;
+            }
+            else
+                if(QString::compare(QFileInfo(path).suffix(),"html.txt") == 0)
+                {
+                    text = ui->textEdit->toHtml();
+                    ui->htmlSourceCheckBox->setVisible(false);
+                    originalText = ui->textEdit->toPlainText();
+
+                    QTextStream textAppend(&textFile);
+
+                    textAppend << text;
+                }
+                else
+                {
+                    text = ui->textEdit->toPlainText();
+
+                    QTextStream textAppend(&textFile);
+
+                    textAppend << text;
+                }
 
         title = path;
 
@@ -192,7 +258,7 @@ void MainWindow::on_actionSave_as_triggered()
     }
     else
     {
-        QMessageBox::warning(this,"Open File Error",textFile.errorString());
+        QMessageBox::warning(this,"Save File Error",textFile.errorString());
 
         if(path.isEmpty())
             title = QDir::currentPath();
@@ -206,9 +272,70 @@ void MainWindow::on_actionSave_as_triggered()
 
 }
 
+void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
+{
+    int res = QMessageBox::question(this,"Formatting TextFile export","When exporting the formatted text file, you can only open it with TPad "
+                                                               "\nor other software that can read html code. "
+                                                               "\nAre you sure you want to continue?\n",QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+
+    if(res == QMessageBox::No)
+        return;
+    else
+        if(res == QMessageBox::Yes)
+        {
+
+            path = QFileDialog::getSaveFileName(this,"Export File to Formatting Text File",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
+
+            if(path.isEmpty() == true)
+                return;
+            if (QFileInfo(path).suffix().isEmpty())
+            {
+                path.append(".html.txt");
+            }
+            else
+            {
+                path.truncate(path.lastIndexOf('.'));
+                path.append(".html.txt");
+            }
+
+            QFile textFile(path);
+
+            if(textFile.open(QIODevice::WriteOnly | QIODevice::Text))
+            {
+                text.clear();
+
+                originalText = ui->textEdit->toPlainText();
+
+                text = ui->textEdit->toHtml();
+
+                QTextStream textAppend(&textFile);
+
+                textAppend << text;
+            }
+            else
+            {
+                QMessageBox::warning(this,"Export File Error",textFile.errorString());
+
+                if(path.isEmpty())
+                    title = QDir::currentPath();
+                else
+                    title = path;
+            }
+
+            title = path;
+
+            textFile.close();
+
+            isSaved = true;
+            changedTitle = false;
+        }
+
+    this->setWindowTitle(title);
+}
+
 void MainWindow::on_actionExport_to_PDF_triggered()
 {
-    path = QFileDialog::getSaveFileName(this,"Save as a text file",QDir::currentPath(), tr("All Files (*.*);;Pdf Files (*.pdf)"),&selFilter);
+    path = QFileDialog::getSaveFileName(this,"Export File to PDF",QDir::currentPath(), tr("All Files (*.*);;Pdf Files (*.pdf)"),&selFilter);
 
     if(path.isEmpty() == true)
         return;
@@ -231,4 +358,34 @@ void MainWindow::on_actionExport_to_PDF_triggered()
     printer.setOutputFileName(path);
 
     ui->textEdit->document()->print(&printer);
+
+    isSaved = true;
+    changedTitle = false;
+
+}
+
+
+bool MainWindow::htmlFileVerifier()
+{
+    if(QString::compare(QFileInfo(path).suffix(),"html") == 0)
+        return true;
+
+    return false;
+}
+
+bool MainWindow::textFileVerifier()
+{
+    if(QString::compare(QFileInfo(path).suffix(),"txt") == 0)
+        return true;
+
+    return false;
+
+}
+
+bool MainWindow::odfFileVerifier()
+{
+    if(QString::compare(QFileInfo(path).suffix(),"odf") == 0)
+        return true;
+
+    return false;
 }
