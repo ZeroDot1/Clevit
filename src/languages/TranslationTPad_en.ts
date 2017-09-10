@@ -302,6 +302,16 @@
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
     </message>
     <message>
+        <location filename="../save_load_files.cpp" line="277"/>
+        <source>When exporting the formatted text file, you can only open it with TPad 
+or other software that can read html code. 
+Are you sure you want to continue?
+</source>
+        <translation>When exporting the formatted text file, you can only open it with TPad 
+or other software that can read html code. 
+Are you sure you want to continue?</translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="338"/>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
         <translation>All Files (*.*);;Pdf Files (*.pdf)</translation>
