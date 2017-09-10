@@ -20,8 +20,8 @@
 # Author: ZeroDot1 https://github.com/ZeroDot1
 # Contact: zerodot1@bk.ru
 # Author Website: https://goo.gl/k3nTZn
-# Version: 1.1
-# Date Time: 01.09.2017 12:47
+# Version: 1.2
+# Date Time: 10.09.2017 13:37
 # Credits: Thanks to Colin Duquesnoy https://github.com/ColinDuquesnoy
 #-----------------------------------------------------------------------------
 cd

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -10,7 +10,7 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="33"/>
@@ -123,7 +123,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="183"/>
@@ -248,7 +248,7 @@
     <message>
         <location filename="../mainwindow.ui" line="363"/>
         <source>Export to PDF...</source>
-        <translation type="unfinished"></translation>
+        <translation>Als .PDF Exportieren...</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="372"/>
@@ -257,7 +257,7 @@
     </message>
     <message>
         <source>Text Files (*.txt)</source>
-        <translation type="vanished">Text Dateien (*.txt)</translation>
+        <translation>Text Dateien (*.txt)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="36"/>
@@ -284,7 +284,7 @@
     <message>
         <location filename="../save_load_files.cpp" line="338"/>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
     </message>
 </context>
 </TS>
