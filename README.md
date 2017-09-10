@@ -9,6 +9,8 @@ A text editor written on C++ with Qt Framework
 
 * Line Number
 
+* Add a tab function so that you can work with different documents at the same time.
+
 * Real-time translation of text being written
 
 ### Maybe...
