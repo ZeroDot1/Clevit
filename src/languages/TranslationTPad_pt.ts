@@ -246,7 +246,7 @@
         <translation>Reportar bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="356"/>
+        <location filename="../mainwindow.ui" line="360"/>
         <source>Export to PDF...</source>
         <translation>Exportar para PDF...</translation>
     </message>
@@ -272,9 +272,13 @@
         <location filename="../save_load_files.cpp" line="39"/>
         <location filename="../save_load_files.cpp" line="101"/>
         <location filename="../save_load_files.cpp" line="158"/>
-        <location filename="../save_load_files.cpp" line="211"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html)</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="211"/>
+        <source>All Files (*.*);;Pdf Files (*.pdf)</source>
+        <translation>Todos os ficheiros (*.*);;Ficheiros pdf (*.pdf)</translation>
     </message>
 </context>
 </TS>
