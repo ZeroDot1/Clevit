@@ -287,7 +287,9 @@
 or other software that can read html code. 
 Are you sure you want to continue?
 </source>
-        <translation type="unfinished"></translation>
+        <translation>Beim Exportieren der formatierten Textdatei können Sie diese nur mit TPad 
+oder andere Software, die HTML-Code lesen kann öffnen. 
+Bist du sicher, dass du weitermachen willst?</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="338"/>
