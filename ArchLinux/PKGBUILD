@@ -1,7 +1,7 @@
 # Maintainer: Tiago Martins <thebigger018@protonmail.com>
 # Maintainer: ZeroDot1 <zerodot1@bk.ru>
 pkgname=tpad
-pkgver=1.2.0
+pkgver=1.2.4
 pkgrel=1
 pkgdesc="TPad - A text editor written on C++ with Qt Framework."
 url='https://github.com/TigaxMT/TPad'
@@ -11,18 +11,15 @@ depends=('qt5-base' 'qt5-translations' 'qt5-graphicaleffects' 'xdg-utils' 'qt5-q
 makedepends=('qt5-tools' 'cmake')
 install=tpad.install
 source=("https://github.com/TigaxMT/TPad/archive/${pkgver}.tar.gz")
-md5sums=('f718fb0325768ea7198ccda730c0423f')
+md5sums=('5d49807226d01034433d3fafba4ddfb8')
 
 build() {
   cd $srcdir/TPad-${pkgver}
-
-  cmake -DCMAKE_INSTALL_PREFIX=/usr \
-    -DCMAKE_BUILD_TYPE=Release
+  qmake-qt5 PREFIX='/usr' LIBDIR='/usr/lib' TPad.pro
   make
 }
 
 package() {
   cd $srcdir/TPad-${pkgver}
-
   make DESTDIR=${pkgdir} install
 }
