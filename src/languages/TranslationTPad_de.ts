@@ -282,6 +282,14 @@
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt);;Html Dateien (*.html)</translation>
     </message>
     <message>
+        <location filename="../save_load_files.cpp" line="277"/>
+        <source>When exporting the formatted text file, you can only open it with TPad 
+or other software that can read html code. 
+Are you sure you want to continue?
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="338"/>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
         <translation type="unfinished"></translation>
