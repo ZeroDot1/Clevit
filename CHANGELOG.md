@@ -1,5 +1,15 @@
 # TPad CHANGELOG.md
 - - -
+
+### 1.2.4
+
+- Font Color Button - Now you can choose colors for your text
+- Pdf export - You can export any text to a pdf file
+- The formatting of open files remains the same
+- 3 methods to install TPad - TPad can be installed by 3 different methods (.sh script, cmake or qmake)
+- TPad homepage has been greatly improved, now uses html and css
+- A lot bugs fixed
+
 ### 1.2.0
 
 - Interface translated into multiple languages
