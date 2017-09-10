@@ -1,6 +1,6 @@
 /************************************************************************************************************
 *    											                                                            *
-*    PicMoments - Is a simple program to take photos. Written on C++ and using Opencv library and QT Framework *
+*    TPad -  A text editor written on C++ with Qt Framework                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -138,7 +138,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
     if(fileNotChanged() == false)
-    {        
+    {
         if(isSaved == false && changedTitle == true)
         {
             QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
@@ -226,7 +226,7 @@ void MainWindow::on_actionReport_Bugs_triggered()
 }
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
-{      
+{
     font = f;
 
     font.setPixelSize(QString(ui->fontSizeBox->currentText()).toInt());
@@ -354,5 +354,3 @@ void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
 
     text.clear();
 }
-
-

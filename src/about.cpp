@@ -1,6 +1,6 @@
 /************************************************************************************************************
 *    											                                                            *
-*    PicMoments - Is a simple program to take photos. Written on C++ and using Opencv library and QT Framework *
+*    TPad -  A text editor written on C++ with Qt Framework                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -43,7 +43,7 @@ void About::on_closeBtn_clicked()
     this->close();
 }
 void About::on_creditsBtn_clicked()
-{   
+{
     credits = new Credits(this);
 
     credits->show();
