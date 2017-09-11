@@ -289,27 +289,28 @@
         <translation>Imprimir um documento</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="317"/>
+        <location filename="../save_load_files.cpp" line="346"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="61"/>
+        <location filename="../save_load_files.cpp" line="63"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="131"/>
+        <location filename="../save_load_files.cpp" line="136"/>
+        <location filename="../save_load_files.cpp" line="239"/>
+        <location filename="../save_load_files.cpp" line="399"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html);;Ficheiros odf (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="221"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</source>
-        <translation>Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html);;Ficheiros odf (*.odf)</translation>
+        <translation type="vanished">Todos os ficheiros (*.*);;Ficheiros de texto (*.txt);;Ficheiros Html (*.html);;Ficheiros odf (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="307"/>
+        <location filename="../save_load_files.cpp" line="336"/>
         <source>When exporting the formatted text file, you can only open it with TPad 
 or other software that can read html code. 
 Are you sure you want to continue?
@@ -320,9 +321,8 @@ Tem a certeza que deseja continuar?
 </translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="368"/>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation>Todos os ficheiros (*.*);;Ficheiros pdf (*.pdf)</translation>
+        <translation type="vanished">Todos os ficheiros (*.*);;Ficheiros pdf (*.pdf)</translation>
     </message>
 </context>
 </TS>

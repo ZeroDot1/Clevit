@@ -302,30 +302,31 @@
     <message>
         <location filename="../mainwindow.cpp" line="380"/>
         <source>Print a document</source>
-        <translation>Print a document</translation>
+        <translation>Print document</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="317"/>
+        <location filename="../save_load_files.cpp" line="346"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>All Files (*.*);;Text Files (*.txt)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="61"/>
+        <location filename="../save_load_files.cpp" line="63"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="131"/>
+        <location filename="../save_load_files.cpp" line="136"/>
+        <location filename="../save_load_files.cpp" line="239"/>
+        <location filename="../save_load_files.cpp" line="399"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="221"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</source>
-        <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</translation>
+        <translation type="vanished">All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="307"/>
+        <location filename="../save_load_files.cpp" line="336"/>
         <source>When exporting the formatted text file, you can only open it with TPad 
 or other software that can read html code. 
 Are you sure you want to continue?
@@ -335,9 +336,8 @@ or other software that can read html code.
 Are you sure you want to continue?</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="368"/>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation>All Files (*.*);;Pdf Files (*.pdf)</translation>
+        <translation type="vanished">All Files (*.*);;Pdf Files (*.pdf)</translation>
     </message>
 </context>
 </TS>
