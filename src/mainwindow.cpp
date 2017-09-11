@@ -366,3 +366,23 @@ void MainWindow::on_htmlSourceCheckBox_stateChanged(int arg1)
     text.clear();
     tmp.clear();
 }
+
+void MainWindow::on_actionPrint_triggered()
+{
+    printer.setPageSize(QPrinter::Letter);
+    printer.setColorMode(QPrinter::Color);
+    printer.setFullPage(true);
+    printer.setResolution(96);
+    printer.setPageMargins(1.0,1.0,1.0,1.0,QPrinter::Inch);
+
+    QPrintDialog dialog(&printer,this);
+
+    dialog.setWindowTitle(tr("Print a document"));
+
+    if(dialog.exec() != QDialog::Accepted)
+        return;
+
+    ui->textEdit->document()->print(&printer);
+
+    dialog.close();
+}

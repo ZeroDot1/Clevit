@@ -41,6 +41,7 @@
 #include <QTextCodec>
 #include <QPrinter>
 #include <QTextDocumentWriter>
+#include <QPrintDialog>
 
 namespace Ui {
 class MainWindow;
@@ -106,6 +107,8 @@ private slots:
     void on_actionExport_to_PDF_triggered();
 
     void on_actionExport_to_Formatting_Txt_File_triggered();
+
+    void on_actionPrint_triggered();
 
 private:
     Ui::MainWindow *ui;

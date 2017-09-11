@@ -166,6 +166,7 @@
     <addaction name="actionSave_as"/>
     <addaction name="actionExport_to_Formatting_Txt_File"/>
     <addaction name="actionExport_to_PDF"/>
+    <addaction name="actionPrint"/>
     <addaction name="actionExit"/>
    </widget>
    <widget class="QMenu" name="menuEdit">
@@ -208,6 +209,7 @@
    <addaction name="actionSave_as"/>
    <addaction name="actionExport_to_Formatting_Txt_File"/>
    <addaction name="actionExport_to_PDF"/>
+   <addaction name="actionPrint"/>
    <addaction name="actionCopy"/>
    <addaction name="actionPaste"/>
    <addaction name="actionCut"/>
@@ -370,6 +372,18 @@
    </property>
    <property name="text">
     <string>Export to Formatting Txt File</string>
+   </property>
+  </action>
+  <action name="actionPrint">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Print.png</normaloff>:/icons/icons/Print.png</iconset>
+   </property>
+   <property name="text">
+    <string>Print</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+P</string>
    </property>
   </action>
  </widget>
