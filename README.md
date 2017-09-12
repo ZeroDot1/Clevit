@@ -5,7 +5,7 @@ A text editor written on C++ with Qt Framework
 
 # Future features
 
-* A search bar to find a specific word
+* Add emojis
 
 * Line Number
 
