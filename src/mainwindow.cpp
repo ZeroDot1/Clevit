@@ -414,7 +414,7 @@ void MainWindow::on_searchBtn_clicked()
 
             QTextCharFormat plainFormat(highlightCursor.charFormat());
             QTextCharFormat colorFormat = plainFormat;
-            colorFormat.setForeground(Qt::red);
+            colorFormat.setBackground(Qt::yellow);
 
             while (!highlightCursor.isNull() && !highlightCursor.atEnd())
             {
