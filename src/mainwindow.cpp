@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     about = NULL;
 
-    isSaved = false, changedTitle = false, firstTime = true;
+    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false;
 
     selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 

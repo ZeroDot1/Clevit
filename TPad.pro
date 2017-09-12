@@ -10,6 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = TPad
 TEMPLATE = app
+CONFIG += c++11
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which as been marked as deprecated (the exact warnings
@@ -22,7 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-TRANSLATIONS = src/languages/TranslationTPad_en.ts  src/languages/TranslationTPad_de.ts src/languages/TranslationTPad_pt.ts
+TRANSLATIONS = languages/TranslationTPad_en.ts  languages/TranslationTPad_de.ts languages/TranslationTPad_pt.ts
 
 SOURCES += \
         src/main.cpp \
@@ -30,12 +31,14 @@ SOURCES += \
     src/about.cpp \
     src/translation.cpp \
     src/credits.cpp \
-    src/save_load_files.cpp
+    src/save_load_files.cpp \
+    src/highlighter.cpp
 
 HEADERS += \
         src/mainwindow.h \
     src/about.h \
-    src/credits.h
+    src/credits.h \
+    src/highlighter.h
 
 FORMS += \
         src/mainwindow.ui \
@@ -44,3 +47,42 @@ FORMS += \
 
 RESOURCES += \
     src/icons.qrc
+
+
+unix:!macx: LIBS += -lX11
+
+unix {
+  #TRANSLATIONS
+  exists($$[QT_INSTALL_BINS]/lrelease) {
+    TRANSLATIONS = $$system("find src/languages/ -name 'TranslationTPad_*.ts'")
+    updateqm.input = TRANSLATIONS
+    updateqm.output = src/languages/${QMAKE_FILE_BASE}.qm
+    updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm src/languages/${QMAKE_FILE_BASE}.qm
+    updateqm.CONFIG += no_link target_predeps
+    QMAKE_EXTRA_COMPILERS += updateqm
+  }
+
+#VARIABLES
+  isEmpty(PREFIX) {
+    PREFIX = /usr
+  }
+  BINDIR = $$PREFIX/bin
+  DATADIR =$$PREFIX/share
+
+  DEFINES += DATADIR=\\\"$$DATADIR\\\" PKGDATADIR=\\\"$$PKGDATADIR\\\"
+
+  #MAKE INSTALL
+
+  INSTALLS += target desktop iconpng trans
+
+  target.path =$$BINDIR
+
+  desktop.path = $$DATADIR/applications
+  desktop.files += ./src/share/applications/$${TARGET}.desktop
+  
+  iconpng.path = $$DATADIR/icons/hicolor/scalable/apps
+  iconpng.files += ./src/icons/icon.png      
+  
+  trans.path = $$DATADIR/TPad
+  trans.files += src/languages
+}

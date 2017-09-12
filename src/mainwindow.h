@@ -24,6 +24,7 @@
 #define MAINWINDOW_H
 
 #include "about.h"
+#include "highlighter.h"
 
 #include <iostream>
 #include <QMainWindow>
@@ -92,6 +93,8 @@ private slots:
 
     bool odfFileVerifier();
 
+    bool cppFileVerifier();
+
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
     void on_fontSizeBox_currentIndexChanged(int index);
@@ -115,10 +118,12 @@ private slots:
 private:
     Ui::MainWindow *ui;
     About *about;
+    Highlighter *syntaxHighlighter;
 
     bool isSaved;
     bool changedTitle;
     bool firstTime;
+    bool cppOpened;
 
     QString path; // Path of text file
     QString text; // Text of text file
