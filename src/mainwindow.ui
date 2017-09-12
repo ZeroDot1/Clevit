@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>477</width>
-    <height>450</height>
+    <width>527</width>
+    <height>468</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -16,6 +16,10 @@
   <property name="windowIcon">
    <iconset resource="icons.qrc">
     <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: rgb(136, 138, 133);
+border-bottom-color: rgb(204, 0, 0);</string>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -156,6 +160,9 @@
            <height>19</height>
           </size>
          </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(255, 255, 255);</string>
+         </property>
         </widget>
         <widget class="QToolButton" name="searchBtn">
          <property name="text">
@@ -170,7 +177,11 @@
      </layout>
     </item>
     <item>
-     <widget class="QTextEdit" name="textEdit"/>
+     <widget class="QTextEdit" name="textEdit">
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 255, 255);</string>
+      </property>
+     </widget>
     </item>
    </layout>
   </widget>
@@ -179,7 +190,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>477</width>
+     <width>527</width>
      <height>20</height>
     </rect>
    </property>

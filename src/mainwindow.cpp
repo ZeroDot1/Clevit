@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     about = NULL;
 
-    isSaved = false, changedTitle = false, firstTime = true;
+    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false;
 
     selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 
@@ -414,7 +414,7 @@ void MainWindow::on_searchBtn_clicked()
 
             QTextCharFormat plainFormat(highlightCursor.charFormat());
             QTextCharFormat colorFormat = plainFormat;
-            colorFormat.setBackground(Qt::yellow);
+            colorFormat.setForeground(Qt::yellow);
 
             while (!highlightCursor.isNull() && !highlightCursor.atEnd())
             {

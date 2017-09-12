@@ -22,6 +22,7 @@
 
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "highlighter.h"
 
 void MainWindow::on_actionNew_File_triggered()
 {
@@ -58,6 +59,13 @@ void MainWindow::on_actionOpen_triggered()
 {
     // Save the path of the text file
 
+    if(cppOpened == true)
+    {
+        delete syntaxHighlighter;
+
+        cppOpened = false;
+    }
+
     QFileDialog dialog;
 
     path = dialog.getOpenFileName(this,"Select a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
@@ -79,6 +87,8 @@ void MainWindow::on_actionOpen_triggered()
             ui->textEdit->setPlainText(text);
             ui->htmlSourceCheckBox->setVisible(true);
             originalText = ui->textEdit->toPlainText();
+
+            syntaxHighlighter = new Highlighter(ui->textEdit->document());
         }
         else
             if(Qt::mightBeRichText(text) == true)
@@ -96,12 +106,21 @@ void MainWindow::on_actionOpen_triggered()
                     originalText = ui->textEdit->toPlainText();
                 }
                 else
-                {
-                    text = QString::fromLocal8Bit(data);
-                    ui->textEdit->setPlainText(text);
-                    ui->htmlSourceCheckBox->setVisible(false);
-                    originalText = ui->textEdit->toPlainText();
-                }
+                    if(cppFileVerifier() == true)
+                    {
+                        ui->textEdit->setPlainText(text);
+                        ui->htmlSourceCheckBox->setVisible(false);
+                        originalText = ui->textEdit->toPlainText();
+
+                        syntaxHighlighter = new Highlighter(ui->textEdit->document());
+                    }
+                    else
+                    {
+                        text = QString::fromLocal8Bit(data);
+                        ui->textEdit->setPlainText(text);
+                        ui->htmlSourceCheckBox->setVisible(false);
+                        originalText = ui->textEdit->toPlainText();
+                    }
 
 
         text.clear();
@@ -449,6 +468,16 @@ bool MainWindow::textFileVerifier()
 bool MainWindow::odfFileVerifier()
 {
     if(QString::compare(QFileInfo(path).suffix(),"odf") == 0)
+        return true;
+
+    return false;
+}
+
+bool MainWindow::cppFileVerifier()
+{
+    cppOpened = true;
+
+    if(QString::compare(QFileInfo(path).suffix(),"cpp") == 0)
         return true;
 
     return false;
