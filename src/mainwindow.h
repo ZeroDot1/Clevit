@@ -110,12 +110,15 @@ private slots:
 
     void on_actionPrint_triggered();
 
+    void on_searchBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
 
     bool isSaved;
     bool changedTitle;
+    bool firstTime;
 
     QString path; // Path of text file
     QString text; // Text of text file
@@ -141,6 +144,8 @@ private:
     QPrinter printer;
 
     QTextDocumentWriter writer;
+
+    QTextDocument *document;
 
     QFont font;
 

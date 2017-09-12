@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     about = NULL;
 
-    isSaved = false, changedTitle = false;
+    isSaved = false, changedTitle = false, firstTime = true;
 
     selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 
@@ -386,3 +386,48 @@ void MainWindow::on_actionPrint_triggered()
 
     dialog.close();
 }
+void MainWindow::on_searchBtn_clicked()
+{
+    if(firstTime == false)
+    {
+        document->undo();
+        firstTime = true;
+    }
+
+        firstTime = false;
+
+        QString searchString = ui->search_TextEdit->toPlainText();
+        document = ui->textEdit->document();
+
+        if (searchString.isEmpty())
+        {
+            QMessageBox::information(this, tr("Empty Search Field"),
+                    "The search field is empty. Please enter a word and click Find.");
+        }
+        else
+        {
+
+            QTextCursor highlightCursor(document);
+            QTextCursor cursor(document);
+
+            cursor.beginEditBlock();
+
+            QTextCharFormat plainFormat(highlightCursor.charFormat());
+            QTextCharFormat colorFormat = plainFormat;
+            colorFormat.setForeground(Qt::red);
+
+            while (!highlightCursor.isNull() && !highlightCursor.atEnd())
+            {
+                highlightCursor = document->find(searchString, highlightCursor, QTextDocument::FindWholeWords);
+
+                if (!highlightCursor.isNull())
+                {
+                    highlightCursor.movePosition(QTextCursor::WordRight,
+                                           QTextCursor::KeepAnchor);
+                    highlightCursor.mergeCharFormat(colorFormat);
+                }
+            }
+
+            cursor.endEditBlock();
+        }
+    }

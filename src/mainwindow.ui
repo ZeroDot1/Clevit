@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>428</width>
-    <height>378</height>
+    <width>477</width>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -136,11 +136,38 @@
      </widget>
     </item>
     <item>
-     <widget class="QCheckBox" name="htmlSourceCheckBox">
-      <property name="text">
-       <string>View Html</string>
-      </property>
-     </widget>
+     <layout class="QHBoxLayout" name="horizontalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="htmlSourceCheckBox">
+        <property name="text">
+         <string>View Html</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSplitter" name="splitter_3">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+        <widget class="QTextEdit" name="search_TextEdit">
+         <property name="maximumSize">
+          <size>
+           <width>191</width>
+           <height>19</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QToolButton" name="searchBtn">
+         <property name="text">
+          <string>Search</string>
+         </property>
+         <property name="checkable">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
     </item>
     <item>
      <widget class="QTextEdit" name="textEdit"/>
@@ -152,7 +179,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>428</width>
+     <width>477</width>
      <height>20</height>
     </rect>
    </property>
