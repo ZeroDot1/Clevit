@@ -78,8 +78,8 @@ unix {
   target.path =$$BINDIR
 
   desktop.path = $$DATADIR/applications
-  desktop.files += ./data/$${TARGET}.desktop
+  desktop.files += ./src/share/applications/$${TARGET}.desktop
 
-  trans.path = $$DATADIR/featherpad
-  trans.files += data/translations/translations
+  trans.path = $$DATADIR/TPad
+  trans.files += src/languages
 }
