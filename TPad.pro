@@ -73,13 +73,16 @@ unix {
 
   #MAKE INSTALL
 
-  INSTALLS += target desktop trans
+  INSTALLS += target desktop iconpng trans
 
   target.path =$$BINDIR
 
   desktop.path = $$DATADIR/applications
   desktop.files += ./src/share/applications/$${TARGET}.desktop
-
+  
+  iconpng.path = $$DATADIR/icons/hicolor/scalable/apps
+  iconpng.files += ./src/icons/icon.png      
+  
   trans.path = $$DATADIR/TPad
   trans.files += src/languages
 }
