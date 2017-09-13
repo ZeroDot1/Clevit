@@ -43,6 +43,8 @@
 #include <QPrinter>
 #include <QTextDocumentWriter>
 #include <QPrintDialog>
+#include <QImageReader>
+#include <QUrl>
 
 namespace Ui {
 class MainWindow;
@@ -87,14 +89,6 @@ private slots:
 
     void textChanged(); // If text change the program add a '*' in the title
 
-    bool htmlFileVerifier();
-
-    bool textFileVerifier();
-
-    bool odfFileVerifier();
-
-    bool cppFileVerifier();
-
     void on_fontComboBox_currentFontChanged(const QFont &f);
 
     void on_fontSizeBox_currentIndexChanged(int index);
@@ -115,6 +109,10 @@ private slots:
 
     void on_searchBtn_clicked();
 
+    void on_actionAdd_an_Image_triggered();
+
+    void on_clearBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -124,6 +122,7 @@ private:
     bool changedTitle;
     bool firstTime;
     bool cppOpened;
+    bool canClear;
 
     QString path; // Path of text file
     QString text; // Text of text file
@@ -155,6 +154,10 @@ private:
     QFont font;
 
     bool fileNotChanged(); // Verify if the text of the open file was modified or not
+    bool htmlFileVerifier();
+    bool textFileVerifier();
+    bool odfFileVerifier();
+    bool cppFileVerifier();
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void configFontSizeBox();
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)

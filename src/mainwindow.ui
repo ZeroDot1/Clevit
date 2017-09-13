@@ -18,8 +18,7 @@
     <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
   </property>
   <property name="styleSheet">
-   <string notr="true">background-color: rgb(136, 138, 133);
-border-bottom-color: rgb(204, 0, 0);</string>
+   <string notr="true"/>
   </property>
   <property name="locale">
    <locale language="English" country="UnitedStates"/>
@@ -149,29 +148,23 @@ border-bottom-color: rgb(204, 0, 0);</string>
        </widget>
       </item>
       <item>
-       <widget class="QSplitter" name="splitter_3">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
+       <widget class="QLineEdit" name="search_TextEdit"/>
+      </item>
+      <item>
+       <widget class="QToolButton" name="searchBtn">
+        <property name="text">
+         <string>Search</string>
         </property>
-        <widget class="QTextEdit" name="search_TextEdit">
-         <property name="maximumSize">
-          <size>
-           <width>191</width>
-           <height>19</height>
-          </size>
-         </property>
-         <property name="styleSheet">
-          <string notr="true">background-color: rgb(255, 255, 255);</string>
-         </property>
-        </widget>
-        <widget class="QToolButton" name="searchBtn">
-         <property name="text">
-          <string>Search</string>
-         </property>
-         <property name="checkable">
-          <bool>false</bool>
-         </property>
-        </widget>
+        <property name="checkable">
+         <bool>false</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="clearBtn">
+        <property name="text">
+         <string>Clear</string>
+        </property>
        </widget>
       </item>
      </layout>
@@ -211,6 +204,7 @@ border-bottom-color: rgb(204, 0, 0);</string>
     <property name="title">
      <string>Edit</string>
     </property>
+    <addaction name="actionAdd_an_Image"/>
     <addaction name="actionCopy"/>
     <addaction name="actionPaste"/>
     <addaction name="actionCut"/>
@@ -247,6 +241,7 @@ border-bottom-color: rgb(204, 0, 0);</string>
    <addaction name="actionSave_as"/>
    <addaction name="actionExport_to_Formatting_Txt_File"/>
    <addaction name="actionExport_to_PDF"/>
+   <addaction name="actionAdd_an_Image"/>
    <addaction name="actionPrint"/>
    <addaction name="actionCopy"/>
    <addaction name="actionPaste"/>
@@ -422,6 +417,15 @@ border-bottom-color: rgb(204, 0, 0);</string>
    </property>
    <property name="shortcut">
     <string>Ctrl+P</string>
+   </property>
+  </action>
+  <action name="actionAdd_an_Image">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Image.png</normaloff>:/icons/icons/Image.png</iconset>
+   </property>
+   <property name="text">
+    <string>Add an Image</string>
    </property>
   </action>
  </widget>
