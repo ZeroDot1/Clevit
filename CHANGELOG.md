@@ -1,6 +1,14 @@
 # TPad Homepage CHANGELOG
 - - -
 
+### 1.(3)
+
+- Css Updated
+- Updating the FEATURES list
+- Update Downloads
+- Fixed translation bugs
+
+
 ### 1.2
 
 - Add a new Screenshot
