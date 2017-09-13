@@ -20,5 +20,6 @@
         <file>icons/pdf.png</file>
         <file>icons/Textcolor.png</file>
         <file>icons/Print.png</file>
+        <file>icons/Image.png</file>
     </qresource>
 </RCC>

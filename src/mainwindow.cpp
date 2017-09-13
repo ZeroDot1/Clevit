@@ -53,7 +53,7 @@ MainWindow::MainWindow(QWidget *parent) :
 
     about = NULL;
 
-    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false;
+    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true;
 
     selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 
@@ -388,6 +388,8 @@ void MainWindow::on_actionPrint_triggered()
 }
 void MainWindow::on_searchBtn_clicked()
 {
+    canClear = true;
+
     if(firstTime == false)
     {
         document->undo();
@@ -396,7 +398,7 @@ void MainWindow::on_searchBtn_clicked()
 
         firstTime = false;
 
-        QString searchString = ui->search_TextEdit->toPlainText();
+        QString searchString = ui->search_TextEdit->text();
         document = ui->textEdit->document();
 
         if (searchString.isEmpty())
@@ -430,4 +432,36 @@ void MainWindow::on_searchBtn_clicked()
 
             cursor.endEditBlock();
         }
+}
+
+void MainWindow::on_clearBtn_clicked()
+{   
+    if(canClear == true)
+    {
+        document->undo();
+
+        canClear = false;
     }
+}
+
+
+void MainWindow::on_actionAdd_an_Image_triggered()
+{
+    QString file = QFileDialog::getOpenFileName(this, tr("Select an image"),
+                                      ".", tr("Bitmap Files (*.bmp)\n"
+                                        "JPEG (*.jpg *jpeg)\n"
+                                        "GIF (*.gif)\n"
+                                        "PNG (*.png)\n"));
+    QUrl Url ( QString ( "file://%1" ).arg ( file ) );
+    QImage image = QImageReader ( file ).read();
+
+    QTextDocument * textDocument =ui->textEdit->document();
+    textDocument->addResource( QTextDocument::ImageResource, Url, QVariant ( image ) );
+    QTextCursor cursor = ui->textEdit->textCursor();
+    QTextImageFormat imageFormat;
+    imageFormat.setWidth( image.width() );
+    imageFormat.setHeight( image.height() );
+    imageFormat.setName( Url.toString() );
+    cursor.insertImage(imageFormat);
+}
+
