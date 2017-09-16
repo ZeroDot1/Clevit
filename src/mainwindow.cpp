@@ -436,6 +436,9 @@ void MainWindow::on_searchBtn_clicked()
 
 void MainWindow::on_clearBtn_clicked()
 {   
+    if(ui->search_TextEdit->text()== "" && ui->textEdit->toPlainText() == "")
+        return;
+
     ui->search_TextEdit->setText("");
 
     if(canClear == true)
