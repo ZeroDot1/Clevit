@@ -436,6 +436,8 @@ void MainWindow::on_searchBtn_clicked()
 
 void MainWindow::on_clearBtn_clicked()
 {   
+    ui->search_TextEdit->setText("");
+
     if(canClear == true)
     {
         document->undo();
