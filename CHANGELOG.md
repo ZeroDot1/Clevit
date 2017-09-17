@@ -1,6 +1,15 @@
 # TPad CHANGELOG.md
 - - -
 
+### 1.3.0
+
+- A new type/export of files (.html.txt files): This files are .txt files with html code , so you can write formatted text in .txt. Note: Only TPad can open correctly this type of files
+- Add images to a document
+- Word finder: You search for a specific word, no problem, type it into the search box and it will be highlighted in yellow.
+- Syntax highlighting: C++
+- TPad homepage improved
+- Bugs Fixed
+
 ### 1.2.4
 
 - Font Color Button - Now you can choose colors for your text
