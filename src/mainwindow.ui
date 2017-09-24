@@ -223,9 +223,26 @@
      <string>Language</string>
     </property>
    </widget>
+   <widget class="QMenu" name="menuOptions">
+    <property name="title">
+     <string>Options</string>
+    </property>
+    <addaction name="actionWindow_Layout_Color"/>
+   </widget>
+   <widget class="QMenu" name="menuThemes">
+    <property name="title">
+     <string>Themes</string>
+    </property>
+    <addaction name="actionNo_Theme"/>
+    <addaction name="actionWood_Theme"/>
+    <addaction name="actionWave_Theme"/>
+    <addaction name="actionRainbow_Theme"/>
+   </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuLanguage"/>
+   <addaction name="menuOptions"/>
+   <addaction name="menuThemes"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -426,6 +443,31 @@
    </property>
    <property name="text">
     <string>Add an Image</string>
+   </property>
+  </action>
+  <action name="actionWindow_Layout_Color">
+   <property name="text">
+    <string>Window Layout Color</string>
+   </property>
+  </action>
+  <action name="actionNo_Theme">
+   <property name="text">
+    <string>No Theme</string>
+   </property>
+  </action>
+  <action name="actionWood_Theme">
+   <property name="text">
+    <string>Wood Theme</string>
+   </property>
+  </action>
+  <action name="actionWave_Theme">
+   <property name="text">
+    <string>Wave Theme</string>
+   </property>
+  </action>
+  <action name="actionRainbow_Theme">
+   <property name="text">
+    <string>Rainbow Theme</string>
    </property>
   </action>
  </widget>
