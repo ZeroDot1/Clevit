@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.0" language="de_DE">
+<TS version="2.1" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -346,12 +346,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="146"/>
         <source>TPad - Text Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>TPad - Text Editor</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Select a Font Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen sie eine Schriftfarbe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
@@ -366,7 +366,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="408"/>
         <source>The search field is empty. Please enter a word and click Find.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Suchfeld ist leer. Bitte geben Sie ein Wort ein und klicken Sie auf Suchen.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="456"/>
@@ -388,12 +388,12 @@ PNG (*.png</translation>
     <message>
         <location filename="../mainwindow.cpp" line="476"/>
         <source>Select a Window Layout Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie eine Fensterlayoutfarbe aus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="534"/>
         <source>Show WordFinder</source>
-        <translation type="unfinished"></translation>
+        <translation>WordFinder anzeigen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
@@ -408,7 +408,7 @@ PNG (*.png</translation>
     <message>
         <location filename="../save_load_files.cpp" line="71"/>
         <source>Select a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie eine Textdatei aus</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="136"/>
