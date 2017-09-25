@@ -341,6 +341,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="496"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>Hide WordFinder</source>
         <translation>Hide WordFinder</translation>
     </message>
@@ -359,6 +360,16 @@
         <translation>Do you want to save the text file?</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="146"/>
+        <source>TPad - Text Editor</source>
+        <translation>TPad - Text Editor</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="275"/>
+        <source>Select a Font Color</source>
+        <translation>Select a Font Color</translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Print a document</source>
         <translation>Print document</translation>
@@ -367,6 +378,11 @@
         <location filename="../mainwindow.cpp" line="407"/>
         <source>Empty Search Field</source>
         <translation>Empty Search Field</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="408"/>
+        <source>The search field is empty. Please enter a word and click Find.</source>
+        <translation>The search field is empty. Please enter a word and click Search.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="456"/>
@@ -387,6 +403,16 @@ PNG (*.png)
 </translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="476"/>
+        <source>Select a Window Layout Color</source>
+        <translation>Select a Window Layout Color</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="534"/>
+        <source>Show WordFinder</source>
+        <translation>Show WordFinder</translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="365"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>All Files (*.*);;Text Files (*.txt)</translation>
@@ -397,11 +423,50 @@ PNG (*.png)
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
     </message>
     <message>
+        <location filename="../save_load_files.cpp" line="71"/>
+        <source>Select a text file</source>
+        <translation>Select a text file</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="136"/>
+        <source>Open File Error</source>
+        <translation>Open File Error</translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="155"/>
         <location filename="../save_load_files.cpp" line="258"/>
         <location filename="../save_load_files.cpp" line="418"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="155"/>
+        <location filename="../save_load_files.cpp" line="258"/>
+        <location filename="../save_load_files.cpp" line="418"/>
+        <source>Save a text file</source>
+        <translation>Save a text file</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="233"/>
+        <location filename="../save_load_files.cpp" line="250"/>
+        <location filename="../save_load_files.cpp" line="338"/>
+        <source>Save File Error</source>
+        <translation>Save File Error</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="250"/>
+        <source>Save canceled</source>
+        <translation>Save canceled</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="355"/>
+        <source>Formatting TextFile export</source>
+        <translation>Formatting TextFile export</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="365"/>
+        <source>Export File to Formatting Text File</source>
+        <translation>Export File to Formatting Text File</translation>
     </message>
     <message>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</source>

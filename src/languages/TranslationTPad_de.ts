@@ -325,6 +325,7 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="496"/>
+        <location filename="../mainwindow.cpp" line="543"/>
         <source>Hide WordFinder</source>
         <translation>WordFinder ausblenden</translation>
     </message>
@@ -343,6 +344,16 @@
         <translation>Möchten Sie die Textdatei speichern?</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="146"/>
+        <source>TPad - Text Editor</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="275"/>
+        <source>Select a Font Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="381"/>
         <source>Print a document</source>
         <translation>Drucke ein Dokument</translation>
@@ -351,6 +362,11 @@
         <location filename="../mainwindow.cpp" line="407"/>
         <source>Empty Search Field</source>
         <translation>Leeres Suchfeld</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="408"/>
+        <source>The search field is empty. Please enter a word and click Find.</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="456"/>
@@ -370,6 +386,16 @@ GIF (*.gif)
 PNG (*.png</translation>
     </message>
     <message>
+        <location filename="../mainwindow.cpp" line="476"/>
+        <source>Select a Window Layout Color</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="534"/>
+        <source>Show WordFinder</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="365"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt)</translation>
@@ -380,11 +406,40 @@ PNG (*.png</translation>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt);;Html Dateien (*.html)</translation>
     </message>
     <message>
+        <location filename="../save_load_files.cpp" line="71"/>
+        <source>Select a text file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="136"/>
+        <source>Open File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <location filename="../save_load_files.cpp" line="155"/>
         <location filename="../save_load_files.cpp" line="258"/>
         <location filename="../save_load_files.cpp" line="418"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt);;Html Dateien (*.html);;odf Dateien (*.odf)</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="155"/>
+        <location filename="../save_load_files.cpp" line="258"/>
+        <location filename="../save_load_files.cpp" line="418"/>
+        <source>Save a text file</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="233"/>
+        <location filename="../save_load_files.cpp" line="250"/>
+        <location filename="../save_load_files.cpp" line="338"/>
+        <source>Save File Error</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="250"/>
+        <source>Save canceled</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="355"/>
@@ -395,6 +450,16 @@ Are you sure you want to continue?
         <translation>Beim Exportieren der formatierten Textdatei können Sie diese nur mit TPad 
 oder andere Software, die HTML-Code lesen kann öffnen. 
 Bist du sicher, dass du weitermachen willst?</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="355"/>
+        <source>Formatting TextFile export</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="365"/>
+        <source>Export File to Formatting Text File</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
