@@ -68,7 +68,7 @@ void MainWindow::on_actionOpen_triggered()
 
     QFileDialog dialog;
 
-    path = dialog.getOpenFileName(this,"Select a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
+    path = dialog.getOpenFileName(this,tr("Select a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
 
     QFile textFile(path);
 
@@ -133,7 +133,7 @@ void MainWindow::on_actionOpen_triggered()
     }
     else
     {
-        QMessageBox::warning(this,"Open File Error",textFile.errorString());
+        QMessageBox::warning(this,tr("Open File Error"),textFile.errorString());
 
         title = QDir::currentPath();
     }
@@ -152,7 +152,7 @@ void MainWindow::on_actionSave_triggered()
 
     if(path.isEmpty())
     {
-        path = dialog.getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
+        path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
         if(QFileInfo(path).suffix().isEmpty() == true)
         {
@@ -230,7 +230,7 @@ void MainWindow::on_actionSave_triggered()
 
         else
         {
-            QMessageBox::warning(this,"Save File Error",textFile.errorString());
+            QMessageBox::warning(this,tr("Save File Error"),textFile.errorString());
 
             textChanged();
 
@@ -247,7 +247,7 @@ void MainWindow::on_actionSave_triggered()
         dialog.close();
     }
     else
-        QMessageBox::warning(this,"Save File Error","Save canceled");
+        QMessageBox::warning(this,tr("Save File Error"),tr("Save canceled"));
 
 }
 
@@ -255,7 +255,7 @@ void MainWindow::on_actionSave_as_triggered()
 {
     QFileDialog dialog;
 
-    path = dialog.getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
+    path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
     if(path.isEmpty())
         return;
@@ -335,7 +335,7 @@ void MainWindow::on_actionSave_as_triggered()
     }
     else
     {
-        QMessageBox::warning(this,"Save File Error",textFile.errorString());
+        QMessageBox::warning(this,tr("Save File Error"),textFile.errorString());
 
         if(path.isEmpty())
             title = QDir::currentPath();
@@ -352,7 +352,7 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 {
-    QMessageBox::StandardButton res = QMessageBox::question(this,"Formatting TextFile export",tr("When exporting the formatted text file, you can only open it with TPad "
+    QMessageBox::StandardButton res = QMessageBox::question(this,tr("Formatting TextFile export"),tr("When exporting the formatted text file, you can only open it with TPad "
                                                                "\nor other software that can read html code. "
                                                                "\nAre you sure you want to continue?\n"),QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
@@ -362,7 +362,7 @@ void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
         if(res == QMessageBox::Yes)
         {
 
-            path = QFileDialog::getSaveFileName(this,"Export File to Formatting Text File",QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
+            path = QFileDialog::getSaveFileName(this,tr("Export File to Formatting Text File"),QDir::currentPath(), tr("All Files (*.*);;Text Files (*.txt)"),&selFilter);
 
             if(path.isEmpty() == true)
                 return;
@@ -415,7 +415,7 @@ void MainWindow::on_actionExport_to_PDF_triggered()
 {
     QFileDialog dialog;
 
-    path = dialog.getSaveFileName(this,"Save a text file",QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
+    path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
 
     if(path.isEmpty() == true)

@@ -143,7 +143,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     {
         if(isSaved == false && changedTitle == true)
         {
-            QMessageBox::StandardButton resBtn = QMessageBox::question(this,"TPad - Text Editor",tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+            QMessageBox::StandardButton resBtn = QMessageBox::question(this,tr("TPad - Text Editor"),tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
             if(resBtn == QMessageBox::Yes)
             {
@@ -272,7 +272,7 @@ void MainWindow::on_fontSizeBox_currentIndexChanged(int index)
 
 void MainWindow::on_colorBtn_clicked()
 {
-    color = QColorDialog::getColor(Qt::black,this,"Select a Font Color");
+    color = QColorDialog::getColor(Qt::black,this,tr("Select a Font Color"));
 
     if(color.isValid())
     {
@@ -405,7 +405,7 @@ void MainWindow::on_searchBtn_clicked()
         if (searchString.isEmpty())
         {
             QMessageBox::information(this, tr("Empty Search Field"),
-                    "The search field is empty. Please enter a word and click Find.");
+                    tr("The search field is empty. Please enter a word and click Find."));
         }
         else
         {
@@ -473,7 +473,7 @@ void MainWindow::on_actionAdd_an_Image_triggered()
 
 void MainWindow::on_actionWindow_Layout_Color_triggered()
 {
-    color = QColorDialog::getColor(Qt::white,this,"Select a Window Layout Color");
+    color = QColorDialog::getColor(Qt::white,this,tr("Select a Window Layout Color"));
 
     if(color.isValid())
     {
@@ -531,7 +531,7 @@ void MainWindow::on_actionHide_WordFinder_triggered()
         ui->searchBtn->setVisible(false);
         ui->clearBtn->setVisible(false);
 
-        ui->actionHide_WordFinder->setText("Show WordFinder");
+        ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
     }
     else
         if(ui->search_TextEdit->isVisible() == false)
@@ -540,6 +540,6 @@ void MainWindow::on_actionHide_WordFinder_triggered()
             ui->searchBtn->setVisible(true);
             ui->clearBtn->setVisible(true);
 
-            ui->actionHide_WordFinder->setText("Hide WordFinder");
+            ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
         }
 }
