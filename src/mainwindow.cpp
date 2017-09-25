@@ -66,6 +66,7 @@ MainWindow::MainWindow(QWidget *parent) :
     connect(ui->italicBtn,SIGNAL(clicked(bool)),this,SLOT(italic()));
     connect(ui->underlineBtn,SIGNAL(clicked(bool)),this,SLOT(underline()));
     connect(langGroup, SIGNAL (triggered(QAction *)), this, SLOT (slotLanguageChanged(QAction *)));
+
 }
 
 MainWindow::~MainWindow()
@@ -470,3 +471,75 @@ void MainWindow::on_actionAdd_an_Image_triggered()
     cursor.insertImage(imageFormat);
 }
 
+void MainWindow::on_actionWindow_Layout_Color_triggered()
+{
+    color = QColorDialog::getColor(Qt::white,this,"Select a Window Layout Color");
+
+    if(color.isValid())
+    {
+        this->setStyleSheet(QString("background-color: %1").arg(color.name()));
+        ui->fontComboBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
+        ui->fontSizeBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
+        ui->Toolbar->setStyleSheet(QString("background-color: %1").arg(color.name()));
+    }
+    else
+    {
+        this->setStyleSheet("");
+        ui->fontComboBox->setStyleSheet("");
+        ui->fontSizeBox->setStyleSheet("");
+        ui->Toolbar->setStyleSheet("");
+    }
+}
+
+void MainWindow::on_actionNo_Theme_2_triggered()
+{
+    this->setStyleSheet("");
+    ui->fontComboBox->setStyleSheet("");
+    ui->fontSizeBox->setStyleSheet("");
+    ui->Toolbar->setStyleSheet("");
+}
+
+void MainWindow::on_actionWood_Theme_2_triggered()
+{
+    this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+    ui->fontComboBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+    ui->fontSizeBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+    ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+}
+
+void MainWindow::on_actionWave_Theme_2_triggered()
+{
+    this->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+    ui->fontComboBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+    ui->fontSizeBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+    ui->Toolbar->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+}
+
+void MainWindow::on_actionRainbow_Theme_2_triggered()
+{
+    this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+    ui->fontComboBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+    ui->fontSizeBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+    ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+}
+
+void MainWindow::on_actionHide_WordFinder_triggered()
+{
+    if(ui->search_TextEdit->isVisible() == true)
+    {
+        ui->search_TextEdit->setVisible(false);
+        ui->searchBtn->setVisible(false);
+        ui->clearBtn->setVisible(false);
+
+        ui->actionHide_WordFinder->setText("Show WordFinder");
+    }
+    else
+        if(ui->search_TextEdit->isVisible() == false)
+        {
+            ui->search_TextEdit->setVisible(true);
+            ui->searchBtn->setVisible(true);
+            ui->clearBtn->setVisible(true);
+
+            ui->actionHide_WordFinder->setText("Hide WordFinder");
+        }
+}

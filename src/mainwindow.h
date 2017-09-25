@@ -45,6 +45,7 @@
 #include <QPrintDialog>
 #include <QImageReader>
 #include <QUrl>
+#include <QComboBox>
 
 namespace Ui {
 class MainWindow;
@@ -113,6 +114,18 @@ private slots:
 
     void on_clearBtn_clicked();
 
+    void on_actionWindow_Layout_Color_triggered();
+
+    void on_actionNo_Theme_2_triggered();
+
+    void on_actionWood_Theme_2_triggered();
+
+    void on_actionWave_Theme_2_triggered();
+
+    void on_actionRainbow_Theme_2_triggered();
+
+    void on_actionHide_WordFinder_triggered();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -123,6 +136,7 @@ private:
     bool firstTime;
     bool cppOpened;
     bool canClear;
+
 
     QString path; // Path of text file
     QString text; // Text of text file
