@@ -150,139 +150,183 @@
         <translation>Idioma</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="260"/>
+        <location filename="../mainwindow.ui" line="228"/>
+        <source>Options</source>
+        <translation>Opções</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="232"/>
+        <source>Themes</source>
+        <translation>Temas</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="278"/>
         <source>Open...</source>
         <translation>Abrir...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="263"/>
+        <location filename="../mainwindow.ui" line="281"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="272"/>
+        <location filename="../mainwindow.ui" line="290"/>
         <source>Save</source>
         <translation>Guardar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="275"/>
+        <location filename="../mainwindow.ui" line="293"/>
         <source>Ctrl+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="284"/>
+        <location filename="../mainwindow.ui" line="302"/>
         <source>Save as...</source>
         <translation>Guardar Como...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="287"/>
+        <location filename="../mainwindow.ui" line="305"/>
         <source>Ctrl+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="296"/>
+        <location filename="../mainwindow.ui" line="314"/>
         <source>Exit</source>
         <translation>Sair</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="299"/>
+        <location filename="../mainwindow.ui" line="317"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="308"/>
+        <location filename="../mainwindow.ui" line="326"/>
         <source>Copy</source>
         <translation>Copiar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="311"/>
+        <location filename="../mainwindow.ui" line="329"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="320"/>
+        <location filename="../mainwindow.ui" line="338"/>
         <source>Paste</source>
         <translation>Colar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="323"/>
+        <location filename="../mainwindow.ui" line="341"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="332"/>
+        <location filename="../mainwindow.ui" line="350"/>
         <source>Cut</source>
         <translation>Cortar</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="335"/>
+        <location filename="../mainwindow.ui" line="353"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="344"/>
+        <location filename="../mainwindow.ui" line="362"/>
         <source>Undo</source>
         <translation>Desfazer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="347"/>
+        <location filename="../mainwindow.ui" line="365"/>
         <source>Ctrl+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="356"/>
+        <location filename="../mainwindow.ui" line="374"/>
         <source>Redo</source>
         <translation>Refazer</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="359"/>
+        <location filename="../mainwindow.ui" line="377"/>
         <source>Ctrl+Shift+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="368"/>
+        <location filename="../mainwindow.ui" line="386"/>
         <source>About TPad</source>
         <translation>Sobre TPad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="377"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>New File</source>
         <translation>Novo Ficheiro</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="380"/>
+        <location filename="../mainwindow.ui" line="398"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="389"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>Report Bugs</source>
         <translation>Reportar bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="398"/>
+        <location filename="../mainwindow.ui" line="416"/>
         <source>Export to PDF...</source>
         <translation>Exportar para PDF...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="407"/>
+        <location filename="../mainwindow.ui" line="425"/>
         <source>Export to Formatting Txt File</source>
         <translation>Exportar para Ficheiro Txt Formatado</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="416"/>
+        <location filename="../mainwindow.ui" line="434"/>
         <source>Print</source>
         <translation>Imprimir</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="419"/>
+        <location filename="../mainwindow.ui" line="437"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="428"/>
+        <location filename="../mainwindow.ui" line="446"/>
         <source>Add an Image</source>
         <translation>Adicionar uma imagem</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="451"/>
+        <source>Window Layout Color</source>
+        <translation>Cor do Layout da Janela</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="456"/>
+        <location filename="../mainwindow.ui" line="476"/>
+        <source>No Theme</source>
+        <translation>Sem Tema</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="461"/>
+        <location filename="../mainwindow.ui" line="481"/>
+        <source>Wood Theme</source>
+        <translation>Tema Madeira</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="466"/>
+        <location filename="../mainwindow.ui" line="486"/>
+        <source>Wave Theme</source>
+        <translation>Tema Onda</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="471"/>
+        <location filename="../mainwindow.ui" line="491"/>
+        <source>Rainbow Theme</source>
+        <translation>Tema Arco-íris</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="496"/>
+        <source>Hide WordFinder</source>
+        <translation>Esconder Buscador de Palavras</translation>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
@@ -294,27 +338,27 @@
         <translation>Ficheiros de texto (*.txt);; Ficheiros Html(*.html)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="145"/>
+        <location filename="../mainwindow.cpp" line="146"/>
         <source>Do you want to save the text file?</source>
         <translation>Deseja guardar o ficheiro de texto?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="380"/>
+        <location filename="../mainwindow.cpp" line="381"/>
         <source>Print a document</source>
         <translation>Imprimir um documento</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="406"/>
+        <location filename="../mainwindow.cpp" line="407"/>
         <source>Empty Search Field</source>
         <translation>Campo de pesquisa vazio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="452"/>
+        <location filename="../mainwindow.cpp" line="456"/>
         <source>Select an image</source>
         <translation>Selecionar uma imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="453"/>
+        <location filename="../mainwindow.cpp" line="457"/>
         <source>Bitmap Files (*.bmp)
 JPEG (*.jpg *jpeg)
 GIF (*.gif)

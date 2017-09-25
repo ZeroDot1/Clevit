@@ -227,22 +227,23 @@
     <property name="title">
      <string>Options</string>
     </property>
+    <widget class="QMenu" name="menuThemes">
+     <property name="title">
+      <string>Themes</string>
+     </property>
+     <addaction name="actionNo_Theme_2"/>
+     <addaction name="actionWood_Theme_2"/>
+     <addaction name="actionWave_Theme_2"/>
+     <addaction name="actionRainbow_Theme_2"/>
+    </widget>
     <addaction name="actionWindow_Layout_Color"/>
-   </widget>
-   <widget class="QMenu" name="menuThemes">
-    <property name="title">
-     <string>Themes</string>
-    </property>
-    <addaction name="actionNo_Theme"/>
-    <addaction name="actionWood_Theme"/>
-    <addaction name="actionWave_Theme"/>
-    <addaction name="actionRainbow_Theme"/>
+    <addaction name="menuThemes"/>
+    <addaction name="actionHide_WordFinder"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
    <addaction name="menuLanguage"/>
    <addaction name="menuOptions"/>
-   <addaction name="menuThemes"/>
    <addaction name="menuHelp"/>
   </widget>
   <widget class="QToolBar" name="mainToolBar">
@@ -468,6 +469,31 @@
   <action name="actionRainbow_Theme">
    <property name="text">
     <string>Rainbow Theme</string>
+   </property>
+  </action>
+  <action name="actionNo_Theme_2">
+   <property name="text">
+    <string>No Theme</string>
+   </property>
+  </action>
+  <action name="actionWood_Theme_2">
+   <property name="text">
+    <string>Wood Theme</string>
+   </property>
+  </action>
+  <action name="actionWave_Theme_2">
+   <property name="text">
+    <string>Wave Theme</string>
+   </property>
+  </action>
+  <action name="actionRainbow_Theme_2">
+   <property name="text">
+    <string>Rainbow Theme</string>
+   </property>
+  </action>
+  <action name="actionHide_WordFinder">
+   <property name="text">
+    <string>Hide WordFinder</string>
    </property>
   </action>
  </widget>

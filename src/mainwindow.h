@@ -116,13 +116,15 @@ private slots:
 
     void on_actionWindow_Layout_Color_triggered();
 
-    void on_actionNo_Theme_triggered();
+    void on_actionNo_Theme_2_triggered();
 
-    void on_actionWood_Theme_triggered();
+    void on_actionWood_Theme_2_triggered();
 
-    void on_actionWave_Theme_triggered();
+    void on_actionWave_Theme_2_triggered();
 
-    void on_actionRainbow_Theme_triggered();
+    void on_actionRainbow_Theme_2_triggered();
+
+    void on_actionHide_WordFinder_triggered();
 
 private:
     Ui::MainWindow *ui;
