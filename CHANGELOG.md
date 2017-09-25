@@ -1,6 +1,11 @@
 # TPad Homepage CHANGELOG
 - - -
 
+### 1.4
+
+Css Updated
+Removed inline Css
+
 ### 1.3
 
 - Added a new menu
