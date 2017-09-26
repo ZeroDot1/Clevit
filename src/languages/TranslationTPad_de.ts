@@ -346,12 +346,12 @@
     <message>
         <location filename="../mainwindow.cpp" line="146"/>
         <source>TPad - Text Editor</source>
-        <translation type="unfinished"></translation>
+        <translation>TPad - Text Editor</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="275"/>
         <source>Select a Font Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen sie eine Schriftfarbe</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="381"/>
@@ -366,7 +366,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="408"/>
         <source>The search field is empty. Please enter a word and click Find.</source>
-        <translation type="unfinished"></translation>
+        <translation>Das Suchfeld ist leer. Bitte geben Sie ein Wort ein und klicken Sie auf Suchen.</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="456"/>
@@ -388,12 +388,12 @@ PNG (*.png</translation>
     <message>
         <location filename="../mainwindow.cpp" line="476"/>
         <source>Select a Window Layout Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie eine Fensterlayoutfarbe aus</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="534"/>
         <source>Show WordFinder</source>
-        <translation type="unfinished"></translation>
+        <translation>WordFinder anzeigen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
@@ -408,12 +408,12 @@ PNG (*.png</translation>
     <message>
         <location filename="../save_load_files.cpp" line="71"/>
         <source>Select a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Wählen Sie eine Textdatei aus</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="136"/>
         <source>Open File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateifehler beim öffnen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="155"/>
@@ -427,19 +427,19 @@ PNG (*.png</translation>
         <location filename="../save_load_files.cpp" line="258"/>
         <location filename="../save_load_files.cpp" line="418"/>
         <source>Save a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Textdatei speichern</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="233"/>
         <location filename="../save_load_files.cpp" line="250"/>
         <location filename="../save_load_files.cpp" line="338"/>
         <source>Save File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateifehler beim speichern</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="250"/>
         <source>Save canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern abgebrochen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="355"/>
@@ -454,12 +454,12 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../save_load_files.cpp" line="355"/>
         <source>Formatting TextFile export</source>
-        <translation type="unfinished"></translation>
+        <translation>Formartierte Texdatei exportieren</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
         <source>Export File to Formatting Text File</source>
-        <translation type="unfinished"></translation>
+        <translation>In formartierte Texdatei exportieren</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
