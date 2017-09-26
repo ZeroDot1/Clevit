@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -413,7 +413,7 @@ PNG (*.png</translation>
     <message>
         <location filename="../save_load_files.cpp" line="136"/>
         <source>Open File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateifehler beim öffnen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="155"/>
@@ -427,19 +427,19 @@ PNG (*.png</translation>
         <location filename="../save_load_files.cpp" line="258"/>
         <location filename="../save_load_files.cpp" line="418"/>
         <source>Save a text file</source>
-        <translation type="unfinished"></translation>
+        <translation>Eine Textdatei speichern</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="233"/>
         <location filename="../save_load_files.cpp" line="250"/>
         <location filename="../save_load_files.cpp" line="338"/>
         <source>Save File Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Dateifehler beim speichern</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="250"/>
         <source>Save canceled</source>
-        <translation type="unfinished"></translation>
+        <translation>Speichern abgebrochen</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="355"/>
@@ -454,12 +454,12 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../save_load_files.cpp" line="355"/>
         <source>Formatting TextFile export</source>
-        <translation type="unfinished"></translation>
+        <translation>Formartierte Texdatei exportieren</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
         <source>Export File to Formatting Text File</source>
-        <translation type="unfinished"></translation>
+        <translation>In formartierte Texdatei exportieren</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
