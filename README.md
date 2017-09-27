@@ -1,6 +1,7 @@
 # ![img](http://basic1.moy.su/Fotos/TPad-New-Icon.png)[TPad](https://goo.gl/LAVDSm "TPad Offical Site")
 A text editor written on C++ with Qt Framework
 - - -
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/47d886e9129440849dce9acec5349c80)](https://www.codacy.com/app/TigaxMT/TPad?utm_source=github.com&utm_medium=referral&utm_content=TigaxMT/TPad&utm_campaign=badger)
 [![travis build](https://travis-ci.org/TigaxMT/TPad.svg?branch=master)](https://travis-ci.org/TigaxMT/TPad)
 
 # Future features
