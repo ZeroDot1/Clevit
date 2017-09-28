@@ -46,6 +46,7 @@
 #include <QImageReader>
 #include <QUrl>
 #include <QComboBox>
+#include <QLibraryInfo>
 
 namespace Ui {
 class MainWindow;
@@ -148,6 +149,7 @@ private:
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
     QString tmp;
     QTranslator m_translator; // contains the translations for this application
+    //QTranslator qt_translator;
 
     QActionGroup* langGroup;
 
