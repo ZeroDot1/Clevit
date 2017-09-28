@@ -98,7 +98,7 @@ void MainWindow::slotLanguageChanged(QAction* action)
     {
       // load the language dependant on the action content
       loadLanguage(action->data().toString());
-      setWindowIcon(QIcon("/src/icons/icon.png"));
+      setWindowIcon(QIcon(":/icons/icons/icon.png"));
     }
 }
 
