@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -10,11 +10,11 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;See: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="33"/>
@@ -128,17 +128,17 @@
     <message>
         <location filename="../mainwindow.ui" line="177"/>
         <source>Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzung:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="187"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>zu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Translate</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzen!</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
@@ -152,7 +152,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="247"/>
@@ -347,11 +347,11 @@
     <message>
         <location filename="../mainwindow.ui" line="533"/>
         <source>Hide Translation </source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer ausblenden</translation>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
-        <translation type="vanished">Text Dateien (*.txt)</translation>
+        <translation>Text Dateien (*.txt)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="63"/>
@@ -418,12 +418,12 @@ PNG (*.png</translation>
     <message>
         <location filename="../mainwindow.cpp" line="567"/>
         <source>Show Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="578"/>
         <source>Hide Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer ausblenden</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
@@ -493,553 +493,553 @@ Bist du sicher, dass du weitermachen willst?</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation type="vanished">Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
+        <translation>Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="130"/>
         <location filename="../translation.cpp" line="150"/>
         <source>French</source>
-        <translation type="unfinished"></translation>
+        <translation>Französisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="130"/>
         <location filename="../translation.cpp" line="150"/>
         <source>fr</source>
-        <translation type="unfinished"></translation>
+        <translation>fr</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="131"/>
         <location filename="../translation.cpp" line="183"/>
         <source>Spanish</source>
-        <translation type="unfinished"></translation>
+        <translation>Spanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="131"/>
         <location filename="../translation.cpp" line="183"/>
         <source>es</source>
-        <translation type="unfinished"></translation>
+        <translation>es</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="132"/>
         <source>Afrikaans</source>
-        <translation type="unfinished"></translation>
+        <translation>Afrikanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="132"/>
         <source>af</source>
-        <translation type="unfinished"></translation>
+        <translation>af</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="133"/>
         <source>Albanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Albanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="133"/>
         <source>sq</source>
-        <translation type="unfinished"></translation>
+        <translation>sq</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="135"/>
         <source>Arabic</source>
-        <translation type="unfinished"></translation>
+        <translation>Arabisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="135"/>
         <source>ar</source>
-        <translation type="unfinished"></translation>
+        <translation>ar</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="136"/>
         <source>Belarusian</source>
-        <translation type="unfinished"></translation>
+        <translation>Weissrussisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="136"/>
         <source>be</source>
-        <translation type="unfinished"></translation>
+        <translation>ne</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="137"/>
         <source>Bulgarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Bulgarisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="137"/>
         <source>bg</source>
-        <translation type="unfinished"></translation>
+        <translation>bq</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="138"/>
         <source>Catalan</source>
-        <translation type="unfinished"></translation>
+        <translation>Katalanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="138"/>
         <source>ca</source>
-        <translation type="unfinished"></translation>
+        <translation>ca</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="139"/>
         <source>Chinese</source>
-        <translation type="unfinished"></translation>
+        <translation>Chinesisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="139"/>
         <source>zh-cn</source>
-        <translation type="unfinished"></translation>
+        <translation>zh-cn</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="141"/>
         <source>Croatian</source>
-        <translation type="unfinished"></translation>
+        <translation>Kroatisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="141"/>
         <source>hr</source>
-        <translation type="unfinished"></translation>
+        <translation>hr</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="142"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tschechisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="142"/>
         <source>cs</source>
-        <translation type="unfinished"></translation>
+        <translation>cs</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="143"/>
         <source>Danish</source>
-        <translation type="unfinished"></translation>
+        <translation>Dänisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="143"/>
         <source>da</source>
-        <translation type="unfinished"></translation>
+        <translation>da</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="144"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Niederländisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="144"/>
         <source>nl</source>
-        <translation type="unfinished"></translation>
+        <translation>nl</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="145"/>
         <location filename="../translation.cpp" line="199"/>
         <location filename="../translation.cpp" line="200"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Englisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="145"/>
         <source>en</source>
-        <translation type="unfinished"></translation>
+        <translation>en</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="146"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Estnisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="146"/>
         <source>et</source>
-        <translation type="unfinished"></translation>
+        <translation>et</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="148"/>
         <source>Filipino</source>
-        <translation type="unfinished"></translation>
+        <translation>Philippinisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="148"/>
         <source>tl</source>
-        <translation type="unfinished"></translation>
+        <translation>tl</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="149"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finnisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="149"/>
         <source>fi</source>
-        <translation type="unfinished"></translation>
+        <translation>fi</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="151"/>
         <source>Galician</source>
-        <translation type="unfinished"></translation>
+        <translation>Galizisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="151"/>
         <source>gl</source>
-        <translation type="unfinished"></translation>
+        <translation>gl</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="152"/>
         <source>German</source>
-        <translation type="unfinished"></translation>
+        <translation>Deutsch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="152"/>
         <source>de</source>
-        <translation type="unfinished"></translation>
+        <translation>de</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="153"/>
         <source>Greek</source>
-        <translation type="unfinished"></translation>
+        <translation>Griechisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="153"/>
         <source>el</source>
-        <translation type="unfinished"></translation>
+        <translation>el</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="155"/>
         <source>Haitian creole alpha</source>
-        <translation type="unfinished"></translation>
+        <translation>Haitianisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="155"/>
         <source>ht</source>
-        <translation type="unfinished"></translation>
+        <translation>ht</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="156"/>
         <source>Hebrew</source>
-        <translation type="unfinished"></translation>
+        <translation>Hebräisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="156"/>
         <source>iw</source>
-        <translation type="unfinished"></translation>
+        <translation>iw</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="157"/>
         <source>Hindi</source>
-        <translation type="unfinished"></translation>
+        <translation>Hindi</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="157"/>
         <source>hi</source>
-        <translation type="unfinished"></translation>
+        <translation>hi</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="158"/>
         <source>Hungarian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ungarisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="158"/>
         <source>hu</source>
-        <translation type="unfinished"></translation>
+        <translation>hu</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="159"/>
         <source>Icelandic</source>
-        <translation type="unfinished"></translation>
+        <translation>Isländisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="159"/>
         <source>is</source>
-        <translation type="unfinished"></translation>
+        <translation>is</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="161"/>
         <source>Indonesian</source>
-        <translation type="unfinished"></translation>
+        <translation>Indonesisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="161"/>
         <source>id</source>
-        <translation type="unfinished"></translation>
+        <translation>id</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="162"/>
         <source>Irish</source>
-        <translation type="unfinished"></translation>
+        <translation>Irisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="162"/>
         <source>ga</source>
-        <translation type="unfinished"></translation>
+        <translation>ga</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="163"/>
         <source>Italian</source>
-        <translation type="unfinished"></translation>
+        <translation>Italienisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="163"/>
         <source>it</source>
-        <translation type="unfinished"></translation>
+        <translation>it</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="164"/>
         <source>Japanese</source>
-        <translation type="unfinished"></translation>
+        <translation>Japanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="164"/>
         <source>ja</source>
-        <translation type="unfinished"></translation>
+        <translation>ja</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="165"/>
         <source>Korean</source>
-        <translation type="unfinished"></translation>
+        <translation>Koreanisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="165"/>
         <source>ko</source>
-        <translation type="unfinished"></translation>
+        <translation></translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="167"/>
         <source>Latvian</source>
-        <translation type="unfinished"></translation>
+        <translation>Lettisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="167"/>
         <source>lv</source>
-        <translation type="unfinished"></translation>
+        <translation>lv</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="168"/>
         <source>Lithuanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Litauisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="168"/>
         <source>lt</source>
-        <translation type="unfinished"></translation>
+        <translation>lt</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="169"/>
         <source>Macedonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Mazedonisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="169"/>
         <source>mk</source>
-        <translation type="unfinished"></translation>
+        <translation>mk</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="170"/>
         <source>Malay</source>
-        <translation type="unfinished"></translation>
+        <translation>Malaiisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="170"/>
         <source>ms</source>
-        <translation type="unfinished"></translation>
+        <translation>ms</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="171"/>
         <source>Maltese</source>
-        <translation type="unfinished"></translation>
+        <translation>Maltesisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="171"/>
         <source>mt</source>
-        <translation type="unfinished"></translation>
+        <translation>mt</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="173"/>
         <source>Norwegian</source>
-        <translation type="unfinished"></translation>
+        <translation>Norwegisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="173"/>
         <source>no</source>
-        <translation type="unfinished"></translation>
+        <translation>no</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="174"/>
         <source>Persian</source>
-        <translation type="unfinished"></translation>
+        <translation>Persisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="174"/>
         <source>fa</source>
-        <translation type="unfinished"></translation>
+        <translation>fa</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="175"/>
         <source>Polish</source>
-        <translation type="unfinished"></translation>
+        <translation>Polnisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="175"/>
         <source>pl</source>
-        <translation type="unfinished"></translation>
+        <translation>pl</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="176"/>
         <source>Portuguese</source>
-        <translation type="unfinished"></translation>
+        <translation>Portugiesisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="176"/>
         <source>pt</source>
-        <translation type="unfinished"></translation>
+        <translation>pt</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="177"/>
         <source>Romanian</source>
-        <translation type="unfinished"></translation>
+        <translation>Rumänisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="177"/>
         <source>ro</source>
-        <translation type="unfinished"></translation>
+        <translation>ro</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="179"/>
         <source>Russian</source>
-        <translation type="unfinished"></translation>
+        <translation>Russisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="179"/>
         <source>ru</source>
-        <translation type="unfinished"></translation>
+        <translation>ru</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="180"/>
         <source>Serbian</source>
-        <translation type="unfinished"></translation>
+        <translation>Serbisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="180"/>
         <source>sr</source>
-        <translation type="unfinished"></translation>
+        <translation>sr</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="181"/>
         <source>Slovak</source>
-        <translation type="unfinished"></translation>
+        <translation>Slowakisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="181"/>
         <source>sk</source>
-        <translation type="unfinished"></translation>
+        <translation>sk</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="182"/>
         <source>Slovenian</source>
-        <translation type="unfinished"></translation>
+        <translation>Slowenisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="182"/>
         <source>sl</source>
-        <translation type="unfinished"></translation>
+        <translation>sl</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="185"/>
         <source>Swahili</source>
-        <translation type="unfinished"></translation>
+        <translation>Swahili</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="185"/>
         <source>sw</source>
-        <translation type="unfinished"></translation>
+        <translation>sw</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="186"/>
         <source>Swedish</source>
-        <translation type="unfinished"></translation>
+        <translation>Schwedisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="186"/>
         <source>sv</source>
-        <translation type="unfinished"></translation>
+        <translation>sv</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="187"/>
         <source>Thai</source>
-        <translation type="unfinished"></translation>
+        <translation>Thailändisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="187"/>
         <source>th</source>
-        <translation type="unfinished"></translation>
+        <translation>th</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="188"/>
         <source>Turkish</source>
-        <translation type="unfinished"></translation>
+        <translation>Türkisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="188"/>
         <source>tr</source>
-        <translation type="unfinished"></translation>
+        <translation>tr</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="189"/>
         <source>Ukrainian</source>
-        <translation type="unfinished"></translation>
+        <translation>Ukrainisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="189"/>
         <source>uk</source>
-        <translation type="unfinished"></translation>
+        <translation>uk</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="191"/>
         <source>Vietnamese</source>
-        <translation type="unfinished"></translation>
+        <translation>Vietnamesisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="191"/>
         <source>vi</source>
-        <translation type="unfinished"></translation>
+        <translation>vi</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="192"/>
         <source>Welsh</source>
-        <translation type="unfinished"></translation>
+        <translation>Walisisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="192"/>
         <source>cy</source>
-        <translation type="unfinished"></translation>
+        <translation>cy</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="193"/>
         <source>Yiddish</source>
-        <translation type="unfinished"></translation>
+        <translation>Jiddisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="193"/>
         <source>yi</source>
-        <translation type="unfinished"></translation>
+        <translation>yi</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="209"/>
         <source>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</source>
-        <translation type="unfinished"></translation>
+        <translation>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="231"/>
         <source>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="238"/>
         <source>&amp;amp;</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;amp;</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="238"/>
         <source>&amp;</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;</translation>
     </message>
 </context>
 </TS>
