@@ -44,7 +44,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->fontComboBox->setEditable(false);
 
     QFontDatabase fontDB;
-    fontDB.addApplicationFont("/fonts/NotoEmoji-Regular.ttf");
+    fontDB.addApplicationFont("/src/fonts/NotoEmoji-Regular.ttf");
 
     font.setStyleHint(QFont::Monospace);
     font.setStyleName("Monospace");
