@@ -592,7 +592,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="141"/>
         <source>Croatian</source>
-        <translation type="unfinished"></translation>
+        <translation>Kroatisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="141"/>
@@ -602,7 +602,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="142"/>
         <source>Czech</source>
-        <translation type="unfinished"></translation>
+        <translation>Tschechisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="142"/>
@@ -612,7 +612,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="143"/>
         <source>Danish</source>
-        <translation type="unfinished"></translation>
+        <translation>Dänisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="143"/>
@@ -622,7 +622,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="144"/>
         <source>Dutch</source>
-        <translation type="unfinished"></translation>
+        <translation>Niederländisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="144"/>
@@ -634,7 +634,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
         <location filename="../translation.cpp" line="199"/>
         <location filename="../translation.cpp" line="200"/>
         <source>English</source>
-        <translation type="unfinished"></translation>
+        <translation>Englisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="145"/>
@@ -644,7 +644,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="146"/>
         <source>Estonian</source>
-        <translation type="unfinished"></translation>
+        <translation>Estnisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="146"/>
@@ -654,7 +654,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="148"/>
         <source>Filipino</source>
-        <translation type="unfinished"></translation>
+        <translation>Philippinisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="148"/>
@@ -664,7 +664,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="149"/>
         <source>Finnish</source>
-        <translation type="unfinished"></translation>
+        <translation>Finnisch</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="149"/>
