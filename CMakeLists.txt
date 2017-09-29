@@ -27,9 +27,10 @@ find_package(Qt5 REQUIRED
     Gui
     Widgets 
     PrintSupport
+    Network
 )
 
 qt5_wrap_ui( UI_HEADERS src/mainwindow.ui src/about.ui src/credits.ui)
 qt5_add_resources( QRCS src/icons.qrc )
 add_executable( ${PROJECT_NAME} src/main.cpp src/mainwindow.cpp src/about.cpp src/translation.cpp src/credits.cpp src/save_load_files.cpp src/highlighter.cpp ${QRCS} )
-target_link_libraries( ${PROJECT_NAME} Qt5::Widgets Qt5::PrintSupport)
+target_link_libraries( ${PROJECT_NAME} Qt5::Widgets Qt5::PrintSupport Qt5::Network)

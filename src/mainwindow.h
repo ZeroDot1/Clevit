@@ -47,6 +47,8 @@
 #include <QUrl>
 #include <QComboBox>
 #include <QLibraryInfo>
+#include <QNetworkReply>
+#include <QNetworkAccessManager>
 
 namespace Ui {
 class MainWindow;
@@ -97,6 +99,8 @@ private slots:
 
     void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
 
+    void finishedSlot(QNetworkReply* reply);
+
     void on_actionReport_Bugs_triggered();
 
     void on_colorBtn_clicked();
@@ -127,6 +131,8 @@ private slots:
 
     void on_actionHide_WordFinder_triggered();
 
+    void on_translateBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -149,7 +155,10 @@ private:
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
     QString tmp;
     QTranslator m_translator; // contains the translations for this application
-    //QTranslator qt_translator;
+
+    QMap<QString, QString> languages;
+
+    QNetworkAccessManager *nam;
 
     QActionGroup* langGroup;
 
@@ -174,6 +183,8 @@ private:
     bool textFileVerifier();
     bool odfFileVerifier();
     bool cppFileVerifier();
+    void setLanguages();
+    void realTimeTranslation();
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void configFontSizeBox();
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)

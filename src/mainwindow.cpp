@@ -32,6 +32,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->htmlSourceCheckBox->setVisible(false);
 
     createLanguageMenu();
+    setLanguages();
 
     configFontSizeBox();
 
@@ -55,6 +56,7 @@ MainWindow::MainWindow(QWidget *parent) :
     text = ui->textEdit->toPlainText();
 
     about = NULL;
+    nam = NULL;
 
     isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true;
 
@@ -545,4 +547,9 @@ void MainWindow::on_actionHide_WordFinder_triggered()
 
             ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
         }
+}
+
+void MainWindow::on_translateBtn_clicked()
+{
+    realTimeTranslation();
 }
