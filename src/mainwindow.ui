@@ -170,6 +170,37 @@
      </layout>
     </item>
     <item>
+     <layout class="QHBoxLayout" name="horizontalLayout_3">
+      <item>
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Translation:</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="fromLangBox"/>
+      </item>
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>To</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QComboBox" name="toLangBox"/>
+      </item>
+      <item>
+       <widget class="QPushButton" name="translateBtn">
+        <property name="text">
+         <string>Translate</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </item>
+    <item>
      <widget class="QTextEdit" name="textEdit">
       <property name="styleSheet">
        <string notr="true">background-color: rgb(255, 255, 255);</string>
@@ -239,6 +270,7 @@
     <addaction name="actionWindow_Layout_Color"/>
     <addaction name="menuThemes"/>
     <addaction name="actionHide_WordFinder"/>
+    <addaction name="actionHide_Translation_bar"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -494,6 +526,11 @@
   <action name="actionHide_WordFinder">
    <property name="text">
     <string>Hide WordFinder</string>
+   </property>
+  </action>
+  <action name="actionHide_Translation_bar">
+   <property name="text">
+    <string>Hide Translation </string>
    </property>
   </action>
  </widget>

@@ -32,12 +32,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->htmlSourceCheckBox->setVisible(false);
 
     createLanguageMenu();
+    setLanguages();
+
+    if(QSslSocket::supportsSsl())
+        std::cout << "Support SSL enabled" << std::endl;
 
     configFontSizeBox();
 
     ui->fontSizeBox->setCurrentText("12");
 
     ui->fontComboBox->setEditable(false);
+
+    QFontDatabase fontDB;
+    fontDB.addApplicationFont("/src/fonts/NotoEmoji-Regular.ttf");
 
     font.setStyleHint(QFont::Monospace);
     font.setStyleName("Monospace");
@@ -52,6 +59,7 @@ MainWindow::MainWindow(QWidget *parent) :
     text = ui->textEdit->toPlainText();
 
     about = NULL;
+    nam = NULL;
 
     isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true;
 
@@ -541,5 +549,35 @@ void MainWindow::on_actionHide_WordFinder_triggered()
             ui->clearBtn->setVisible(true);
 
             ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
+        }
+}
+
+void MainWindow::on_translateBtn_clicked()
+{
+    realTimeTranslation();
+}
+
+void MainWindow::on_actionHide_Translation_bar_triggered()
+{
+    if(ui->fromLangBox->isVisible() == true)
+    {
+        ui->label->setVisible(false);
+        ui->label_2->setVisible(false);
+        ui->fromLangBox->setVisible(false);
+        ui->toLangBox->setVisible(false);
+        ui->translateBtn->setVisible(false);
+
+        ui->actionHide_Translation_bar->setText(tr("Show Translation"));
+    }
+    else
+        if(ui->fromLangBox->isVisible() == false)
+        {
+            ui->label->setVisible(true);
+            ui->label_2->setVisible(true);
+            ui->fromLangBox->setVisible(true);
+            ui->toLangBox->setVisible(true);
+            ui->translateBtn->setVisible(true);
+
+            ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
         }
 }
