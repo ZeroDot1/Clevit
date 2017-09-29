@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -10,11 +10,11 @@
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten Bedingungen. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;See: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../about.ui" line="33"/>
@@ -128,17 +128,17 @@
     <message>
         <location filename="../mainwindow.ui" line="177"/>
         <source>Translation:</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzung:</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="187"/>
         <source>To</source>
-        <translation type="unfinished"></translation>
+        <translation>zu</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="197"/>
         <source>Translate</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzen!</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="223"/>
@@ -152,7 +152,7 @@
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="247"/>
@@ -347,11 +347,11 @@
     <message>
         <location filename="../mainwindow.ui" line="533"/>
         <source>Hide Translation </source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer ausblenden</translation>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
-        <translation type="vanished">Text Dateien (*.txt)</translation>
+        <translation>Text Dateien (*.txt)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="63"/>
@@ -418,12 +418,12 @@ PNG (*.png</translation>
     <message>
         <location filename="../mainwindow.cpp" line="567"/>
         <source>Show Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="578"/>
         <source>Hide Translation</source>
-        <translation type="unfinished"></translation>
+        <translation>Übersetzer ausblenden</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="365"/>
@@ -493,7 +493,7 @@ Bist du sicher, dass du weitermachen willst?</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation type="vanished">Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
+        <translation>Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="130"/>
@@ -1024,22 +1024,22 @@ Bist du sicher, dass du weitermachen willst?</translation>
     <message>
         <location filename="../translation.cpp" line="209"/>
         <source>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</source>
-        <translation type="unfinished"></translation>
+        <translation>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="231"/>
         <source>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="238"/>
         <source>&amp;amp;</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;amp;</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="238"/>
         <source>&amp;</source>
-        <translation type="unfinished"></translation>
+        <translation>&amp;</translation>
     </message>
 </context>
 </TS>
