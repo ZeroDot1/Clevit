@@ -12,8 +12,6 @@ A text editor written on C++ with Qt Framework
 
 * Add a tab function so that you can work with different documents at the same time.
 
-* Real-time translation of text being written
-
 ### Maybe...
 
 * Add a smart spell checker
