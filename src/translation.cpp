@@ -1,4 +1,3 @@
-
 /************************************************************************************************************
 *    											                                                            *
 *    TPad -  A text editor written on C++ with Qt Framework                                                 *
@@ -203,8 +202,7 @@ void MainWindow::setLanguages()
 
 void MainWindow::realTimeTranslation()
 {
-    if(nam == NULL)
-        nam = new QNetworkAccessManager(this);
+    nam = new QNetworkAccessManager(this);
 
     QStringList words = ui->textEdit->toPlainText().split(QRegExp("\\s+"));
     QString gtUrl = tr("http://translate.google.com/translate_t?langpair=%1|%2&text=").arg(languages[ui->fromLangBox->currentText()]).arg(languages[ui->toLangBox->currentText()]) + words.join("+");

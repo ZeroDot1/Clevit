@@ -49,6 +49,8 @@
 #include <QLibraryInfo>
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
+#include <QSslSocket>
+#include <QSsl>
 
 namespace Ui {
 class MainWindow;
@@ -132,6 +134,8 @@ private slots:
     void on_actionHide_WordFinder_triggered();
 
     void on_translateBtn_clicked();
+
+    void on_actionHide_Translation_bar_triggered();
 
 private:
     Ui::MainWindow *ui;

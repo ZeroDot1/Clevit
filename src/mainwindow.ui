@@ -270,6 +270,7 @@
     <addaction name="actionWindow_Layout_Color"/>
     <addaction name="menuThemes"/>
     <addaction name="actionHide_WordFinder"/>
+    <addaction name="actionHide_Translation_bar"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -525,6 +526,11 @@
   <action name="actionHide_WordFinder">
    <property name="text">
     <string>Hide WordFinder</string>
+   </property>
+  </action>
+  <action name="actionHide_Translation_bar">
+   <property name="text">
+    <string>Hide Translation </string>
    </property>
   </action>
  </widget>
