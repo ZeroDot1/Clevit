@@ -29,6 +29,8 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
+    setSettings();
+
     ui->htmlSourceCheckBox->setVisible(false);
 
     createLanguageMenu();
@@ -44,7 +46,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->fontComboBox->setEditable(false);
 
     QFontDatabase fontDB;
-    fontDB.addApplicationFont("/src/fonts/NotoEmoji-Regular.ttf");
+    fontDB.addApplicationFont("/fonts/NotoEmoji-Regular.ttf");
 
     font.setStyleHint(QFont::Monospace);
     font.setStyleName("Monospace");
@@ -144,6 +146,8 @@ void MainWindow::configFontSizeBox()
 void MainWindow::closeEvent(QCloseEvent *event)
 {
     text = ui->textEdit->toPlainText();
+
+    saveSettings();
 
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
@@ -509,26 +513,35 @@ void MainWindow::on_actionNo_Theme_2_triggered()
 
 void MainWindow::on_actionWood_Theme_2_triggered()
 {
+    theme = "Wood";
+
     this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
     ui->fontComboBox->setStyleSheet("background-color: rgb(245, 121, 0);");
     ui->fontSizeBox->setStyleSheet("background-color: rgb(245, 121, 0);");
     ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+
 }
 
 void MainWindow::on_actionWave_Theme_2_triggered()
 {
+    theme = "Wave";
+
     this->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
     ui->fontComboBox->setStyleSheet("background-color: rgb(114, 159, 207);");
     ui->fontSizeBox->setStyleSheet("background-color: rgb(114, 159, 207);");
     ui->Toolbar->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+
 }
 
 void MainWindow::on_actionRainbow_Theme_2_triggered()
 {
+    theme = "Rainbow";
+
     this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->fontComboBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->fontSizeBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+
 }
 
 void MainWindow::on_actionHide_WordFinder_triggered()
@@ -580,4 +593,23 @@ void MainWindow::on_actionHide_Translation_bar_triggered()
 
             ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
         }
+}
+
+void MainWindow::on_actionReset_Default_Layout_triggered()
+{
+    ui->search_TextEdit->setVisible(true);
+    ui->searchBtn->setVisible(true);
+    ui->clearBtn->setVisible(true);
+
+    ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
+
+    ui->label->setVisible(true);
+    ui->label_2->setVisible(true);
+    ui->fromLangBox->setVisible(true);
+    ui->toLangBox->setVisible(true);
+    ui->translateBtn->setVisible(true);
+
+    ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
+
+    this->setStyleSheet("");
 }

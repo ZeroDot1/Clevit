@@ -482,3 +482,120 @@ bool MainWindow::cppFileVerifier()
 
     return false;
 }
+
+void MainWindow::saveSettings()
+{
+    QFile saveSets("lset.txt");
+
+    if(saveSets.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QTextStream textAppend(&saveSets);
+
+        if(ui->search_TextEdit->isVisible())
+            textAppend << "1\n";
+        else
+            textAppend << "0\n";
+
+        if(ui->translateBtn->isVisible())
+            textAppend << "1\n";
+        else
+            textAppend << "0\n";
+
+        if(this->styleSheet() == "")
+            textAppend << "0";
+        else
+            if(theme.isEmpty() == true)
+                textAppend << this->styleSheet()+"\n";
+            else
+                textAppend << theme+"\n";
+    }
+
+    saveSets.close();
+}
+
+void MainWindow::setSettings()
+{
+    QFile setSets("lset.txt");
+
+    if(setSets.exists())
+        if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))
+        {
+            QString tmp = setSets.readAll();
+
+            if(tmp[0] == '1')
+            {
+                ui->search_TextEdit->setVisible(true);
+                ui->searchBtn->setVisible(true);
+                ui->clearBtn->setVisible(true);
+
+                ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
+            }
+            else
+                if(tmp[0] == '0')
+                {
+                    ui->search_TextEdit->setVisible(false);
+                    ui->searchBtn->setVisible(false);
+                    ui->clearBtn->setVisible(false);
+
+                    ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
+                }
+
+            if(tmp[2] == '1')
+            {
+                ui->label->setVisible(true);
+                ui->label_2->setVisible(true);
+                ui->fromLangBox->setVisible(true);
+                ui->toLangBox->setVisible(true);
+                ui->translateBtn->setVisible(true);
+
+                ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
+            }
+            else
+                if(tmp[2] == '0')
+                {
+                    ui->label->setVisible(false);
+                    ui->label_2->setVisible(false);
+                    ui->fromLangBox->setVisible(false);
+                    ui->toLangBox->setVisible(false);
+                    ui->translateBtn->setVisible(false);
+
+                    ui->actionHide_Translation_bar->setText(tr("Show Translation"));
+                }
+
+            QString style;
+
+            for(int i = 4,j = 0;i < tmp.length();i++,j++)
+                style.insert(j,tmp[i]);
+
+            if(QString::compare(style,"Wood\n") == 0)
+            {
+                this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+                ui->fontComboBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+                ui->fontSizeBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+                ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+
+            }
+            else
+                if(QString::compare(style,"Wave\n") == 0)
+                {
+                    this->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+                    ui->fontComboBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+                    ui->fontSizeBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+                    ui->Toolbar->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+
+                }
+                else
+                    if(QString::compare(style,"Rainbow\n") == 0)
+                    {
+                        this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->fontComboBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->fontSizeBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+
+                    }
+                    else
+                        this->setStyleSheet(style);
+        }
+
+    setSets.close();
+}
