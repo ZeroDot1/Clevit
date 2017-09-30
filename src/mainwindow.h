@@ -163,6 +163,8 @@ private:
     QString tmp;
     QString theme;
     QTranslator m_translator; // contains the translations for this application
+    QTranslator qtTranslator;
+    QTranslator qtBaseTranslator;
 
     QMap<QString, QString> languages;
 
