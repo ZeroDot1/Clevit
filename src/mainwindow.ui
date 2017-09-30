@@ -271,6 +271,7 @@
     <addaction name="menuThemes"/>
     <addaction name="actionHide_WordFinder"/>
     <addaction name="actionHide_Translation_bar"/>
+    <addaction name="actionReset_Default_Layout"/>
    </widget>
    <addaction name="menuFile"/>
    <addaction name="menuEdit"/>
@@ -531,6 +532,11 @@
   <action name="actionHide_Translation_bar">
    <property name="text">
     <string>Hide Translation </string>
+   </property>
+  </action>
+  <action name="actionReset_Default_Layout">
+   <property name="text">
+    <string>Reset Window Layout</string>
    </property>
   </action>
  </widget>

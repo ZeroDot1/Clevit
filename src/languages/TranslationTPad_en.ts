@@ -191,226 +191,233 @@
         <translation>Themes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="310"/>
+        <location filename="../mainwindow.ui" line="311"/>
         <source>Open...</source>
         <translation>Open...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="313"/>
+        <location filename="../mainwindow.ui" line="314"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="322"/>
+        <location filename="../mainwindow.ui" line="323"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="325"/>
+        <location filename="../mainwindow.ui" line="326"/>
         <source>Ctrl+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="334"/>
+        <location filename="../mainwindow.ui" line="335"/>
         <source>Save as...</source>
         <translation>Save as...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="337"/>
+        <location filename="../mainwindow.ui" line="338"/>
         <source>Ctrl+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="346"/>
+        <location filename="../mainwindow.ui" line="347"/>
         <source>Exit</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="349"/>
+        <location filename="../mainwindow.ui" line="350"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="358"/>
+        <location filename="../mainwindow.ui" line="359"/>
         <source>Copy</source>
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="361"/>
+        <location filename="../mainwindow.ui" line="362"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="370"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>Paste</source>
         <translation>Paste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="373"/>
+        <location filename="../mainwindow.ui" line="374"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="382"/>
+        <location filename="../mainwindow.ui" line="383"/>
         <source>Cut</source>
         <translation>Cut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="385"/>
+        <location filename="../mainwindow.ui" line="386"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>Undo</source>
         <translation>Undo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="397"/>
+        <location filename="../mainwindow.ui" line="398"/>
         <source>Ctrl+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>Redo</source>
         <translation>Redo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="409"/>
+        <location filename="../mainwindow.ui" line="410"/>
         <source>Ctrl+Shift+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="419"/>
         <source>About TPad</source>
         <translation>About Tpad</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
+        <location filename="../mainwindow.ui" line="428"/>
         <source>New File</source>
         <translation>New File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="439"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>Report Bugs</source>
         <translation>Report Bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="448"/>
+        <location filename="../mainwindow.ui" line="449"/>
         <source>Export to PDF...</source>
         <translation>Export to PDF...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="457"/>
+        <location filename="../mainwindow.ui" line="458"/>
         <source>Export to Formatting Txt File</source>
         <translation>Export to Formatting Txt File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="466"/>
+        <location filename="../mainwindow.ui" line="467"/>
         <source>Print</source>
         <translation>Print</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="469"/>
+        <location filename="../mainwindow.ui" line="470"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="478"/>
+        <location filename="../mainwindow.ui" line="479"/>
         <source>Add an Image</source>
         <translation>Add an Image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="483"/>
+        <location filename="../mainwindow.ui" line="484"/>
         <source>Window Layout Color</source>
         <translation>Window Layout Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="488"/>
-        <location filename="../mainwindow.ui" line="508"/>
+        <location filename="../mainwindow.ui" line="489"/>
+        <location filename="../mainwindow.ui" line="509"/>
         <source>No Theme</source>
         <translation>No Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="493"/>
-        <location filename="../mainwindow.ui" line="513"/>
+        <location filename="../mainwindow.ui" line="494"/>
+        <location filename="../mainwindow.ui" line="514"/>
         <source>Wood Theme</source>
         <translation>Wood Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="498"/>
-        <location filename="../mainwindow.ui" line="518"/>
+        <location filename="../mainwindow.ui" line="499"/>
+        <location filename="../mainwindow.ui" line="519"/>
         <source>Wave Theme</source>
         <translation>Wave Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="503"/>
-        <location filename="../mainwindow.ui" line="523"/>
+        <location filename="../mainwindow.ui" line="504"/>
+        <location filename="../mainwindow.ui" line="524"/>
         <source>Rainbow Theme</source>
         <translation>Rainbow Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="528"/>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.ui" line="529"/>
+        <location filename="../mainwindow.cpp" line="574"/>
+        <location filename="../mainwindow.cpp" line="614"/>
+        <location filename="../save_load_files.cpp" line="540"/>
         <source>Hide WordFinder</source>
         <translation>Hide WordFinder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="533"/>
+        <location filename="../mainwindow.ui" line="534"/>
         <source>Hide Translation </source>
         <translation>Hide Translation </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="539"/>
+        <source>Reset Window Layout</source>
+        <translation>Reset Window Layout</translation>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
         <translation type="vanished">Text Files (*.txt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="63"/>
+        <location filename="../mainwindow.cpp" line="68"/>
         <source>Text Files (*.txt);; Html File(*.html)</source>
         <translation>Text Files (*.txt);; Html Files(*.html)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="151"/>
+        <location filename="../mainwindow.cpp" line="169"/>
         <source>Do you want to save the text file?</source>
         <translation>Do you want to save the text file?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="151"/>
+        <location filename="../mainwindow.cpp" line="169"/>
         <source>TPad - Text Editor</source>
         <translation>TPad - Text Editor</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="280"/>
+        <location filename="../mainwindow.cpp" line="298"/>
         <source>Select a Font Color</source>
         <translation>Select a Font Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="386"/>
+        <location filename="../mainwindow.cpp" line="403"/>
         <source>Print a document</source>
         <translation>Print document</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="412"/>
+        <location filename="../mainwindow.cpp" line="429"/>
         <source>Empty Search Field</source>
         <translation>Empty Search Field</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="413"/>
+        <location filename="../mainwindow.cpp" line="430"/>
         <source>The search field is empty. Please enter a word and click Find.</source>
         <translation>The search field is empty. Please enter a word and click Search.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="461"/>
+        <location filename="../mainwindow.cpp" line="478"/>
         <source>Select an image</source>
         <translation>Select an image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="462"/>
+        <location filename="../mainwindow.cpp" line="479"/>
         <source>Bitmap Files (*.bmp)
 JPEG (*.jpg *jpeg)
 GIF (*.gif)
@@ -423,22 +430,26 @@ PNG (*.png)
 </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="481"/>
+        <location filename="../mainwindow.cpp" line="498"/>
         <source>Select a Window Layout Color</source>
         <translation>Select a Window Layout Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="539"/>
+        <location filename="../mainwindow.cpp" line="565"/>
+        <location filename="../save_load_files.cpp" line="549"/>
         <source>Show WordFinder</source>
         <translation>Show WordFinder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="567"/>
+        <location filename="../mainwindow.cpp" line="593"/>
+        <location filename="../save_load_files.cpp" line="571"/>
         <source>Show Translation</source>
         <translation>Show Translation</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="578"/>
+        <location filename="../mainwindow.cpp" line="604"/>
+        <location filename="../mainwindow.cpp" line="622"/>
+        <location filename="../save_load_files.cpp" line="560"/>
         <source>Hide Translation</source>
         <translation>Hide Translation</translation>
     </message>
@@ -497,6 +508,16 @@ PNG (*.png)
         <location filename="../save_load_files.cpp" line="365"/>
         <source>Export File to Formatting Text File</source>
         <translation>Export File to Formatting Text File</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="518"/>
+        <source>Error Saving Settings</source>
+        <translation>Error Saving Settings</translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="518"/>
+        <source>TPad can&apos;t save your settings</source>
+        <translation>TPad can&apos;t save your settings</translation>
     </message>
     <message>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);; Odf Files (*.odf)</source>
@@ -1043,22 +1064,22 @@ Are you sure you want to continue?</translation>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="209"/>
+        <location filename="../translation.cpp" line="208"/>
         <source>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="231"/>
+        <location filename="../translation.cpp" line="230"/>
         <source>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="238"/>
+        <location filename="../translation.cpp" line="237"/>
         <source>&amp;amp;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="238"/>
+        <location filename="../translation.cpp" line="237"/>
         <source>&amp;</source>
         <translation></translation>
     </message>

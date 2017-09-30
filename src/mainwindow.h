@@ -26,6 +26,7 @@
 #include "about.h"
 #include "highlighter.h"
 
+#include <string.h>
 #include <iostream>
 #include <QMainWindow>
 #include <QCloseEvent>
@@ -137,6 +138,8 @@ private slots:
 
     void on_actionHide_Translation_bar_triggered();
 
+    void on_actionReset_Default_Layout_triggered();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -158,6 +161,7 @@ private:
     QString m_langPath; // Path of language files. This is always fixed to /languages.
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
     QString tmp;
+    QString theme;
     QTranslator m_translator; // contains the translations for this application
 
     QMap<QString, QString> languages;
@@ -187,6 +191,8 @@ private:
     bool textFileVerifier();
     bool odfFileVerifier();
     bool cppFileVerifier();
+    void saveSettings();
+    void setSettings();
     void setLanguages();
     void realTimeTranslation();
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
