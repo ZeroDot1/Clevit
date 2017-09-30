@@ -485,7 +485,11 @@ bool MainWindow::cppFileVerifier()
 
 void MainWindow::saveSettings()
 {
-    QFile saveSets("lset.txt");
+    QDir createPath;
+
+    createPath.mkdir("TPad_Files");
+
+    QFile saveSets(createPath.absolutePath()+"/TPad_Files/lset.txt");
 
     if(saveSets.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -509,13 +513,18 @@ void MainWindow::saveSettings()
             else
                 textAppend << theme+"\n";
     }
+    else
+    {
+        QMessageBox::warning(this,tr("Error Saving Settings"),tr("TPad can't save your settings"));
+        return;
+    }
 
     saveSets.close();
 }
 
 void MainWindow::setSettings()
 {
-    QFile setSets("lset.txt");
+    QFile setSets("TPad_Files/lset.txt");
 
     if(setSets.exists())
         if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))

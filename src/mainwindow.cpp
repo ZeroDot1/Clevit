@@ -88,6 +88,8 @@ void MainWindow::textChanged()
 {
    isSaved = false;
 
+   QTextCursor cursor = ui->textEdit->textCursor();
+
     text = ui->textEdit->toPlainText();
 
     if(changedTitle == false && fileNotChanged() == false)
@@ -103,6 +105,15 @@ void MainWindow::textChanged()
 
             changedTitle = false;
         }
+
+    // When cursor is in col number 0 qt reset font, font size, color and other stuff.
+    // This piece of code prevent this
+
+    if(cursor.columnNumber() == 0 && cursor.hasSelection() == false)
+    {
+        ui->textEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->setTextColor(color);
+    }
 }
 
 bool MainWindow::fileNotChanged()
@@ -120,7 +131,7 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
 {
     QTextCursor cursor = ui->textEdit->textCursor();
     if (cursor.hasSelection() == true)
-    {
+    {   
         cursor.mergeCharFormat(format);
 
         ui->textEdit->mergeCurrentCharFormat(format);
@@ -299,7 +310,6 @@ void MainWindow::on_colorBtn_clicked()
         ui->textEdit->setTextColor(Qt::black);
         ui->colorBtn->setStyleSheet("background-color: black");
     }
-
 }
 
 
@@ -485,14 +495,14 @@ void MainWindow::on_actionAdd_an_Image_triggered()
 
 void MainWindow::on_actionWindow_Layout_Color_triggered()
 {
-    color = QColorDialog::getColor(Qt::white,this,tr("Select a Window Layout Color"));
+    QColor lColor = QColorDialog::getColor(Qt::white,this,tr("Select a Window Layout Color"));
 
-    if(color.isValid())
+    if(lColor.isValid())
     {
-        this->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->fontComboBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->fontSizeBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->Toolbar->setStyleSheet(QString("background-color: %1").arg(color.name()));
+        this->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->fontComboBox->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->fontSizeBox->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->Toolbar->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
     }
     else
     {
@@ -612,4 +622,5 @@ void MainWindow::on_actionReset_Default_Layout_triggered()
     ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
 
     this->setStyleSheet("");
+    ui->Toolbar->setStyleSheet("");
 }
