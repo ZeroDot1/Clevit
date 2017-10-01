@@ -3,8 +3,11 @@
 
 ### 1.4
 
-Css Updated
-Removed inline Css
+- Add a new Screenshot
+- Updating the FEATURES list
+- Update Downloads
+- Css Updated
+- Removed inline Css
 
 ### 1.3
 
