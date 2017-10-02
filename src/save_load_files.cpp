@@ -529,9 +529,9 @@ void MainWindow::setSettings()
     if(setSets.exists())
         if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))
         {
-            QString tmp = setSets.readAll();
+            QString str = setSets.readAll();
 
-            if(tmp[0] == '1')
+            if(str[0] == '1')
             {
                 ui->search_TextEdit->setVisible(true);
                 ui->searchBtn->setVisible(true);
@@ -540,7 +540,7 @@ void MainWindow::setSettings()
                 ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
             }
             else
-                if(tmp[0] == '0')
+                if(str[0] == '0')
                 {
                     ui->search_TextEdit->setVisible(false);
                     ui->searchBtn->setVisible(false);
@@ -549,7 +549,7 @@ void MainWindow::setSettings()
                     ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
                 }
 
-            if(tmp[2] == '1')
+            if(str[2] == '1')
             {
                 ui->label->setVisible(true);
                 ui->label_2->setVisible(true);
@@ -560,7 +560,7 @@ void MainWindow::setSettings()
                 ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
             }
             else
-                if(tmp[2] == '0')
+                if(str[2] == '0')
                 {
                     ui->label->setVisible(false);
                     ui->label_2->setVisible(false);
@@ -573,8 +573,8 @@ void MainWindow::setSettings()
 
             QString style;
 
-            for(int i = 4,j = 0;i < tmp.length();i++,j++)
-                style.insert(j,tmp[i]);
+            for(int i = 4,j = 0;i < str.length();i++,j++)
+                style.insert(j,str[i]);
 
             if(QString::compare(style,"Wood\n") == 0)
             {

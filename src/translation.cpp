@@ -68,7 +68,8 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
     qApp->removeTranslator(&translator);
 
     // load the new translator
-     if(translator.load(QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename))) //
+
+    if(translator.load(QString(QApplication::applicationDirPath()+"/src/languages/%1").arg(filename))) //
      {
          qApp->installTranslator(&translator);
 
@@ -77,6 +78,52 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
      }
     else
         std::cout << "Cannot load translations." << std::endl;
+
+    ///Translate the buttons of TPad
+
+    if(filename.contains("de") == true)
+    {
+        if (qtTranslator.load("qt_de.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+        {
+            std::cout << "Qt translations loaded" << std::endl;
+            qApp->installTranslator(&qtTranslator);
+        }
+
+        if (qtBaseTranslator.load("qtbase_de.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+        {
+                std::cout << "QtBase translations loaded" << std::endl;
+                qApp->installTranslator(&qtBaseTranslator);
+        }
+    }
+    else
+        if(filename.contains("pt") == true)
+        {
+            if (qtTranslator.load("qt_pt.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+             {
+                 std::cout << "Qt translations loaded" << std::endl;
+                 qApp->installTranslator(&qtTranslator);
+             }
+
+             if (qtBaseTranslator.load("qtbase_pt.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+             {
+                 std::cout << "QtBase translations loaded" << std::endl;
+                 qApp->installTranslator(&qtBaseTranslator);
+             }
+        }
+        else
+        {
+            if (qtTranslator.load("qt_en.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+            {
+                std::cout << "Qt translations loaded" << std::endl;
+                qApp->installTranslator(&qtTranslator);
+            }
+
+            if (qtBaseTranslator.load("qtbase_en.qm", QLibraryInfo::location(QLibraryInfo::TranslationsPath)))
+            {
+                    std::cout << "QtBase translations loaded" << std::endl;
+                    qApp->installTranslator(&qtBaseTranslator);
+            }
+        }
 }
 
 void MainWindow::loadLanguage(const QString& rLanguage)

@@ -340,6 +340,15 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="529"/>
+        <source>Hide/Show WordFinder</source>
+        <translation>Esconder/Mostrar Buscador de Palavras</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="534"/>
+        <source>Hide/Show Translation </source>
+        <translation>Esconder/Mostrar Tradução </translation>
+    </message>
+    <message>
         <location filename="../mainwindow.cpp" line="574"/>
         <location filename="../mainwindow.cpp" line="614"/>
         <location filename="../save_load_files.cpp" line="540"/>
@@ -347,9 +356,8 @@
         <translation>Esconder Buscador de Palavras</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="534"/>
         <source>Hide Translation </source>
-        <translation>Esconder Tradução</translation>
+        <translation type="vanished">Esconder Tradução</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="539"/>
@@ -361,7 +369,7 @@
         <translation type="vanished">Ficheiros de texto (*.txt)</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="68"/>
+        <location filename="../mainwindow.cpp" line="66"/>
         <source>Text Files (*.txt);; Html File(*.html)</source>
         <translation>Ficheiros de texto (*.txt);; Ficheiros Html(*.html)</translation>
     </message>
@@ -523,548 +531,548 @@ Tem a certeza que deseja continuar?
         <translation type="vanished">Todos os ficheiros (*.*);;Ficheiros pdf (*.pdf)</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="130"/>
-        <location filename="../translation.cpp" line="150"/>
+        <location filename="../translation.cpp" line="177"/>
+        <location filename="../translation.cpp" line="197"/>
         <source>French</source>
         <translation>Francês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="130"/>
-        <location filename="../translation.cpp" line="150"/>
+        <location filename="../translation.cpp" line="177"/>
+        <location filename="../translation.cpp" line="197"/>
         <source>fr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="131"/>
-        <location filename="../translation.cpp" line="183"/>
+        <location filename="../translation.cpp" line="178"/>
+        <location filename="../translation.cpp" line="230"/>
         <source>Spanish</source>
         <translation>Espanhol</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="131"/>
-        <location filename="../translation.cpp" line="183"/>
+        <location filename="../translation.cpp" line="178"/>
+        <location filename="../translation.cpp" line="230"/>
         <source>es</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="132"/>
+        <location filename="../translation.cpp" line="179"/>
         <source>Afrikaans</source>
         <translation>Afrikaans</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="132"/>
+        <location filename="../translation.cpp" line="179"/>
         <source>af</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="133"/>
+        <location filename="../translation.cpp" line="180"/>
         <source>Albanian</source>
         <translation>Albanês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="133"/>
+        <location filename="../translation.cpp" line="180"/>
         <source>sq</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="135"/>
+        <location filename="../translation.cpp" line="182"/>
         <source>Arabic</source>
         <translation>Árabe</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="135"/>
+        <location filename="../translation.cpp" line="182"/>
         <source>ar</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="136"/>
+        <location filename="../translation.cpp" line="183"/>
         <source>Belarusian</source>
         <translation>Bielorrusso</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="136"/>
+        <location filename="../translation.cpp" line="183"/>
         <source>be</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="137"/>
+        <location filename="../translation.cpp" line="184"/>
         <source>Bulgarian</source>
         <translation>Búlgaro</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="137"/>
+        <location filename="../translation.cpp" line="184"/>
         <source>bg</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="138"/>
+        <location filename="../translation.cpp" line="185"/>
         <source>Catalan</source>
         <translation>Catalão</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="138"/>
+        <location filename="../translation.cpp" line="185"/>
         <source>ca</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="139"/>
+        <location filename="../translation.cpp" line="186"/>
         <source>Chinese</source>
         <translation>Chinês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="139"/>
+        <location filename="../translation.cpp" line="186"/>
         <source>zh-cn</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="141"/>
+        <location filename="../translation.cpp" line="188"/>
         <source>Croatian</source>
         <translation>Croata</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="141"/>
+        <location filename="../translation.cpp" line="188"/>
         <source>hr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="142"/>
+        <location filename="../translation.cpp" line="189"/>
         <source>Czech</source>
         <translation>Checo</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="142"/>
+        <location filename="../translation.cpp" line="189"/>
         <source>cs</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="143"/>
+        <location filename="../translation.cpp" line="190"/>
         <source>Danish</source>
         <translation>Dinamarquês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="143"/>
+        <location filename="../translation.cpp" line="190"/>
         <source>da</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="144"/>
+        <location filename="../translation.cpp" line="191"/>
         <source>Dutch</source>
         <translation>Holandês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="144"/>
+        <location filename="../translation.cpp" line="191"/>
         <source>nl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="145"/>
-        <location filename="../translation.cpp" line="199"/>
-        <location filename="../translation.cpp" line="200"/>
+        <location filename="../translation.cpp" line="192"/>
+        <location filename="../translation.cpp" line="246"/>
+        <location filename="../translation.cpp" line="247"/>
         <source>English</source>
         <translation>Inglês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="145"/>
+        <location filename="../translation.cpp" line="192"/>
         <source>en</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="146"/>
+        <location filename="../translation.cpp" line="193"/>
         <source>Estonian</source>
         <translation>Estoniano</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="146"/>
+        <location filename="../translation.cpp" line="193"/>
         <source>et</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="148"/>
+        <location filename="../translation.cpp" line="195"/>
         <source>Filipino</source>
         <translation>Filipino</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="148"/>
+        <location filename="../translation.cpp" line="195"/>
         <source>tl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="149"/>
+        <location filename="../translation.cpp" line="196"/>
         <source>Finnish</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="149"/>
+        <location filename="../translation.cpp" line="196"/>
         <source>fi</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="151"/>
+        <location filename="../translation.cpp" line="198"/>
         <source>Galician</source>
         <translation>Galega</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="151"/>
+        <location filename="../translation.cpp" line="198"/>
         <source>gl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="152"/>
+        <location filename="../translation.cpp" line="199"/>
         <source>German</source>
         <translation>Alemão</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="152"/>
+        <location filename="../translation.cpp" line="199"/>
         <source>de</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="153"/>
+        <location filename="../translation.cpp" line="200"/>
         <source>Greek</source>
         <translation>Grego</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="153"/>
+        <location filename="../translation.cpp" line="200"/>
         <source>el</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="155"/>
+        <location filename="../translation.cpp" line="202"/>
         <source>Haitian creole alpha</source>
         <translation>Alfa crioula haitiana</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="155"/>
+        <location filename="../translation.cpp" line="202"/>
         <source>ht</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="156"/>
+        <location filename="../translation.cpp" line="203"/>
         <source>Hebrew</source>
         <translation>Hebraico</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="156"/>
+        <location filename="../translation.cpp" line="203"/>
         <source>iw</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="157"/>
+        <location filename="../translation.cpp" line="204"/>
         <source>Hindi</source>
         <translation>Hindi</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="157"/>
+        <location filename="../translation.cpp" line="204"/>
         <source>hi</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="158"/>
+        <location filename="../translation.cpp" line="205"/>
         <source>Hungarian</source>
         <translation>Húngaro</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="158"/>
+        <location filename="../translation.cpp" line="205"/>
         <source>hu</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="159"/>
+        <location filename="../translation.cpp" line="206"/>
         <source>Icelandic</source>
         <translation>Islandês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="159"/>
+        <location filename="../translation.cpp" line="206"/>
         <source>is</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="161"/>
+        <location filename="../translation.cpp" line="208"/>
         <source>Indonesian</source>
         <translation>Indonésio</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="161"/>
+        <location filename="../translation.cpp" line="208"/>
         <source>id</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="162"/>
+        <location filename="../translation.cpp" line="209"/>
         <source>Irish</source>
         <translation>Irlandês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="162"/>
+        <location filename="../translation.cpp" line="209"/>
         <source>ga</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="163"/>
+        <location filename="../translation.cpp" line="210"/>
         <source>Italian</source>
         <translation>Italiano</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="163"/>
+        <location filename="../translation.cpp" line="210"/>
         <source>it</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="164"/>
+        <location filename="../translation.cpp" line="211"/>
         <source>Japanese</source>
         <translation>Japonês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="164"/>
+        <location filename="../translation.cpp" line="211"/>
         <source>ja</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="165"/>
+        <location filename="../translation.cpp" line="212"/>
         <source>Korean</source>
         <translation>Coreano</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="165"/>
+        <location filename="../translation.cpp" line="212"/>
         <source>ko</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="167"/>
+        <location filename="../translation.cpp" line="214"/>
         <source>Latvian</source>
         <translation>Letão</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="167"/>
+        <location filename="../translation.cpp" line="214"/>
         <source>lv</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="168"/>
+        <location filename="../translation.cpp" line="215"/>
         <source>Lithuanian</source>
         <translation>Lituano</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="168"/>
+        <location filename="../translation.cpp" line="215"/>
         <source>lt</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="169"/>
+        <location filename="../translation.cpp" line="216"/>
         <source>Macedonian</source>
         <translation>Macedônio</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="169"/>
+        <location filename="../translation.cpp" line="216"/>
         <source>mk</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="170"/>
+        <location filename="../translation.cpp" line="217"/>
         <source>Malay</source>
         <translation>Malaio</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="170"/>
+        <location filename="../translation.cpp" line="217"/>
         <source>ms</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="171"/>
+        <location filename="../translation.cpp" line="218"/>
         <source>Maltese</source>
         <translation>Maltês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="171"/>
+        <location filename="../translation.cpp" line="218"/>
         <source>mt</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="173"/>
+        <location filename="../translation.cpp" line="220"/>
         <source>Norwegian</source>
         <translation>Norueguês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="173"/>
+        <location filename="../translation.cpp" line="220"/>
         <source>no</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="174"/>
+        <location filename="../translation.cpp" line="221"/>
         <source>Persian</source>
         <translation>Persa</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="174"/>
+        <location filename="../translation.cpp" line="221"/>
         <source>fa</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="175"/>
+        <location filename="../translation.cpp" line="222"/>
         <source>Polish</source>
         <translation>Polonês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="175"/>
+        <location filename="../translation.cpp" line="222"/>
         <source>pl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="176"/>
+        <location filename="../translation.cpp" line="223"/>
         <source>Portuguese</source>
         <translation>Português</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="176"/>
+        <location filename="../translation.cpp" line="223"/>
         <source>pt</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="177"/>
+        <location filename="../translation.cpp" line="224"/>
         <source>Romanian</source>
         <translation>Romeno</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="177"/>
+        <location filename="../translation.cpp" line="224"/>
         <source>ro</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="179"/>
+        <location filename="../translation.cpp" line="226"/>
         <source>Russian</source>
         <translation>Russo</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="179"/>
+        <location filename="../translation.cpp" line="226"/>
         <source>ru</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="180"/>
+        <location filename="../translation.cpp" line="227"/>
         <source>Serbian</source>
         <translation>Sérvio</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="180"/>
+        <location filename="../translation.cpp" line="227"/>
         <source>sr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="181"/>
+        <location filename="../translation.cpp" line="228"/>
         <source>Slovak</source>
         <translation>Eslovaco</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="181"/>
+        <location filename="../translation.cpp" line="228"/>
         <source>sk</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="182"/>
+        <location filename="../translation.cpp" line="229"/>
         <source>Slovenian</source>
         <translation>Eslovénio</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="182"/>
+        <location filename="../translation.cpp" line="229"/>
         <source>sl</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="185"/>
+        <location filename="../translation.cpp" line="232"/>
         <source>Swahili</source>
         <translation>Swahili</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="185"/>
+        <location filename="../translation.cpp" line="232"/>
         <source>sw</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="186"/>
+        <location filename="../translation.cpp" line="233"/>
         <source>Swedish</source>
         <translation>Sueco</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="186"/>
+        <location filename="../translation.cpp" line="233"/>
         <source>sv</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="187"/>
+        <location filename="../translation.cpp" line="234"/>
         <source>Thai</source>
         <translation>Tailandês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="187"/>
+        <location filename="../translation.cpp" line="234"/>
         <source>th</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="188"/>
+        <location filename="../translation.cpp" line="235"/>
         <source>Turkish</source>
         <translation>Turco</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="188"/>
+        <location filename="../translation.cpp" line="235"/>
         <source>tr</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="189"/>
+        <location filename="../translation.cpp" line="236"/>
         <source>Ukrainian</source>
         <translation>Ucraniano</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="189"/>
+        <location filename="../translation.cpp" line="236"/>
         <source>uk</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="191"/>
+        <location filename="../translation.cpp" line="238"/>
         <source>Vietnamese</source>
         <translation>Vietnamita</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="191"/>
+        <location filename="../translation.cpp" line="238"/>
         <source>vi</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="192"/>
+        <location filename="../translation.cpp" line="239"/>
         <source>Welsh</source>
         <translation>Galês</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="192"/>
+        <location filename="../translation.cpp" line="239"/>
         <source>cy</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="193"/>
+        <location filename="../translation.cpp" line="240"/>
         <source>Yiddish</source>
         <translation>Iídiche</translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="193"/>
+        <location filename="../translation.cpp" line="240"/>
         <source>yi</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="208"/>
+        <location filename="../translation.cpp" line="255"/>
         <source>http://translate.google.com/translate_t?langpair=%1|%2&amp;text=</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="230"/>
+        <location filename="../translation.cpp" line="277"/>
         <source>input type=hidden name=mainwindow value=&quot;(.*)&quot;&gt;&lt;div id=sug_exp&gt;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="237"/>
+        <location filename="../translation.cpp" line="284"/>
         <source>&amp;amp;</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../translation.cpp" line="237"/>
+        <location filename="../translation.cpp" line="284"/>
         <source>&amp;</source>
         <translation></translation>
     </message>
