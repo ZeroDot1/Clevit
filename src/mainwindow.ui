@@ -526,12 +526,12 @@
   </action>
   <action name="actionHide_WordFinder">
    <property name="text">
-    <string>Hide WordFinder</string>
+    <string>Hide/Show WordFinder</string>
    </property>
   </action>
   <action name="actionHide_Translation_bar">
    <property name="text">
-    <string>Hide Translation </string>
+    <string>Hide/Show Translation </string>
    </property>
   </action>
   <action name="actionReset_Default_Layout">

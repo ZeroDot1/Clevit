@@ -29,8 +29,6 @@ MainWindow::MainWindow(QWidget *parent) :
 {
     ui->setupUi(this);
 
-    setSettings();
-
     ui->htmlSourceCheckBox->setVisible(false);
 
     createLanguageMenu();
@@ -70,6 +68,8 @@ MainWindow::MainWindow(QWidget *parent) :
     title = QDir::currentPath();
 
     this->setWindowTitle(title);
+
+    setSettings();
 
     connect(ui->textEdit,SIGNAL(textChanged()),this,SLOT(textChanged()));
     connect(ui->boldBtn,SIGNAL(clicked(bool)),this,SLOT(bold()));
@@ -623,4 +623,6 @@ void MainWindow::on_actionReset_Default_Layout_triggered()
 
     this->setStyleSheet("");
     ui->Toolbar->setStyleSheet("");
+    ui->fontComboBox->setStyleSheet("");
+    ui->fontSizeBox->setStyleSheet("");
 }
