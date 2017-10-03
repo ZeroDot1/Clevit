@@ -1,8 +1,9 @@
-# ![img](http://basic1.moy.su/Fotos/TPad-New-Icon.png)[Clevit](https://goo.gl/LAVDSm "Clevit Offical Site")
+# ![img](http://basic1.moy.su/Fotos/TPad-New-Icon.png)[Clevit](https://goo.gl/fcM7JC "Clevit Offical Site")
 The only smart text editor in this galaxy!
 - - -
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/47d886e9129440849dce9acec5349c80)](https://www.codacy.com/app/TigaxMT/TPad?utm_source=github.com&utm_medium=referral&utm_content=TigaxMT/TPad&utm_campaign=badger)
-[![travis build](https://travis-ci.org/TigaxMT/TPad.svg?branch=master)](https://travis-ci.org/TigaxMT/TPad)
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/8990879e312a47a7993c2a4c18a26f0b)](https://www.codacy.com/app/TigaxMT/Clevit?utm_source=github.com&utm_medium=referral&utm_content=TigaxMT/Clevit&utm_campaign=badger)
+
+[![travis build](https://travis-ci.org/TigaxMT/Clevit.svg?branch=master)](https://travis-ci.org/TigaxMT/Clevit)
 
 # Future features
 
