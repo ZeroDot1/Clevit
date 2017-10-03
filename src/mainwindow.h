@@ -140,6 +140,10 @@ private slots:
 
     void on_actionReset_Default_Layout_triggered();
 
+    void on_actionText_Edit_Color_triggered();
+
+    void on_highlightBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -162,6 +166,7 @@ private:
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
     QString tmp;
     QString theme;
+    QString txtEditColor;
     QTranslator m_translator; // contains the translations for this application
     QTranslator qtTranslator;
     QTranslator qtBaseTranslator;
@@ -179,6 +184,7 @@ private:
     QTextCodec *codec;
 
     QColor color;
+    QColor tColor;
 
     QPrinter printer;
 

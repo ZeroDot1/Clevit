@@ -1,4 +1,3 @@
-
 /************************************************************************************************************
 *    											                                                            *
 *    TPad -  A text editor written on C++ with Qt Framework                                                 *
@@ -625,4 +624,32 @@ void MainWindow::on_actionReset_Default_Layout_triggered()
     ui->Toolbar->setStyleSheet("");
     ui->fontComboBox->setStyleSheet("");
     ui->fontSizeBox->setStyleSheet("");
+    ui->textEdit->setStyleSheet("");
+    txtEditColor.clear();
+}
+
+void MainWindow::on_actionText_Edit_Color_triggered()
+{
+    tColor = QColorDialog::getColor(Qt::white,this,tr("Select a Text Edit Color"));
+
+    if(tColor.isValid())
+    {
+        ui->textEdit->setStyleSheet(QString("background-color: %1").arg(tColor.name()));
+
+        txtEditColor = tColor.name();
+    }
+}
+
+void MainWindow::on_highlightBtn_clicked()
+{
+    QColor hColor= QColorDialog::getColor(Qt::white,this,tr("Select a Highlight Color"));
+
+    if(hColor.isValid())
+    {
+        ui->textEdit->setTextBackgroundColor(hColor);
+    }
+    else
+    {
+        ui->textEdit->setTextBackgroundColor(Qt::white);
+    }
 }

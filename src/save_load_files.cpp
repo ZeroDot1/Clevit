@@ -506,12 +506,17 @@ void MainWindow::saveSettings()
             textAppend << "0\n";
 
         if(this->styleSheet() == "")
-            textAppend << "0";
+            textAppend << "0\n";
         else
             if(theme.isEmpty() == true)
                 textAppend << this->styleSheet()+"\n";
             else
                 textAppend << theme+"\n";
+
+        if(txtEditColor.isEmpty() == true)
+            textAppend << "0\n";
+        else
+            textAppend << txtEditColor+"\n";
     }
     else
     {
@@ -530,6 +535,10 @@ void MainWindow::setSettings()
         if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))
         {
             QString str = setSets.readAll();
+
+            int i, j = 0;
+            QChar ch;
+            QString style;
 
             if(str[0] == '1')
             {
@@ -570,11 +579,15 @@ void MainWindow::setSettings()
 
                     ui->actionHide_Translation_bar->setText(tr("Show Translation"));
                 }
+            i = 4;
+            ch = str[i];
 
-            QString style;
+            for(;ch != '\n';i++,j++)
+            {
+                ch = str[i];
 
-            for(int i = 4,j = 0;i < str.length();i++,j++)
                 style.insert(j,str[i]);
+            }
 
             if(QString::compare(style,"Wood\n") == 0)
             {
@@ -604,6 +617,23 @@ void MainWindow::setSettings()
                     }
                     else
                         this->setStyleSheet(style);
+
+            if(str[i] == '0')
+                ;
+            else
+            {
+                j = 0;
+
+                for(;i < str.length();i++,j++)
+                {
+                    if(str[i] == '\n')
+                        continue;
+                    else
+                        txtEditColor.insert(j,str[i]);
+                }
+
+                ui->textEdit->setStyleSheet(QString("background-color: %1").arg(txtEditColor));
+            }
         }
 
     setSets.close();

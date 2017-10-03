@@ -21,5 +21,6 @@
         <file>icons/Textcolor.png</file>
         <file>icons/Print.png</file>
         <file>icons/Image.png</file>
+        <file>icons/Highlight.png</file>
     </qresource>
 </RCC>

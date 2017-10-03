@@ -61,10 +61,37 @@
         </widget>
        </item>
        <item>
-        <widget class="QSplitter" name="splitter">
+        <widget class="QSplitter" name="splitter_3">
          <property name="orientation">
           <enum>Qt::Horizontal</enum>
          </property>
+         <widget class="QPushButton" name="highlightBtn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>21</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="icons.qrc">
+            <normaloff>:/icons/icons/Highlight.png</normaloff>:/icons/icons/Highlight.png</iconset>
+          </property>
+          <property name="iconSize">
+           <size>
+            <width>21</width>
+            <height>16</height>
+           </size>
+          </property>
+         </widget>
          <widget class="QPushButton" name="colorBtn">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
@@ -85,6 +112,13 @@
            <string/>
           </property>
          </widget>
+        </widget>
+       </item>
+       <item>
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
          <widget class="QToolButton" name="boldBtn">
           <property name="toolTip">
            <string>Bold</string>
@@ -267,10 +301,13 @@
      <addaction name="actionWave_Theme_2"/>
      <addaction name="actionRainbow_Theme_2"/>
     </widget>
+    <addaction name="actionText_Edit_Color"/>
     <addaction name="actionWindow_Layout_Color"/>
     <addaction name="menuThemes"/>
+    <addaction name="separator"/>
     <addaction name="actionHide_WordFinder"/>
     <addaction name="actionHide_Translation_bar"/>
+    <addaction name="separator"/>
     <addaction name="actionReset_Default_Layout"/>
    </widget>
    <addaction name="menuFile"/>
@@ -537,6 +574,11 @@
   <action name="actionReset_Default_Layout">
    <property name="text">
     <string>Reset Window Layout</string>
+   </property>
+  </action>
+  <action name="actionText_Edit_Color">
+   <property name="text">
+    <string>Text Edit Color</string>
    </property>
   </action>
  </widget>
