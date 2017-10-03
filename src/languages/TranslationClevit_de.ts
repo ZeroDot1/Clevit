@@ -17,9 +17,13 @@
         <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../about.ui" line="33"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;and you are welcome to redistribute it &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions..&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;See: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - Ein praktischer Texteditor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut  KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Siehe: &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../about.ui" line="33"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;TPad - The only smart text editor in this galaxy&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This is free software,&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;and you are welcome to redistribute it &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;under certain conditions..&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;See: &lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../about.ui" line="46"/>
@@ -266,8 +270,12 @@
     </message>
     <message>
         <location filename="../mainwindow.ui" line="456"/>
+        <source>About Clevit</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>About TPad</source>
-        <translation>Über TPad</translation>
+        <translation type="vanished">Über TPad</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="465"/>
@@ -356,7 +364,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="573"/>
         <location filename="../mainwindow.cpp" line="613"/>
-        <location filename="../save_load_files.cpp" line="549"/>
+        <location filename="../save_load_files.cpp" line="548"/>
         <source>Hide WordFinder</source>
         <translation>WordFinder ausblenden</translation>
     </message>
@@ -384,9 +392,13 @@
         <translation>Möchten Sie die Textdatei speichern?</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="168"/>
         <source>TPad - Text Editor</source>
-        <translation>TPad - Text Editor</translation>
+        <translation type="vanished">TPad - Text Editor</translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.cpp" line="168"/>
+        <source>Clevit - Text Editor</source>
+        <translation type="unfinished"></translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="297"/>
@@ -432,20 +444,20 @@ PNG (*.png</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="564"/>
-        <location filename="../save_load_files.cpp" line="558"/>
+        <location filename="../save_load_files.cpp" line="557"/>
         <source>Show WordFinder</source>
         <translation>WordFinder anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="592"/>
-        <location filename="../save_load_files.cpp" line="580"/>
+        <location filename="../save_load_files.cpp" line="579"/>
         <source>Show Translation</source>
         <translation>Übersetzer anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <location filename="../mainwindow.cpp" line="621"/>
-        <location filename="../save_load_files.cpp" line="569"/>
+        <location filename="../save_load_files.cpp" line="568"/>
         <source>Hide Translation</source>
         <translation>Übersetzer ausblenden</translation>
     </message>
@@ -460,80 +472,91 @@ PNG (*.png</translation>
         <translation type="unfinished"></translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="365"/>
+        <location filename="../save_load_files.cpp" line="364"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="71"/>
+        <location filename="../save_load_files.cpp" line="70"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt);;Html Dateien (*.html)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="71"/>
+        <location filename="../save_load_files.cpp" line="70"/>
         <source>Select a text file</source>
         <translation>Wählen Sie eine Textdatei aus</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="136"/>
+        <location filename="../save_load_files.cpp" line="135"/>
         <source>Open File Error</source>
         <translation>Dateifehler beim öffnen</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="155"/>
-        <location filename="../save_load_files.cpp" line="258"/>
-        <location filename="../save_load_files.cpp" line="418"/>
+        <location filename="../save_load_files.cpp" line="154"/>
+        <location filename="../save_load_files.cpp" line="257"/>
+        <location filename="../save_load_files.cpp" line="417"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>Alle Dateien (*.*);;Text Dateien (*.txt);;Html Dateien (*.html);;odf Dateien (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="155"/>
-        <location filename="../save_load_files.cpp" line="258"/>
-        <location filename="../save_load_files.cpp" line="418"/>
+        <location filename="../save_load_files.cpp" line="154"/>
+        <location filename="../save_load_files.cpp" line="257"/>
+        <location filename="../save_load_files.cpp" line="417"/>
         <source>Save a text file</source>
         <translation>Eine Textdatei speichern</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="233"/>
-        <location filename="../save_load_files.cpp" line="250"/>
-        <location filename="../save_load_files.cpp" line="338"/>
+        <location filename="../save_load_files.cpp" line="232"/>
+        <location filename="../save_load_files.cpp" line="249"/>
+        <location filename="../save_load_files.cpp" line="337"/>
         <source>Save File Error</source>
         <translation>Dateifehler beim speichern</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="250"/>
+        <location filename="../save_load_files.cpp" line="249"/>
         <source>Save canceled</source>
         <translation>Speichern abgebrochen</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="355"/>
+        <location filename="../save_load_files.cpp" line="522"/>
+        <source>Clevit can&apos;t save your settings</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
         <source>When exporting the formatted text file, you can only open it with TPad 
 or other software that can read html code. 
 Are you sure you want to continue?
 </source>
-        <translation>Beim Exportieren der formatierten Textdatei können Sie diese nur mit TPad 
+        <translation type="vanished">Beim Exportieren der formatierten Textdatei können Sie diese nur mit TPad 
 oder andere Software, die HTML-Code lesen kann öffnen. 
 Bist du sicher, dass du weitermachen willst?</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="355"/>
+        <location filename="../save_load_files.cpp" line="354"/>
         <source>Formatting TextFile export</source>
         <translation>Formartierte Texdatei exportieren</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="365"/>
+        <location filename="../save_load_files.cpp" line="354"/>
+        <source>When exporting the formatted text file, you can only open it with Clevit 
+or other software that can read html code. 
+Are you sure you want to continue?
+</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../save_load_files.cpp" line="364"/>
         <source>Export File to Formatting Text File</source>
         <translation>In formartierte Texdatei exportieren</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="523"/>
+        <location filename="../save_load_files.cpp" line="522"/>
         <source>Error Saving Settings</source>
         <translation>Fehler beim speichern der Einstellungen</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="523"/>
         <source>TPad can&apos;t save your settings</source>
-        <translation>TPad kann die Einstellungen die du gesetzt hast nicht Speichern</translation>
+        <translation type="vanished">TPad kann die Einstellungen die du gesetzt hast nicht Speichern</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>

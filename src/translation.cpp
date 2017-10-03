@@ -1,6 +1,6 @@
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -37,7 +37,7 @@ void MainWindow::createLanguageMenu(void)
     m_langPath.append("/src/languages/"); //
 
     QDir dir(m_langPath);
-    QStringList fileNames = dir.entryList(QStringList("TranslationTPad_*.qm"));
+    QStringList fileNames = dir.entryList(QStringList("TranslationClevit_*.qm"));
 
     for (int i = 0; i < fileNames.size(); ++i)
     {
@@ -79,7 +79,7 @@ void MainWindow::switchTranslator(QTranslator& translator, const QString& filena
     else
         std::cout << "Cannot load translations." << std::endl;
 
-    ///Translate the buttons of TPad
+    ///Translate the buttons of Clevit
 
     if(filename.contains("de") == true)
     {
@@ -132,7 +132,7 @@ void MainWindow::loadLanguage(const QString& rLanguage)
     {
         m_currLang = rLanguage;
         QLocale::setDefault(QLocale(m_currLang));
-        switchTranslator(m_translator, QString("TranslationTPad_%1.qm").arg(rLanguage));
+        switchTranslator(m_translator, QString("TranslationClevit_%1.qm").arg(rLanguage));
     }
 }
 

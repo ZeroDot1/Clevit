@@ -249,7 +249,7 @@
      <x>0</x>
      <y>0</y>
      <width>527</width>
-     <height>20</height>
+     <height>19</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
@@ -281,7 +281,7 @@
      <string>Help</string>
     </property>
     <addaction name="actionReport_Bugs"/>
-    <addaction name="actionAbout_TPad"/>
+    <addaction name="actionAbout_Clevit"/>
    </widget>
    <widget class="QMenu" name="menuLanguage">
     <property name="title">
@@ -447,13 +447,13 @@
     <string>Ctrl+Shift+Z</string>
    </property>
   </action>
-  <action name="actionAbout_TPad">
+  <action name="actionAbout_Clevit">
    <property name="icon">
     <iconset resource="icons.qrc">
      <normaloff>:/icons/icons/About.png</normaloff>:/icons/icons/About.png</iconset>
    </property>
    <property name="text">
-    <string>About TPad</string>
+    <string>About Clevit</string>
    </property>
   </action>
   <action name="actionNew_File">

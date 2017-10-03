@@ -1,6 +1,6 @@
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -165,7 +165,7 @@ void MainWindow::closeEvent(QCloseEvent *event)
     {
         if(isSaved == false && changedTitle == true)
         {
-            QMessageBox::StandardButton resBtn = QMessageBox::question(this,tr("TPad - Text Editor"),tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+            QMessageBox::StandardButton resBtn = QMessageBox::question(this,tr("Clevit - Text Editor"),tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
             if(resBtn == QMessageBox::Yes)
             {
@@ -231,7 +231,7 @@ void MainWindow::on_actionExit_triggered()
     QApplication::quit();
 }
 
-void MainWindow::on_actionAbout_TPad_triggered()
+void MainWindow::on_actionAbout_Clevit_triggered()
 {
     if(about == NULL)
     {
@@ -245,8 +245,8 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
 void MainWindow::on_actionReport_Bugs_triggered()
 {
-    if(QDesktopServices::openUrl(QUrl("https://github.com/TigaxMT/TPad/issues")) == false)
-        QMessageBox::warning(this,"Error opening the link","TPad could not open link ");
+    if(QDesktopServices::openUrl(QUrl("https://github.com/TigaxMT/Clevit/issues")) == false)
+        QMessageBox::warning(this,"Error opening the link","Clevit could not open link ");
 }
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)

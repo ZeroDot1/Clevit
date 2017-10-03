@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *

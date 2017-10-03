@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -352,7 +351,7 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 {
-    QMessageBox::StandardButton res = QMessageBox::question(this,tr("Formatting TextFile export"),tr("When exporting the formatted text file, you can only open it with TPad "
+    QMessageBox::StandardButton res = QMessageBox::question(this,tr("Formatting TextFile export"),tr("When exporting the formatted text file, you can only open it with Clevit "
                                                                "\nor other software that can read html code. "
                                                                "\nAre you sure you want to continue?\n"),QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
@@ -487,9 +486,9 @@ void MainWindow::saveSettings()
 {
     QDir createPath;
 
-    createPath.mkdir("TPad_Files");
+    createPath.mkdir("Clevit_Files");
 
-    QFile saveSets(createPath.absolutePath()+"/TPad_Files/lset.txt");
+    QFile saveSets(createPath.absolutePath()+"/Clevit_Files/lset.txt");
 
     if(saveSets.open(QIODevice::WriteOnly | QIODevice::Text))
     {
@@ -520,7 +519,7 @@ void MainWindow::saveSettings()
     }
     else
     {
-        QMessageBox::warning(this,tr("Error Saving Settings"),tr("TPad can't save your settings"));
+        QMessageBox::warning(this,tr("Error Saving Settings"),tr("Clevit can't save your settings"));
         return;
     }
 
@@ -529,7 +528,7 @@ void MainWindow::saveSettings()
 
 void MainWindow::setSettings()
 {
-    QFile setSets("TPad_Files/lset.txt");
+    QFile setSets("Clevit_Files/lset.txt");
 
     if(setSets.exists())
         if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))

@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -86,7 +85,7 @@ private slots:
 
     void on_actionNew_File_triggered();
 
-    void on_actionAbout_TPad_triggered();
+    void on_actionAbout_Clevit_triggered();
 
     void bold();
 
