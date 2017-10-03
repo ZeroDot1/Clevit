@@ -1,7 +1,7 @@
 # ![img](http://basic1.moy.su/Fotos/TPad-New-Icon.png)[Clevit](https://goo.gl/LAVDSm "Clevit Offical Site")
 The only smart text editor in this galaxy!
 - - -
-[![travis build](https://travis-ci.org/TigaxMT/Clevit.svg?branch=master](https://travis-ci.org/TigaxMT/Clevit)
+[![travis build](https://travis-ci.org/TigaxMT/Clevit.svg?branch=master)](https://travis-ci.org/TigaxMT/Clevit)
 
 # Future features
 
