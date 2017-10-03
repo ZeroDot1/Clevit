@@ -6,7 +6,7 @@
     <message>
         <location filename="../about.ui" line="14"/>
         <source>About TPad</source>
-        <translation>About TPad</translation>
+        <translation>About Clevit</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;TPad - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
@@ -95,7 +95,7 @@
     <message>
         <location filename="../mainwindow.ui" line="14"/>
         <source>MainWindow</source>
-        <translation>TPad - A pratical editor</translation>
+        <translation>Clevit - The only smart text editor in this galaxy</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="47"/>
