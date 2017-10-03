@@ -2,6 +2,7 @@
 The only smart text editor in this galaxy!
 - - -
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8990879e312a47a7993c2a4c18a26f0b)](https://www.codacy.com/app/TigaxMT/Clevit?utm_source=github.com&utm_medium=referral&utm_content=TigaxMT/Clevit&utm_campaign=badger)
+
 [![travis build](https://travis-ci.org/TigaxMT/Clevit.svg?branch=master)](https://travis-ci.org/TigaxMT/Clevit)
 
 # Future features

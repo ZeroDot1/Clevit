@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -352,7 +351,7 @@ void MainWindow::on_actionSave_as_triggered()
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 {
-    QMessageBox::StandardButton res = QMessageBox::question(this,tr("Formatting TextFile export"),tr("When exporting the formatted text file, you can only open it with TPad "
+    QMessageBox::StandardButton res = QMessageBox::question(this,tr("Formatting TextFile export"),tr("When exporting the formatted text file, you can only open it with Clevit "
                                                                "\nor other software that can read html code. "
                                                                "\nAre you sure you want to continue?\n"),QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
@@ -481,4 +480,160 @@ bool MainWindow::cppFileVerifier()
         return true;
 
     return false;
+}
+
+void MainWindow::saveSettings()
+{
+    QDir createPath;
+
+    createPath.mkdir("Clevit_Files");
+
+    QFile saveSets(createPath.absolutePath()+"/Clevit_Files/lset.txt");
+
+    if(saveSets.open(QIODevice::WriteOnly | QIODevice::Text))
+    {
+        QTextStream textAppend(&saveSets);
+
+        if(ui->search_TextEdit->isVisible())
+            textAppend << "1\n";
+        else
+            textAppend << "0\n";
+
+        if(ui->translateBtn->isVisible())
+            textAppend << "1\n";
+        else
+            textAppend << "0\n";
+
+        if(this->styleSheet() == "")
+            textAppend << "0\n";
+        else
+            if(theme.isEmpty() == true)
+                textAppend << this->styleSheet()+"\n";
+            else
+                textAppend << theme+"\n";
+
+        if(txtEditColor.isEmpty() == true)
+            textAppend << "0\n";
+        else
+            textAppend << txtEditColor+"\n";
+    }
+    else
+    {
+        QMessageBox::warning(this,tr("Error Saving Settings"),tr("Clevit can't save your settings"));
+        return;
+    }
+
+    saveSets.close();
+}
+
+void MainWindow::setSettings()
+{
+    QFile setSets("Clevit_Files/lset.txt");
+
+    if(setSets.exists())
+        if(setSets.open((QIODevice::ReadOnly | QIODevice::Text)))
+        {
+            QString str = setSets.readAll();
+
+            int i, j = 0;
+            QChar ch;
+            QString style;
+
+            if(str[0] == '1')
+            {
+                ui->search_TextEdit->setVisible(true);
+                ui->searchBtn->setVisible(true);
+                ui->clearBtn->setVisible(true);
+
+                ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
+            }
+            else
+                if(str[0] == '0')
+                {
+                    ui->search_TextEdit->setVisible(false);
+                    ui->searchBtn->setVisible(false);
+                    ui->clearBtn->setVisible(false);
+
+                    ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
+                }
+
+            if(str[2] == '1')
+            {
+                ui->label->setVisible(true);
+                ui->label_2->setVisible(true);
+                ui->fromLangBox->setVisible(true);
+                ui->toLangBox->setVisible(true);
+                ui->translateBtn->setVisible(true);
+
+                ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
+            }
+            else
+                if(str[2] == '0')
+                {
+                    ui->label->setVisible(false);
+                    ui->label_2->setVisible(false);
+                    ui->fromLangBox->setVisible(false);
+                    ui->toLangBox->setVisible(false);
+                    ui->translateBtn->setVisible(false);
+
+                    ui->actionHide_Translation_bar->setText(tr("Show Translation"));
+                }
+            i = 4;
+            ch = str[i];
+
+            for(;ch != '\n';i++,j++)
+            {
+                ch = str[i];
+
+                style.insert(j,str[i]);
+            }
+
+            if(QString::compare(style,"Wood\n") == 0)
+            {
+                this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+                ui->fontComboBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+                ui->fontSizeBox->setStyleSheet("background-color: rgb(245, 121, 0);");
+                ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+
+            }
+            else
+                if(QString::compare(style,"Wave\n") == 0)
+                {
+                    this->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+                    ui->fontComboBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+                    ui->fontSizeBox->setStyleSheet("background-color: rgb(114, 159, 207);");
+                    ui->Toolbar->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+
+                }
+                else
+                    if(QString::compare(style,"Rainbow\n") == 0)
+                    {
+                        this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->fontComboBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->fontSizeBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+                        ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+
+                    }
+                    else
+                        this->setStyleSheet(style);
+
+            if(str[i] == '0')
+                ;
+            else
+            {
+                j = 0;
+
+                for(;i < str.length();i++,j++)
+                {
+                    if(str[i] == '\n')
+                        continue;
+                    else
+                        txtEditColor.insert(j,str[i]);
+                }
+
+                ui->textEdit->setStyleSheet(QString("background-color: %1").arg(txtEditColor));
+            }
+        }
+
+    setSets.close();
 }

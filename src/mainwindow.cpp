@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -32,12 +31,19 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->htmlSourceCheckBox->setVisible(false);
 
     createLanguageMenu();
+    setLanguages();
+
+    if(QSslSocket::supportsSsl())
+        std::cout << "Support SSL enabled" << std::endl;
 
     configFontSizeBox();
 
     ui->fontSizeBox->setCurrentText("12");
 
     ui->fontComboBox->setEditable(false);
+
+    QFontDatabase fontDB;
+    fontDB.addApplicationFont("/fonts/NotoEmoji-Regular.ttf");
 
     font.setStyleHint(QFont::Monospace);
     font.setStyleName("Monospace");
@@ -52,6 +58,7 @@ MainWindow::MainWindow(QWidget *parent) :
     text = ui->textEdit->toPlainText();
 
     about = NULL;
+    nam = NULL;
 
     isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true;
 
@@ -60,6 +67,8 @@ MainWindow::MainWindow(QWidget *parent) :
     title = QDir::currentPath();
 
     this->setWindowTitle(title);
+
+    setSettings();
 
     connect(ui->textEdit,SIGNAL(textChanged()),this,SLOT(textChanged()));
     connect(ui->boldBtn,SIGNAL(clicked(bool)),this,SLOT(bold()));
@@ -78,6 +87,8 @@ void MainWindow::textChanged()
 {
    isSaved = false;
 
+   QTextCursor cursor = ui->textEdit->textCursor();
+
     text = ui->textEdit->toPlainText();
 
     if(changedTitle == false && fileNotChanged() == false)
@@ -93,6 +104,15 @@ void MainWindow::textChanged()
 
             changedTitle = false;
         }
+
+    // When cursor is in col number 0 qt reset font, font size, color and other stuff.
+    // This piece of code prevent this
+
+    if(cursor.columnNumber() == 0 && cursor.hasSelection() == false)
+    {
+        ui->textEdit->mergeCurrentCharFormat(format);
+        ui->textEdit->setTextColor(color);
+    }
 }
 
 bool MainWindow::fileNotChanged()
@@ -110,7 +130,7 @@ void MainWindow::mergeFormatOnWordOrSelection(const QTextCharFormat &format)
 {
     QTextCursor cursor = ui->textEdit->textCursor();
     if (cursor.hasSelection() == true)
-    {
+    {   
         cursor.mergeCharFormat(format);
 
         ui->textEdit->mergeCurrentCharFormat(format);
@@ -137,13 +157,15 @@ void MainWindow::closeEvent(QCloseEvent *event)
 {
     text = ui->textEdit->toPlainText();
 
+    saveSettings();
+
     // If the user doesn't has type text or open any text file, so the program doesn't show the message box
 
     if(fileNotChanged() == false)
     {
         if(isSaved == false && changedTitle == true)
         {
-            QMessageBox::StandardButton resBtn = QMessageBox::question(this,tr("TPad - Text Editor"),tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
+            QMessageBox::StandardButton resBtn = QMessageBox::question(this,tr("Clevit - Text Editor"),tr("Do you want to save the text file?"),QMessageBox::Cancel | QMessageBox::No | QMessageBox::Yes, QMessageBox::Yes);
 
             if(resBtn == QMessageBox::Yes)
             {
@@ -209,7 +231,7 @@ void MainWindow::on_actionExit_triggered()
     QApplication::quit();
 }
 
-void MainWindow::on_actionAbout_TPad_triggered()
+void MainWindow::on_actionAbout_Clevit_triggered()
 {
     if(about == NULL)
     {
@@ -223,8 +245,8 @@ void MainWindow::on_actionAbout_TPad_triggered()
 
 void MainWindow::on_actionReport_Bugs_triggered()
 {
-    if(QDesktopServices::openUrl(QUrl("https://github.com/TigaxMT/TPad/issues")) == false)
-        QMessageBox::warning(this,"Error opening the link","TPad could not open link ");
+    if(QDesktopServices::openUrl(QUrl("https://github.com/TigaxMT/Clevit/issues")) == false)
+        QMessageBox::warning(this,"Error opening the link","Clevit could not open link ");
 }
 
 void MainWindow::on_fontComboBox_currentFontChanged(const QFont &f)
@@ -287,7 +309,6 @@ void MainWindow::on_colorBtn_clicked()
         ui->textEdit->setTextColor(Qt::black);
         ui->colorBtn->setStyleSheet("background-color: black");
     }
-
 }
 
 
@@ -473,14 +494,14 @@ void MainWindow::on_actionAdd_an_Image_triggered()
 
 void MainWindow::on_actionWindow_Layout_Color_triggered()
 {
-    color = QColorDialog::getColor(Qt::white,this,tr("Select a Window Layout Color"));
+    QColor lColor = QColorDialog::getColor(Qt::white,this,tr("Select a Window Layout Color"));
 
-    if(color.isValid())
+    if(lColor.isValid())
     {
-        this->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->fontComboBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->fontSizeBox->setStyleSheet(QString("background-color: %1").arg(color.name()));
-        ui->Toolbar->setStyleSheet(QString("background-color: %1").arg(color.name()));
+        this->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->fontComboBox->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->fontSizeBox->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
+        ui->Toolbar->setStyleSheet(QString("background-color: %1").arg(lColor.name()));
     }
     else
     {
@@ -501,26 +522,35 @@ void MainWindow::on_actionNo_Theme_2_triggered()
 
 void MainWindow::on_actionWood_Theme_2_triggered()
 {
+    theme = "Wood";
+
     this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
     ui->fontComboBox->setStyleSheet("background-color: rgb(245, 121, 0);");
     ui->fontSizeBox->setStyleSheet("background-color: rgb(245, 121, 0);");
     ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 178, 102, 255), stop:0.55 rgba(235, 148, 61, 255), stop:0.98 rgba(0, 0, 0, 255), stop:1 rgba(0, 0, 0, 0));");
+
 }
 
 void MainWindow::on_actionWave_Theme_2_triggered()
 {
+    theme = "Wave";
+
     this->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
     ui->fontComboBox->setStyleSheet("background-color: rgb(114, 159, 207);");
     ui->fontSizeBox->setStyleSheet("background-color: rgb(114, 159, 207);");
     ui->Toolbar->setStyleSheet("background-color: qradialgradient(spread:repeat, cx:0.5, cy:0.5, radius:0.077, fx:0.5, fy:0.5, stop:0 rgba(0, 169, 255, 147), stop:0.497326 rgba(0, 0, 0, 147), stop:1 rgba(0, 169, 255, 147));");
+
 }
 
 void MainWindow::on_actionRainbow_Theme_2_triggered()
 {
+    theme = "Rainbow";
+
     this->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->fontComboBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->fontSizeBox->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
     ui->Toolbar->setStyleSheet("background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(255, 0, 0, 255), stop:0.166 rgba(255, 255, 0, 255), stop:0.333 rgba(0, 255, 0, 255), stop:0.5 rgba(0, 255, 255, 255), stop:0.666 rgba(0, 0, 255, 255), stop:0.833 rgba(255, 0, 255, 255), stop:1 rgba(255, 0, 0, 255));");
+
 }
 
 void MainWindow::on_actionHide_WordFinder_triggered()
@@ -542,4 +572,84 @@ void MainWindow::on_actionHide_WordFinder_triggered()
 
             ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
         }
+}
+
+void MainWindow::on_translateBtn_clicked()
+{
+    realTimeTranslation();
+}
+
+void MainWindow::on_actionHide_Translation_bar_triggered()
+{
+    if(ui->fromLangBox->isVisible() == true)
+    {
+        ui->label->setVisible(false);
+        ui->label_2->setVisible(false);
+        ui->fromLangBox->setVisible(false);
+        ui->toLangBox->setVisible(false);
+        ui->translateBtn->setVisible(false);
+
+        ui->actionHide_Translation_bar->setText(tr("Show Translation"));
+    }
+    else
+        if(ui->fromLangBox->isVisible() == false)
+        {
+            ui->label->setVisible(true);
+            ui->label_2->setVisible(true);
+            ui->fromLangBox->setVisible(true);
+            ui->toLangBox->setVisible(true);
+            ui->translateBtn->setVisible(true);
+
+            ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
+        }
+}
+
+void MainWindow::on_actionReset_Default_Layout_triggered()
+{
+    ui->search_TextEdit->setVisible(true);
+    ui->searchBtn->setVisible(true);
+    ui->clearBtn->setVisible(true);
+
+    ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
+
+    ui->label->setVisible(true);
+    ui->label_2->setVisible(true);
+    ui->fromLangBox->setVisible(true);
+    ui->toLangBox->setVisible(true);
+    ui->translateBtn->setVisible(true);
+
+    ui->actionHide_Translation_bar->setText(tr("Hide Translation"));
+
+    this->setStyleSheet("");
+    ui->Toolbar->setStyleSheet("");
+    ui->fontComboBox->setStyleSheet("");
+    ui->fontSizeBox->setStyleSheet("");
+    ui->textEdit->setStyleSheet("");
+    txtEditColor.clear();
+}
+
+void MainWindow::on_actionText_Edit_Color_triggered()
+{
+    tColor = QColorDialog::getColor(Qt::white,this,tr("Select a Text Edit Color"));
+
+    if(tColor.isValid())
+    {
+        ui->textEdit->setStyleSheet(QString("background-color: %1").arg(tColor.name()));
+
+        txtEditColor = tColor.name();
+    }
+}
+
+void MainWindow::on_highlightBtn_clicked()
+{
+    QColor hColor= QColorDialog::getColor(Qt::white,this,tr("Select a Highlight Color"));
+
+    if(hColor.isValid())
+    {
+        ui->textEdit->setTextBackgroundColor(hColor);
+    }
+    else
+    {
+        ui->textEdit->setTextBackgroundColor(Qt::white);
+    }
 }

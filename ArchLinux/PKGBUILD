@@ -1,25 +1,25 @@
 # Maintainer: Tiago Martins <thebigger018@protonmail.com>
 # Maintainer: ZeroDot1 <zerodot1@bk.ru>
-pkgname=tpad
+pkgname=clevit
 pkgver=1.2.4
 pkgrel=1
-pkgdesc="TPad - A text editor written on C++ with Qt Framework."
-url='https://github.com/TigaxMT/TPad'
+pkgdesc="Clevit - The only smart text editor in this galaxy"
+url='https://github.com/TigaxMT/Clevit'
 license=('GPL3')
 arch=('x86_64')
 depends=('qt5-base' 'qt5-translations' 'qt5-graphicaleffects' 'xdg-utils' 'qt5-quickcontrols2' 'qt5-quickcontrols' 'qt5-declarative' 'libevent')
 makedepends=('qt5-tools' 'cmake')
-install=tpad.install
-source=("https://github.com/TigaxMT/TPad/archive/${pkgver}.tar.gz")
+install=clevit.install
+source=("https://github.com/TigaxMT/Clevit/archive/${pkgver}.tar.gz")
 md5sums=('5d49807226d01034433d3fafba4ddfb8')
 
 build() {
-  cd $srcdir/TPad-${pkgver}
-  qmake-qt5 PREFIX='/usr' LIBDIR='/usr/lib' TPad.pro
+  cd $srcdir/Clevit-${pkgver}
+  qmake-qt5 PREFIX='/usr' LIBDIR='/usr/lib' Clevit.pro
   make
 }
 
 package() {
-  cd $srcdir/TPad-${pkgver}
+  cd $srcdir/Clevit-${pkgver}
   make DESTDIR=${pkgdir} install
 }

@@ -1,7 +1,6 @@
-
 /************************************************************************************************************
 *    											                                                            *
-*    TPad -  A text editor written on C++ with Qt Framework                                                 *
+*    Clevit -  The only smart text editor in this galaxy                                                 *
 *											                                                                *
 *    Copyright (C) 2017  Tiago Martins                        				                                *
 *											                                                                *
@@ -26,6 +25,7 @@
 #include "about.h"
 #include "highlighter.h"
 
+#include <string.h>
 #include <iostream>
 #include <QMainWindow>
 #include <QCloseEvent>
@@ -46,6 +46,11 @@
 #include <QImageReader>
 #include <QUrl>
 #include <QComboBox>
+#include <QLibraryInfo>
+#include <QNetworkReply>
+#include <QNetworkAccessManager>
+#include <QSslSocket>
+#include <QSsl>
 
 namespace Ui {
 class MainWindow;
@@ -80,7 +85,7 @@ private slots:
 
     void on_actionNew_File_triggered();
 
-    void on_actionAbout_TPad_triggered();
+    void on_actionAbout_Clevit_triggered();
 
     void bold();
 
@@ -95,6 +100,8 @@ private slots:
     void on_fontSizeBox_currentIndexChanged(int index);
 
     void slotLanguageChanged(QAction* action); // this slot is called by the language menu actions
+
+    void finishedSlot(QNetworkReply* reply);
 
     void on_actionReport_Bugs_triggered();
 
@@ -126,6 +133,16 @@ private slots:
 
     void on_actionHide_WordFinder_triggered();
 
+    void on_translateBtn_clicked();
+
+    void on_actionHide_Translation_bar_triggered();
+
+    void on_actionReset_Default_Layout_triggered();
+
+    void on_actionText_Edit_Color_triggered();
+
+    void on_highlightBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -147,7 +164,15 @@ private:
     QString m_langPath; // Path of language files. This is always fixed to /languages.
     QString colorBtn_str; // convert QColor in QString to create a stylesheet
     QString tmp;
+    QString theme;
+    QString txtEditColor;
     QTranslator m_translator; // contains the translations for this application
+    QTranslator qtTranslator;
+    QTranslator qtBaseTranslator;
+
+    QMap<QString, QString> languages;
+
+    QNetworkAccessManager *nam;
 
     QActionGroup* langGroup;
 
@@ -158,6 +183,7 @@ private:
     QTextCodec *codec;
 
     QColor color;
+    QColor tColor;
 
     QPrinter printer;
 
@@ -172,6 +198,10 @@ private:
     bool textFileVerifier();
     bool odfFileVerifier();
     bool cppFileVerifier();
+    void saveSettings();
+    void setSettings();
+    void setLanguages();
+    void realTimeTranslation();
     void mergeFormatOnWordOrSelection(const QTextCharFormat &format);
     void configFontSizeBox();
     void loadLanguage(const QString& rLanguage); // loads a language by the given language shortcur (e.g. de, en)

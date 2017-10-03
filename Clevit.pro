@@ -4,11 +4,11 @@
 #
 #-------------------------------------------------
 
-QT       += core gui widgets printsupport
+QT       += core gui widgets printsupport network
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = TPad
+TARGET = Clevit
 TEMPLATE = app
 CONFIG += c++11
 
@@ -23,7 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-TRANSLATIONS = languages/TranslationTPad_en.ts  languages/TranslationTPad_de.ts languages/TranslationTPad_pt.ts
+TRANSLATIONS = languages/TranslationTClevit_en.ts  languages/TranslationClevit_de.ts languages/TranslationClevit_pt.ts
 
 SOURCES += \
         src/main.cpp \
@@ -54,7 +54,7 @@ unix:!macx: LIBS += -lX11
 unix {
   #TRANSLATIONS
   exists($$[QT_INSTALL_BINS]/lrelease) {
-    TRANSLATIONS = $$system("find src/languages/ -name 'TranslationTPad_*.ts'")
+    TRANSLATIONS = $$system("find src/languages/ -name 'TranslationClevit_*.ts'")
     updateqm.input = TRANSLATIONS
     updateqm.output = src/languages/${QMAKE_FILE_BASE}.qm
     updateqm.commands = $$[QT_INSTALL_BINS]/lrelease ${QMAKE_FILE_IN} -qm src/languages/${QMAKE_FILE_BASE}.qm
