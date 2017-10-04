@@ -3,6 +3,7 @@
 
 ### 1.4
 
+- Added all new informations about Clevit
 - Add a new Screenshot
 - Updating the FEATURES list
 - Update Downloads
