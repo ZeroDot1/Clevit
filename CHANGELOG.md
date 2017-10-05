@@ -1,6 +1,10 @@
 # TPad Homepage CHANGELOG
 - - -
 
+### 1.5
+
+Add Updates for Version 1.3.4
+
 ### 1.4
 
 - Added all new informations about Clevit
