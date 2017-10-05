@@ -456,6 +456,57 @@ void MainWindow::on_searchBtn_clicked()
         }
 }
 
+void MainWindow::on_replaceBtn_clicked()
+{
+    QString searchString = ui->search_TextEdit->text();
+    document = ui->textEdit->document();
+
+    if (searchString.isEmpty())
+    {
+        QMessageBox::information(this, tr("Empty Search Field"),
+                tr("The search field is empty. Please enter a word and click Find."));
+    }
+    else
+    {
+
+        QString tmpword = QInputDialog::getText(this,tr("Replace Word"),tr("Insert a word/text to replace the\nword/text you type in WordFinder bar."));
+        QString word;
+
+        QTextCursor replaceCursor(document);
+        QTextCursor cursor(document);
+
+        cursor.beginEditBlock();
+
+        QTextCharFormat plainFormat(replaceCursor.charFormat());
+
+        while (!replaceCursor.isNull() && !replaceCursor.atEnd())
+        {
+            replaceCursor = document->find(searchString, replaceCursor, QTextDocument::FindWholeWords);
+
+            if (!replaceCursor.isNull())
+            {
+                replaceCursor.movePosition(QTextCursor::WordRight,
+                                       QTextCursor::KeepAnchor);
+                QString word2replace = replaceCursor.selectedText();
+
+                if(word2replace[0] == " ")
+                    word = " " + tmpword;
+                else
+                    word = tmpword;
+
+                if(word2replace[word2replace.length()-1] == " ")
+                    word = word + " ";
+                else
+                    word = word + "\n";
+
+                replaceCursor.insertText(word,plainFormat);
+            }
+        }
+
+        cursor.endEditBlock();
+    }
+}
+
 void MainWindow::on_clearBtn_clicked()
 {   
     if(ui->search_TextEdit->text()== "" && ui->textEdit->toPlainText() == "")

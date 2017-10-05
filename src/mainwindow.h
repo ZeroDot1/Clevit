@@ -51,6 +51,7 @@
 #include <QNetworkAccessManager>
 #include <QSslSocket>
 #include <QSsl>
+#include <QInputDialog>
 
 namespace Ui {
 class MainWindow;
@@ -142,6 +143,8 @@ private slots:
     void on_actionText_Edit_Color_triggered();
 
     void on_highlightBtn_clicked();
+
+    void on_replaceBtn_clicked();
 
 private:
     Ui::MainWindow *ui;
