@@ -23,7 +23,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 # You can also select to disable deprecated APIs only up to a certain version of Qt.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-TRANSLATIONS = languages/TranslationTClevit_en.ts  languages/TranslationClevit_de.ts languages/TranslationClevit_pt.ts
+TRANSLATIONS = src/languages/TranslationTClevit_en.ts  src/languages/TranslationClevit_de.ts src/languages/TranslationClevit_pt.ts
 
 SOURCES += \
         src/main.cpp \
