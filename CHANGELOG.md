@@ -1,6 +1,14 @@
 # Clevit CHANGELOG.md
 - - -
 
+## 1.3.4
+
+- Text Highlight color feature
+- Changing of background color of text edit
+- And the name project has been changed to Clevit
+- HomePage Updated
+
+
 ## 1.3.3
 
 - A Translation function NOTE: This new feature works very bad yet. So hide it for now.
