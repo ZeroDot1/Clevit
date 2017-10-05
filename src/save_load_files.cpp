@@ -56,17 +56,6 @@ void MainWindow::on_actionNew_File_triggered()
 
 void MainWindow::on_actionOpen_triggered()
 {
-    // Save the path of the text file
-
-    if(cppOpened == true)
-    {
-        delete syntaxHighlighter;
-
-        cppOpened = false;
-    }
-
-    QFileDialog dialog;
-
     path = dialog.getOpenFileName(this,tr("Select a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html)"),&selFilter);
 
     QFile textFile(path);
@@ -137,18 +126,17 @@ void MainWindow::on_actionOpen_triggered()
         title = QDir::currentPath();
     }
 
-    textFile.close();
-    dialog.close();
-
     this->setWindowTitle(title);
 
     isSaved = false;
+
+    textFile.close();
+
+    dialog.close();
 }
 
 void MainWindow::on_actionSave_triggered()
 {
-    QFileDialog dialog;
-
     if(path.isEmpty())
     {
         path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
@@ -242,18 +230,16 @@ void MainWindow::on_actionSave_triggered()
         textFile.close();
 
         this->setWindowTitle(title);
-
-        dialog.close();
     }
     else
         QMessageBox::warning(this,tr("Save File Error"),tr("Save canceled"));
 
+
+    dialog.close();
 }
 
 void MainWindow::on_actionSave_as_triggered()
 {
-    QFileDialog dialog;
-
     path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
     if(path.isEmpty())
@@ -261,12 +247,9 @@ void MainWindow::on_actionSave_as_triggered()
 
     if(QFileInfo(path).suffix().isEmpty() == true)
     {
-        if(QFileInfo(path).suffix().isEmpty() == true)
-        {
-            if(QString::compare(selFilter,"Text Files (*.txt)") == 0){ path.append(".txt"); }
-            else if(QString::compare(selFilter,"Html Files (*.html)") == 0){ path.append(".html"); }
-            else if(QString::compare(selFilter,"Odf Files (*.odf)") == 0){ path.append(".odf"); }
-        }
+        if(QString::compare(selFilter,"Text Files (*.txt)") == 0){ path.append(".txt"); }
+        else if(QString::compare(selFilter,"Html Files (*.html)") == 0){ path.append(".html"); }
+        else if(QString::compare(selFilter,"Odf Files (*.odf)") == 0){ path.append(".odf"); }
     }
 
     QFile textFile(path);
@@ -342,11 +325,11 @@ void MainWindow::on_actionSave_as_triggered()
             title = path;
     }
 
-    textFile.close();
-    dialog.close();
-
     this->setWindowTitle(title);
 
+    textFile.close();
+
+    dialog.close();
 }
 
 void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
@@ -412,8 +395,6 @@ void MainWindow::on_actionExport_to_Formatting_Txt_File_triggered()
 
 void MainWindow::on_actionExport_to_PDF_triggered()
 {
-    QFileDialog dialog;
-
     path = dialog.getSaveFileName(this,tr("Save a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)"),&selFilter);
 
 
@@ -449,6 +430,8 @@ void MainWindow::on_actionExport_to_PDF_triggered()
 
 bool MainWindow::htmlFileVerifier()
 {
+    cppOpened = true;
+
     if(QString::compare(QFileInfo(path).suffix(),"html") == 0)
         return true;
 

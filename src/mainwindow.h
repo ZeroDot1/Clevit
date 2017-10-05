@@ -170,6 +170,8 @@ private:
     QTranslator qtTranslator;
     QTranslator qtBaseTranslator;
 
+    QFileDialog dialog;
+
     QMap<QString, QString> languages;
 
     QNetworkAccessManager *nam;
