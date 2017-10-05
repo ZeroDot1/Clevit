@@ -405,8 +405,8 @@
         <translation>Cor do Editor de Texto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="624"/>
-        <location filename="../mainwindow.cpp" line="664"/>
+        <location filename="../mainwindow.cpp" line="631"/>
+        <location filename="../mainwindow.cpp" line="671"/>
         <location filename="../save_load_files.cpp" line="531"/>
         <source>Hide WordFinder</source>
         <translation>Esconder Buscador de Palavras</translation>
@@ -451,36 +451,36 @@
         <translation>Imprimir um documento</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="428"/>
-        <location filename="../mainwindow.cpp" line="466"/>
+        <location filename="../mainwindow.cpp" line="424"/>
+        <location filename="../mainwindow.cpp" line="468"/>
         <source>Empty Search Field</source>
         <translation>Campo de pesquisa vazio</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="429"/>
-        <location filename="../mainwindow.cpp" line="467"/>
+        <location filename="../mainwindow.cpp" line="425"/>
+        <location filename="../mainwindow.cpp" line="469"/>
         <source>The search field is empty. Please enter a word and click Find.</source>
         <translation>O campo de pesquisa está vazio. Por favor escreva uma palavra e clique em Pesquisar.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="474"/>
         <source>Replace Word</source>
         <translation>Substituir Palavra</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="472"/>
+        <location filename="../mainwindow.cpp" line="474"/>
         <source>Insert a word/text to replace the
 word/text you type in WordFinder bar.</source>
         <translation>Inserir a palavra/texto para substituir a
 palavra/texto que digitou no Buscador de Palavras.</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="528"/>
+        <location filename="../mainwindow.cpp" line="535"/>
         <source>Select an image</source>
         <translation>Selecionar uma imagem</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="529"/>
+        <location filename="../mainwindow.cpp" line="536"/>
         <source>Bitmap Files (*.bmp)
 JPEG (*.jpg *jpeg)
 GIF (*.gif)
@@ -499,36 +499,36 @@ PNG (*.png)
       </translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="548"/>
+        <location filename="../mainwindow.cpp" line="555"/>
         <source>Select a Window Layout Color</source>
         <translation>Selecionar uma cor para o Layout da Janela</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="615"/>
+        <location filename="../mainwindow.cpp" line="622"/>
         <location filename="../save_load_files.cpp" line="540"/>
         <source>Show WordFinder</source>
         <translation>Mostrar Buscador de Palavras</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="643"/>
+        <location filename="../mainwindow.cpp" line="650"/>
         <location filename="../save_load_files.cpp" line="562"/>
         <source>Show Translation</source>
         <translation>Mostrar Tradução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="654"/>
-        <location filename="../mainwindow.cpp" line="672"/>
+        <location filename="../mainwindow.cpp" line="661"/>
+        <location filename="../mainwindow.cpp" line="679"/>
         <location filename="../save_load_files.cpp" line="551"/>
         <source>Hide Translation</source>
         <translation>Esconder Tradução</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="684"/>
+        <location filename="../mainwindow.cpp" line="691"/>
         <source>Select a Text Edit Color</source>
         <translation>Selecione uma cor para o Editor de Texto</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="696"/>
+        <location filename="../mainwindow.cpp" line="703"/>
         <source>Select a Highlight Color</source>
         <translation>Selecione uma cor para o highlight</translation>
     </message>

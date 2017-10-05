@@ -156,6 +156,7 @@ private:
     bool firstTime;
     bool cppOpened;
     bool canClear;
+    bool replaced;
 
 
     QString path; // Path of text file
