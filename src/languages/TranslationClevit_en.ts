@@ -4,9 +4,6 @@
 <context>
     <name>About</name>
     <message>
-        <location filename="../about.ui" line="14"/>
-        <source>About Clevit</source>
-        <translation>About Clevit</translation>
     </message>
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - A pratical text editor&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
@@ -380,7 +377,7 @@
     <message>
         <location filename="../mainwindow.cpp" line="573"/>
         <location filename="../mainwindow.cpp" line="613"/>
-        <location filename="../save_load_files.cpp" line="548"/>
+        <location filename="../save_load_files.cpp" line="531"/>
         <source>Hide WordFinder</source>
         <translation>Hide WordFinder</translation>
     </message>
@@ -461,20 +458,20 @@ PNG (*.png)
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="564"/>
-        <location filename="../save_load_files.cpp" line="557"/>
+        <location filename="../save_load_files.cpp" line="540"/>
         <source>Show WordFinder</source>
         <translation>Show WordFinder</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="592"/>
-        <location filename="../save_load_files.cpp" line="579"/>
+        <location filename="../save_load_files.cpp" line="562"/>
         <source>Show Translation</source>
         <translation>Show Translation</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="603"/>
         <location filename="../mainwindow.cpp" line="621"/>
-        <location filename="../save_load_files.cpp" line="568"/>
+        <location filename="../save_load_files.cpp" line="551"/>
         <source>Hide Translation</source>
         <translation>Hide Translation</translation>
     </message>
@@ -489,58 +486,58 @@ PNG (*.png)
         <translation>Select a Highlight Color</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="364"/>
+        <location filename="../save_load_files.cpp" line="347"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>All Files (*.*);;Text Files (*.txt)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="70"/>
+        <location filename="../save_load_files.cpp" line="59"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="70"/>
+        <location filename="../save_load_files.cpp" line="59"/>
         <source>Select a text file</source>
         <translation>Select a text file</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="135"/>
+        <location filename="../save_load_files.cpp" line="124"/>
         <source>Open File Error</source>
         <translation>Open File Error</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="154"/>
-        <location filename="../save_load_files.cpp" line="257"/>
-        <location filename="../save_load_files.cpp" line="417"/>
+        <location filename="../save_load_files.cpp" line="142"/>
+        <location filename="../save_load_files.cpp" line="243"/>
+        <location filename="../save_load_files.cpp" line="398"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="154"/>
-        <location filename="../save_load_files.cpp" line="257"/>
-        <location filename="../save_load_files.cpp" line="417"/>
+        <location filename="../save_load_files.cpp" line="142"/>
+        <location filename="../save_load_files.cpp" line="243"/>
+        <location filename="../save_load_files.cpp" line="398"/>
         <source>Save a text file</source>
         <translation>Save a text file</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="232"/>
-        <location filename="../save_load_files.cpp" line="249"/>
-        <location filename="../save_load_files.cpp" line="337"/>
+        <location filename="../save_load_files.cpp" line="220"/>
+        <location filename="../save_load_files.cpp" line="235"/>
+        <location filename="../save_load_files.cpp" line="320"/>
         <source>Save File Error</source>
         <translation>Save File Error</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="249"/>
+        <location filename="../save_load_files.cpp" line="235"/>
         <source>Save canceled</source>
         <translation>Save canceled</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="354"/>
+        <location filename="../save_load_files.cpp" line="337"/>
         <source>Formatting TextFile export</source>
         <translation>Formatting TextFile export</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="354"/>
+        <location filename="../save_load_files.cpp" line="337"/>
         <source>When exporting the formatted text file, you can only open it with Clevit 
 or other software that can read html code. 
 Are you sure you want to continue?
@@ -550,17 +547,17 @@ or other software that can read html code.
 Are you sure you want to continue?</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="364"/>
+        <location filename="../save_load_files.cpp" line="347"/>
         <source>Export File to Formatting Text File</source>
         <translation>Export File to Formatting Text File</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="522"/>
+        <location filename="../save_load_files.cpp" line="505"/>
         <source>Error Saving Settings</source>
         <translation>Error Saving Settings</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="522"/>
+        <location filename="../save_load_files.cpp" line="505"/>
         <source>Clevit can&apos;t save your settings</source>
         <translation>Clevit can&apos;t save your settings</translation>
     </message>
