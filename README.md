@@ -54,12 +54,6 @@ You need install this dependencies before install Clevit
 * (6) Now double click on the execuable or yet on this terminal write this: `./Clevit`
 * (7) Enjoy!  
 
-# Source Forge
-
-Now Clevit is in Source Forge! So you can go and review it or only download it. There will be versions for Linux and Windows
-
-See here: https://sourceforge.net/projects/clevit/
-
 # Translation
 
 * Now the Clevit can be translated into any language, just open the .ts file in qt5 linguist, translate, release and put the .qm file in the languages ​​folder
