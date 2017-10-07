@@ -3,7 +3,9 @@
 
 ### 1.5
 
-Add Updates for Version 1.3.4
+- Add Updates for Version 1.3.4.1
+- Fixed translation bugs
+- Fixed a lot of small bugs
 
 ### 1.4
 
