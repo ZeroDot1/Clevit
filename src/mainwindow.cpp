@@ -618,6 +618,7 @@ void MainWindow::on_actionHide_WordFinder_triggered()
         ui->search_TextEdit->setVisible(false);
         ui->searchBtn->setVisible(false);
         ui->clearBtn->setVisible(false);
+        ui->replaceBtn->setVisible(false);
 
         ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
     }
@@ -627,6 +628,7 @@ void MainWindow::on_actionHide_WordFinder_triggered()
             ui->search_TextEdit->setVisible(true);
             ui->searchBtn->setVisible(true);
             ui->clearBtn->setVisible(true);
+            ui->replaceBtn->setVisible(true);
 
             ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
         }

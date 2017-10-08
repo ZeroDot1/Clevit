@@ -23,6 +23,7 @@
 #include "ui_mainwindow.h"
 #include "highlighter.h"
 
+
 void MainWindow::on_actionNew_File_triggered()
 {
     path.clear();
