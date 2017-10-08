@@ -4,6 +4,7 @@
 ### 1.5
 
 - Add Updates for Version 1.3.4.1
+- Update Downloads
 - Fixed translation bugs
 - Fixed a lot of small bugs
 
