@@ -51,6 +51,7 @@
 #include <QNetworkAccessManager>
 #include <QSslSocket>
 #include <QSsl>
+#include <QInputDialog>
 
 namespace Ui {
 class MainWindow;
@@ -143,6 +144,8 @@ private slots:
 
     void on_highlightBtn_clicked();
 
+    void on_replaceBtn_clicked();
+
 private:
     Ui::MainWindow *ui;
     About *about;
@@ -153,6 +156,7 @@ private:
     bool firstTime;
     bool cppOpened;
     bool canClear;
+    bool replaced;
 
 
     QString path; // Path of text file

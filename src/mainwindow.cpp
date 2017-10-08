@@ -60,7 +60,7 @@ MainWindow::MainWindow(QWidget *parent) :
     about = NULL;
     nam = NULL;
 
-    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true;
+    isSaved = false, changedTitle = false, firstTime = true, cppOpened = false, canClear = true, replaced = false;
 
     selFilter = tr("Text Files (*.txt);; Html File(*.html)");
 
@@ -410,16 +410,12 @@ void MainWindow::on_actionPrint_triggered()
 }
 void MainWindow::on_searchBtn_clicked()
 {
-    canClear = true;
 
     if(firstTime == false)
     {
         document->undo();
         firstTime = true;
     }
-
-        firstTime = false;
-
         QString searchString = ui->search_TextEdit->text();
         document = ui->textEdit->document();
 
@@ -446,6 +442,10 @@ void MainWindow::on_searchBtn_clicked()
 
                 if (!highlightCursor.isNull())
                 {
+                    canClear = true;
+                    firstTime = false;
+                    replaced = false;
+
                     highlightCursor.movePosition(QTextCursor::WordRight,
                                            QTextCursor::KeepAnchor);
                     highlightCursor.mergeCharFormat(colorFormat);
@@ -456,6 +456,63 @@ void MainWindow::on_searchBtn_clicked()
         }
 }
 
+void MainWindow::on_replaceBtn_clicked()
+{
+    firstTime = true;
+
+    QString searchString = ui->search_TextEdit->text();
+    document = ui->textEdit->document();
+
+    if (searchString.isEmpty())
+    {
+        QMessageBox::information(this, tr("Empty Search Field"),
+                tr("The search field is empty. Please enter a word and click Find."));
+    }
+    else
+    {
+
+        QString tmpword = QInputDialog::getText(this,tr("Replace Word"),tr("Insert a word/text to replace the\nword/text you type in WordFinder bar."));
+        QString word;
+
+        QTextCursor replaceCursor(document);
+        QTextCursor cursor(document);
+
+        cursor.beginEditBlock();
+
+        QTextCharFormat plainFormat(replaceCursor.charFormat());
+
+        while (!replaceCursor.isNull() && !replaceCursor.atEnd())
+        {
+            replaceCursor = document->find(searchString, replaceCursor, QTextDocument::FindWholeWords);
+
+            if (!replaceCursor.isNull())
+            {
+                replaced = true;
+
+                replaceCursor.movePosition(QTextCursor::WordRight,
+                                       QTextCursor::KeepAnchor);
+                QString word2replace = replaceCursor.selectedText();
+
+                std::cout << word2replace.toStdString() << std::endl;
+
+                if(QChar(word2replace[0]) == QChar(' '))
+                    word = " " + tmpword;
+                else
+                    word = tmpword;
+
+                if(QChar(word2replace[word2replace.length()-1]) == QChar(' '))
+                    word = word + " ";
+                else
+                    word = word + "\n";
+
+                replaceCursor.insertText(word,plainFormat);
+            }
+        }
+
+        cursor.endEditBlock();
+    }
+}
+
 void MainWindow::on_clearBtn_clicked()
 {   
     if(ui->search_TextEdit->text()== "" && ui->textEdit->toPlainText() == "")
@@ -463,11 +520,12 @@ void MainWindow::on_clearBtn_clicked()
 
     ui->search_TextEdit->setText("");
 
-    if(canClear == true)
+    if(canClear == true && replaced == false)
     {
         document->undo();
 
         canClear = false;
+        firstTime = true;
     }
 }
 
