@@ -3,6 +3,7 @@
 
 ### 1.5
 
+- All pictures will be hosted with Google Photos, thanks to Google.
 - Add Updates for Version 1.3.4.1
 - Update Downloads
 - Fixed translation bugs
