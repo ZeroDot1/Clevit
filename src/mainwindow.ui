@@ -267,6 +267,7 @@
     <addaction name="actionOpen"/>
     <addaction name="actionSave"/>
     <addaction name="actionSave_as"/>
+    <addaction name="actionEncrypt_Decrypt_a_file"/>
     <addaction name="actionExport_to_Formatting_Txt_File"/>
     <addaction name="actionExport_to_PDF"/>
     <addaction name="actionPrint"/>
@@ -586,6 +587,11 @@
   <action name="actionText_Edit_Color">
    <property name="text">
     <string>Text Edit Color</string>
+   </property>
+  </action>
+  <action name="actionEncrypt_Decrypt_a_file">
+   <property name="text">
+    <string>Encrypt/Decrypt a file</string>
    </property>
   </action>
  </widget>

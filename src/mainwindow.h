@@ -24,6 +24,7 @@
 
 #include "about.h"
 #include "highlighter.h"
+#include "encryption.h"
 
 #include <string.h>
 #include <iostream>
@@ -49,8 +50,6 @@
 #include <QLibraryInfo>
 #include <QNetworkReply>
 #include <QNetworkAccessManager>
-#include <QSslSocket>
-#include <QSsl>
 #include <QInputDialog>
 
 namespace Ui {
@@ -146,10 +145,13 @@ private slots:
 
     void on_replaceBtn_clicked();
 
+    void on_actionEncrypt_Decrypt_a_file_triggered();
+
 private:
     Ui::MainWindow *ui;
     About *about;
     Highlighter *syntaxHighlighter;
+    Encryption *enc;
 
     bool isSaved;
     bool changedTitle;

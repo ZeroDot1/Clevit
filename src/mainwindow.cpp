@@ -713,3 +713,10 @@ void MainWindow::on_highlightBtn_clicked()
         ui->textEdit->setTextBackgroundColor(Qt::white);
     }
 }
+
+void MainWindow::on_actionEncrypt_Decrypt_a_file_triggered()
+{
+    enc = new Encryption(this);
+
+    enc->show();
+}
