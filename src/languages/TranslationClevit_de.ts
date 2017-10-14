@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE TS>
-<TS version="2.1" language="de_DE">
+<TS version="2.0" language="de_DE">
 <context>
     <name>About</name>
     <message>
@@ -13,7 +13,7 @@
         style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/span&gt;&lt;/p&gt;&lt;p
         align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;This is free software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; and you are welcome to redistribute it
         &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
         Galaxie&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
         font-size:9pt;&quot;&gt;Dieses Programm kommt mit ABSOLUT KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Das ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p
         align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt; und du bist eingeladen, es weiter zu verteilen &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;unter bestimmten
@@ -26,7 +26,7 @@
         &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;See:
         &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;
         color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
         Galaxie&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
         font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p
         align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben.
@@ -40,7 +40,7 @@
         &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;under certain conditions..&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;See:
         &lt;/span&gt;&lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; font-size:9pt; text-decoration: underline;
         color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser
         Galaxie&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
         font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut KEINER GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p
         align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben.
@@ -52,7 +52,7 @@
         2017 Tiago Martins&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This program comes with ABSOLUTELY NO WARRANTY. &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;This is free software,&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;and you are welcome to
         redistribute it &lt;/p&gt;&lt;p align=&quot;center&quot;&gt;under certain conditions..&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;See: &lt;a href=&quot;https://www.gnu.org/licenses/gpl-3.0.en.html&quot;&gt;&lt;span style=&quot; text-decoration:
         underline; color:#0000ff;&quot;&gt;https://www.gnu.org/licenses/gpl-3.0.en.html&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser Galaxie&lt;/span&gt;&lt;/p&gt;&lt;p
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Clevit - Der einzige intelligente Texteditor in dieser Galaxie&lt;/span&gt;&lt;/p&gt;&lt;p
         align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Copyright (C) 2017 Tiago Martins&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dieses Programm kommt mit absolut KEINER
         GARANTIE. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Dies ist freie Software,&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;und Sie
         können sie unter bestimmten &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt;&quot;&gt;Bedingungen weitergeben. &lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot;
@@ -110,7 +110,7 @@
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline;
         color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline;
         color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
@@ -122,7 +122,7 @@
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -134,7 +134,7 @@
     <message>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt;
         &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
 </context>
@@ -143,58 +143,58 @@
     <message>
         <location filename="../encryption.ui" line="14"/>
         <source>Encrypt/Decrypt Files</source>
-        <translation type="unfinished"></translation>
+        <translation>Clevit - Verschlüsseln/Entschlüsseln von Dateien</translation>
     </message>
     <message>
         <location filename="../encryption.ui" line="30"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#f57900;&quot;&gt;Welcome &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#a40000;&quot;&gt;to a simple &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#c17d11;&quot;&gt;Encryption/Decryption AES App&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Select an option for each Box&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;and&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Press Start&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#f57900;&quot;&gt;Willkommen &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#a40000;&quot;&gt;zu Clevit &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#c17d11;&quot;&gt;Verschlüsselungs/Entschlüsselungs AES App&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Wählen Sie für jede Box eine Option aus&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;und&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Klicken sie auf Start&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../encryption.ui" line="46"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose an Option&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Wählen sie eine Option&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../encryption.ui" line="68"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose a Encryption&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Wählen sie die verschlüsselung&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../encryption.ui" line="87"/>
         <source>Start!</source>
-        <translation type="unfinished"></translation>
+        <translation>Start!</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="15"/>
         <source>Encrypt</source>
-        <translation type="unfinished"></translation>
+        <translation>Verschlüsseln</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="16"/>
         <source>Decrypt</source>
-        <translation type="unfinished"></translation>
+        <translation>Entschlüsseln</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="18"/>
         <source>AES 256 bits</source>
-        <translation type="unfinished"></translation>
+        <translation>AES 256 bit</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="50"/>
         <location filename="../encryption.cpp" line="64"/>
         <source>Error: Open file</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim Öffnen einer Datei</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="50"/>
         <source>Could not open file to read: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte Datei nicht zum Lesen öffnen: %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="64"/>
         <source>Could not open file to write: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte Datei nicht zum Schreiben öffnen: %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="87"/>
@@ -448,7 +448,7 @@ YOUR DATA HAS NOT BEEN AFFECTED.</source>
     </message>
     <message>
         <source>About</source>
-        <translation type="vanished">Über</translation>
+        <translation>Über</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="289"/>
@@ -652,7 +652,7 @@ YOUR DATA HAS NOT BEEN AFFECTED.</source>
     <message>
         <source>Hide/Show Translation
       </source>
-        <translation type="vanished">Übersetzer ausblenden/anzeigen</translation>
+        <translation>Übersetzer ausblenden/anzeigen</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="589"/>
@@ -669,7 +669,7 @@ YOUR DATA HAS NOT BEEN AFFECTED.</source>
     <message>
         <source>Hide Translation
       </source>
-        <translation type="vanished">Übersetzer ausblenden</translation>
+        <translation>Übersetzer ausblenden</translation>
     </message>
     <message>
         <location filename="../mainwindow.ui" line="584"/>
@@ -678,7 +678,7 @@ YOUR DATA HAS NOT BEEN AFFECTED.</source>
     </message>
     <message>
         <source>Text Files (*.txt)</source>
-        <translation type="vanished">Text Dateien (*.txt)</translation>
+        <translation>Text Dateien (*.txt)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="65"/>
@@ -745,7 +745,7 @@ PNG (*.png)
     <message>
         <source>Bitmap Files (*.bmp) JPEG (*.jpg *jpeg) GIF (*.gif) PNG (*.png)
       </source>
-        <translation type="vanished">Bitmap Dateien (*.bmp) JPEG (*.jpg *jpeg) GIF (*.gif) PNG (*.png)</translation>
+        <translation>Bitmap Dateien (*.bmp) JPEG (*.jpg *jpeg) GIF (*.gif) PNG (*.png)</translation>
     </message>
     <message>
         <location filename="../mainwindow.cpp" line="555"/>
@@ -844,7 +844,7 @@ Möchten sie fortfahren und die Datei speichern?</translation>
     <message>
         <source>When exporting the formatted text file, you can only open it with Clevit or other software that can read html code. Are you sure you want to continue?
       </source>
-        <translation type="vanished">Beim Exportieren der formatierten Textdatei können Sie diese nur mit Clevit oder andere Software, die HTML-Code lesen kann öffnen. Bist du sicher, dass du weitermachen willst?</translation>
+        <translation>Beim Exportieren der formatierten Textdatei können Sie diese nur mit Clevit oder andere Software, die HTML-Code lesen kann öffnen. Bist du sicher, dass du weitermachen willst?</translation>
     </message>
     <message>
         <location filename="../save_load_files.cpp" line="338"/>
@@ -863,7 +863,7 @@ Möchten sie fortfahren und die Datei speichern?</translation>
     </message>
     <message>
         <source>All Files (*.*);;Pdf Files (*.pdf)</source>
-        <translation type="vanished">Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
+        <translation>Alle Dateien (*.*);;Pdf Dateien (*.pdf)</translation>
     </message>
     <message>
         <location filename="../translation.cpp" line="177"/>
