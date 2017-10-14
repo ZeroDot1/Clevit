@@ -200,13 +200,13 @@
         <location filename="../encryption.cpp" line="87"/>
         <location filename="../encryption.cpp" line="186"/>
         <source>Error: Creating Key</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Beim erzeugen des Schlüssels</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="87"/>
         <location filename="../encryption.cpp" line="186"/>
         <source>EVP_BytesToKey() error: %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_BytesToKey() error: %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="101"/>
@@ -214,114 +214,116 @@
         <location filename="../encryption.cpp" line="127"/>
         <location filename="../encryption.cpp" line="136"/>
         <source>Error: Encrypting</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Verschlüsselung</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="101"/>
         <location filename="../encryption.cpp" line="116"/>
         <source>EVP_EncryptInit_ex() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_EncryptInit_ex() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="127"/>
         <source>EVP_EncryptUpdate() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_EncryptUpdate() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="136"/>
         <source>EVP_EncryptFinal_ex() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_EncryptFinal_ex() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="171"/>
         <source>Error: Salt</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Salt</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="171"/>
         <source>Could not load salt from data!</source>
-        <translation type="unfinished"></translation>
+        <translation>Konnte kein Salt aus Daten laden!</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="198"/>
         <location filename="../encryption.cpp" line="214"/>
         <location filename="../encryption.cpp" line="223"/>
         <source>Error: Decrypting</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Entschlüsselung</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="198"/>
         <source>EVP_DecryptInit_ex() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_DecryptInit_ex() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="214"/>
         <source>EVP_DecryptUpdate() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_DecryptUpdate() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="223"/>
         <source>EVP_DecryptFinal_ex() failed %1</source>
-        <translation type="unfinished"></translation>
+        <translation>EVP_DecryptFinal_ex() failed %1</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="225"/>
         <location filename="../encryption.cpp" line="316"/>
         <source>Wrong passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Falsches Passwort</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="225"/>
         <source>Probably your passphrase are wrong.
 Clevit will be closed for safety.
 YOUR DATA HAS NOT BEEN AFFECTED.</source>
-        <translation type="unfinished"></translation>
+        <translation>Ihre Passwort ist wahrscheinlich falsch.
+Clevit wird aus Sicherheitsgründen geschlossen.
+IHRE DATEN WURDEN NICHT BERÜHRT.</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="260"/>
         <location filename="../encryption.cpp" line="287"/>
         <source>Select a text file</source>
-        <translation type="unfinished">Wählen Sie eine Textdatei aus</translation>
+        <translation>Wählen Sie eine Textdatei aus</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="260"/>
         <location filename="../encryption.cpp" line="287"/>
         <source>All Files (*.*);;Text Files (*.txt);</source>
-        <translation type="unfinished"></translation>
+        <translation>Alle Dateien (*.*);;Text Dateien (*.txt);</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="264"/>
         <location filename="../encryption.cpp" line="291"/>
         <source>Error: Selecting File</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Eine Datei auswählen</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="264"/>
         <location filename="../encryption.cpp" line="291"/>
         <source>Invalid Path File</source>
-        <translation type="unfinished"></translation>
+        <translation>Unzulässige Pfad-Datei</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="270"/>
         <location filename="../encryption.cpp" line="297"/>
         <source>Passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Passwort</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="270"/>
         <source>Insert a passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Geben sie ein Passwort ein</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="274"/>
         <source>Error: Creating passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler beim erstellen eines Passworts</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="274"/>
         <location filename="../encryption.cpp" line="301"/>
         <source>Invalid Passphrase. Try again!</source>
-        <translation type="unfinished"></translation>
+        <translation>Falsches Passwort versuche es noch mal!</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="282"/>
