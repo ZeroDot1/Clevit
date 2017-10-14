@@ -23,6 +23,7 @@
 #include "ui_mainwindow.h"
 #include "highlighter.h"
 
+
 void MainWindow::on_actionNew_File_triggered()
 {
     path.clear();
@@ -527,6 +528,7 @@ void MainWindow::setSettings()
                 ui->search_TextEdit->setVisible(true);
                 ui->searchBtn->setVisible(true);
                 ui->clearBtn->setVisible(true);
+                ui->replaceBtn->setVisible(true);
 
                 ui->actionHide_WordFinder->setText(tr("Hide WordFinder"));
             }
@@ -536,6 +538,7 @@ void MainWindow::setSettings()
                     ui->search_TextEdit->setVisible(false);
                     ui->searchBtn->setVisible(false);
                     ui->clearBtn->setVisible(false);
+                    ui->replaceBtn->setVisible(false);
 
                     ui->actionHide_WordFinder->setText(tr("Show WordFinder"));
                 }

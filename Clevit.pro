@@ -25,6 +25,14 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 TRANSLATIONS = src/languages/TranslationTClevit_en.ts  src/languages/TranslationClevit_de.ts src/languages/TranslationClevit_pt.ts
 
+
+unix: {
+
+INCLUDEPATH=/usr/include/openssl
+
+LIBS += -L/usr/lib
+LIBS += -lcrypto -lssl
+
 SOURCES += \
         src/main.cpp \
         src/mainwindow.cpp \
@@ -47,6 +55,42 @@ FORMS += \
 
 RESOURCES += \
     src/icons.qrc
+
+
+}
+
+win32: {
+
+LIBS += C:\OpenSSL-Win32\bin\libcrypto-1_1.dll
+LIBS += C:\OpenSSL-Win32\bin\libssl-1_1.dll
+
+INCLUDEPATH += C:/OpenSSL-Win32/include
+
+SOURCES += \
+        src/main.cpp \
+        src/mainwindow.cpp \
+    src/about.cpp \
+    src/translation.cpp \
+    src/credits.cpp \
+    src/save_load_files.cpp \
+    src/highlighter.cpp
+
+HEADERS += \
+        src/mainwindow.h \
+    src/about.h \
+    src/credits.h \
+    src/highlighter.h
+
+FORMS += \
+        src/mainwindow.ui \
+    src/about.ui \
+    src/credits.ui
+
+RESOURCES += \
+    src/icons.qrc
+
+
+}
 
 
 unix:!macx: LIBS += -lX11
@@ -86,3 +130,12 @@ unix {
   trans.path = $$DATADIR/TPad
   trans.files += src/languages
 }
+
+HEADERS += \
+    src/encryption.h
+
+SOURCES += \
+    src/encryption.cpp
+
+FORMS += \
+    src/encryption.ui

@@ -84,34 +84,261 @@
         <translation>Credits</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="24"/>
+        <location filename="../credits.ui" line="28"/>
         <source>Written by</source>
         <translation>Written by</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="36"/>
+        <location filename="../credits.ui" line="40"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="72"/>
+        <location filename="../credits.ui" line="76"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="42"/>
+        <location filename="../credits.ui" line="46"/>
         <source>Translated by</source>
         <translation>Translated by</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="54"/>
+        <location filename="../credits.ui" line="58"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;ZeroDot1 &amp;lt; &lt;a href=&quot;zerodot1@bk.ru&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;zerodot1@bk.ru&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;p&gt;Tiago Martins &amp;lt; &lt;a href=&quot;thebigger018@protonmail.com&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#0000ff;&quot;&gt;thebigger018@protonmail.com&lt;/span&gt;&lt;/a&gt; &amp;gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location filename="../credits.ui" line="60"/>
+        <location filename="../credits.ui" line="64"/>
         <source>Tested by</source>
         <translation>Tested by</translation>
+    </message>
+</context>
+<context>
+    <name>Encryption</name>
+    <message>
+        <location filename="../encryption.ui" line="14"/>
+        <source>Encrypt/Decrypt Files</source>
+        <translation>Encrypt/Decrypt Files</translation>
+    </message>
+    <message>
+        <location filename="../encryption.ui" line="30"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#f57900;&quot;&gt;Welcome &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#a40000;&quot;&gt;to a simple &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#c17d11;&quot;&gt;Encryption/Decryption AES App&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Select an option for each Box&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;and&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Press Start&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#f57900;&quot;&gt;Welcome &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#a40000;&quot;&gt;to a simple &lt;/span&gt;&lt;span style=&quot; font-size:9pt; font-weight:600; font-style:italic; color:#c17d11;&quot;&gt;Encryption/Decryption AES App&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Select an option for each Box&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;and&lt;/span&gt;&lt;/p&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:9pt; font-weight:600;&quot;&gt;Press Começar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../encryption.ui" line="46"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose an Option&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose an Option&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../encryption.ui" line="68"/>
+        <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose a Encryption&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Choose a Encryption&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+    </message>
+    <message>
+        <location filename="../encryption.ui" line="87"/>
+        <source>Start!</source>
+        <translation>Start!</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="15"/>
+        <source>Encrypt</source>
+        <translation>Encrypt</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="16"/>
+        <source>Decrypt</source>
+        <translation>Decrypt</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="18"/>
+        <source>AES 256 bits</source>
+        <translation>AES 256 bits</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="50"/>
+        <location filename="../encryption.cpp" line="64"/>
+        <source>Error: Open file</source>
+        <translation>Error: Open file</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="50"/>
+        <source>Could not open file to read: %1</source>
+        <translation>Could not open file to read: %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="64"/>
+        <source>Could not open file to write: %1</source>
+        <translation>Could not open file to write: %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="87"/>
+        <location filename="../encryption.cpp" line="186"/>
+        <source>Error: Creating Key</source>
+        <translation>Error: Creating Key</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="87"/>
+        <location filename="../encryption.cpp" line="186"/>
+        <source>EVP_BytesToKey() error: %1</source>
+        <translation>EVP_BytesToKey() error: %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="101"/>
+        <location filename="../encryption.cpp" line="116"/>
+        <location filename="../encryption.cpp" line="127"/>
+        <location filename="../encryption.cpp" line="136"/>
+        <source>Error: Encrypting</source>
+        <translation>Error: Encrypting</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="101"/>
+        <location filename="../encryption.cpp" line="116"/>
+        <source>EVP_EncryptInit_ex() failed %1</source>
+        <translation>EVP_EncryptInit_ex() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="127"/>
+        <source>EVP_EncryptUpdate() failed %1</source>
+        <translation>EVP_EncryptUpdate() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="136"/>
+        <source>EVP_EncryptFinal_ex() failed %1</source>
+        <translation>EVP_EncryptFinal_ex() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="171"/>
+        <source>Error: Salt</source>
+        <translation>Error: Salt</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="171"/>
+        <source>Could not load salt from data!</source>
+        <translation>Could not load salt from data!</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="198"/>
+        <location filename="../encryption.cpp" line="214"/>
+        <location filename="../encryption.cpp" line="223"/>
+        <source>Error: Decrypting</source>
+        <translation>Error: Decrypting</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="198"/>
+        <source>EVP_DecryptInit_ex() failed %1</source>
+        <translation>EVP_DecryptInit_ex() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="214"/>
+        <source>EVP_DecryptUpdate() failed %1</source>
+        <translation>EVP_DecryptUpdate() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="223"/>
+        <source>EVP_DecryptFinal_ex() failed %1</source>
+        <translation>EVP_DecryptFinal_ex() failed %1</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="225"/>
+        <location filename="../encryption.cpp" line="316"/>
+        <source>Wrong passphrase</source>
+        <translation>Wrong passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="225"/>
+        <source>Probably your passphrase are wrong.
+Clevit will be closed for safety.
+YOUR DATA HAS NOT BEEN AFFECTED.</source>
+        <translation>Probably your passphrase are wrong.
+Clevit will be closed for safety.
+YOUR DATA HAS NOT BEEN AFFECTED.</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="260"/>
+        <location filename="../encryption.cpp" line="287"/>
+        <source>Select a text file</source>
+        <translation>Select a text file</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="260"/>
+        <location filename="../encryption.cpp" line="287"/>
+        <source>All Files (*.*);;Text Files (*.txt);</source>
+        <translation>All Files (*.*);;Text Files (*.txt);</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="264"/>
+        <location filename="../encryption.cpp" line="291"/>
+        <source>Error: Selecting File</source>
+        <translation>Error: Selecting File</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="264"/>
+        <location filename="../encryption.cpp" line="291"/>
+        <source>Invalid Path File</source>
+        <translation>Invalid Path File</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="270"/>
+        <location filename="../encryption.cpp" line="297"/>
+        <source>Passphrase</source>
+        <translation>Passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="270"/>
+        <source>Insert a passphrase</source>
+        <translation>Insert a passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="274"/>
+        <source>Error: Creating passphrase</source>
+        <translation>Error: Creating passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="274"/>
+        <location filename="../encryption.cpp" line="301"/>
+        <source>Invalid Passphrase. Try again!</source>
+        <translation>Invalid Passphrase. Try again!</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="282"/>
+        <source>Encrypted File</source>
+        <translation>Encrypted File</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="282"/>
+        <source>File has been Encrypted!</source>
+        <translation>File has been Encrypted!</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="297"/>
+        <source>Insert your passphrase</source>
+        <translation>Insert your passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="301"/>
+        <source>Error: Inserting passphrase</source>
+        <translation>Error: Inserting passphrase</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="310"/>
+        <source>Decrypted File</source>
+        <translation>Decrypted File</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="310"/>
+        <source>File has been Decrypted!</source>
+        <translation>File has been Decrypted!</translation>
+    </message>
+    <message>
+        <location filename="../encryption.cpp" line="316"/>
+        <source>An error occured.
+Clevit will be closed for safety.
+YOUR DATA HAS NOT BEEN AFFECTED.</source>
+        <translation>An error occured.
+Clevit will be closed for safety.
+YOUR DATA HAS NOT BEEN AFFECTED.</translation>
     </message>
 </context>
 <context>
@@ -195,7 +422,7 @@
         <translation>File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="277"/>
+        <location filename="../mainwindow.ui" line="278"/>
         <source>Edit</source>
         <translation>Edit</translation>
     </message>
@@ -204,198 +431,203 @@
         <translation type="vanished">About</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="288"/>
+        <location filename="../mainwindow.ui" line="289"/>
         <source>Help</source>
         <translation>Help</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="295"/>
+        <location filename="../mainwindow.ui" line="296"/>
         <source>Language</source>
         <translation>Language</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="300"/>
+        <location filename="../mainwindow.ui" line="301"/>
         <source>Options</source>
         <translation>Options</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="304"/>
+        <location filename="../mainwindow.ui" line="305"/>
         <source>Themes</source>
         <translation>Themes</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="355"/>
+        <location filename="../mainwindow.ui" line="356"/>
         <source>Open...</source>
         <translation>Open...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="358"/>
+        <location filename="../mainwindow.ui" line="359"/>
         <source>Ctrl+O</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="367"/>
+        <location filename="../mainwindow.ui" line="368"/>
         <source>Save</source>
         <translation>Save</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="370"/>
+        <location filename="../mainwindow.ui" line="371"/>
         <source>Ctrl+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="379"/>
+        <location filename="../mainwindow.ui" line="380"/>
         <source>Save as...</source>
         <translation>Save as...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="382"/>
+        <location filename="../mainwindow.ui" line="383"/>
         <source>Ctrl+Shift+S</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="391"/>
+        <location filename="../mainwindow.ui" line="392"/>
         <source>Exit</source>
         <translation>Exit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="394"/>
+        <location filename="../mainwindow.ui" line="395"/>
         <source>Ctrl+Q</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="403"/>
+        <location filename="../mainwindow.ui" line="404"/>
         <source>Copy</source>
         <translation>Copy</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="406"/>
+        <location filename="../mainwindow.ui" line="407"/>
         <source>Ctrl+C</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="415"/>
+        <location filename="../mainwindow.ui" line="416"/>
         <source>Paste</source>
         <translation>Paste</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="418"/>
+        <location filename="../mainwindow.ui" line="419"/>
         <source>Ctrl+V</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="427"/>
+        <location filename="../mainwindow.ui" line="428"/>
         <source>Cut</source>
         <translation>Cut</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="430"/>
+        <location filename="../mainwindow.ui" line="431"/>
         <source>Ctrl+X</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="439"/>
+        <location filename="../mainwindow.ui" line="440"/>
         <source>Undo</source>
         <translation>Undo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="442"/>
+        <location filename="../mainwindow.ui" line="443"/>
         <source>Ctrl+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="451"/>
+        <location filename="../mainwindow.ui" line="452"/>
         <source>Redo</source>
         <translation>Redo</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="454"/>
+        <location filename="../mainwindow.ui" line="455"/>
         <source>Ctrl+Shift+Z</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="463"/>
+        <location filename="../mainwindow.ui" line="464"/>
         <source>About Clevit</source>
         <translation>About Clevit</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="472"/>
+        <location filename="../mainwindow.ui" line="473"/>
         <source>New File</source>
         <translation>New File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="475"/>
+        <location filename="../mainwindow.ui" line="476"/>
         <source>Ctrl+N</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="484"/>
+        <location filename="../mainwindow.ui" line="485"/>
         <source>Report Bugs</source>
         <translation>Report Bugs</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="493"/>
+        <location filename="../mainwindow.ui" line="494"/>
         <source>Export to PDF...</source>
         <translation>Export to PDF...</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="502"/>
+        <location filename="../mainwindow.ui" line="503"/>
         <source>Export to Formatting Txt File</source>
         <translation>Export to Formatting Txt File</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="511"/>
+        <location filename="../mainwindow.ui" line="512"/>
         <source>Print</source>
         <translation>Print</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="514"/>
+        <location filename="../mainwindow.ui" line="515"/>
         <source>Ctrl+P</source>
         <translation>Ctrl+P</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="523"/>
+        <location filename="../mainwindow.ui" line="524"/>
         <source>Add an Image</source>
         <translation>Add an Image</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="528"/>
+        <location filename="../mainwindow.ui" line="529"/>
         <source>Window Layout Color</source>
         <translation>Window Layout Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="533"/>
-        <location filename="../mainwindow.ui" line="553"/>
+        <location filename="../mainwindow.ui" line="534"/>
+        <location filename="../mainwindow.ui" line="554"/>
         <source>No Theme</source>
         <translation>No Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="538"/>
-        <location filename="../mainwindow.ui" line="558"/>
+        <location filename="../mainwindow.ui" line="539"/>
+        <location filename="../mainwindow.ui" line="559"/>
         <source>Wood Theme</source>
         <translation>Wood Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="543"/>
-        <location filename="../mainwindow.ui" line="563"/>
+        <location filename="../mainwindow.ui" line="544"/>
+        <location filename="../mainwindow.ui" line="564"/>
         <source>Wave Theme</source>
         <translation>Wave Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="548"/>
-        <location filename="../mainwindow.ui" line="568"/>
+        <location filename="../mainwindow.ui" line="549"/>
+        <location filename="../mainwindow.ui" line="569"/>
         <source>Rainbow Theme</source>
         <translation>Rainbow Theme</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="573"/>
+        <location filename="../mainwindow.ui" line="574"/>
         <source>Hide/Show WordFinder</source>
         <translation>Hide/Show WordFinder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="578"/>
+        <location filename="../mainwindow.ui" line="579"/>
         <source>Hide/Show Translation </source>
         <translation>Hide/Show Translation </translation>
+    </message>
+    <message>
+        <location filename="../mainwindow.ui" line="594"/>
+        <source>Encrypt/Decrypt a file</source>
+        <translation>Encrypt/Decrypt a file</translation>
     </message>
     <message>
         <source>Hide/Show Translation
@@ -404,14 +636,14 @@
       </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="588"/>
+        <location filename="../mainwindow.ui" line="589"/>
         <source>Text Edit Color</source>
         <translation>Text Edit Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="631"/>
-        <location filename="../mainwindow.cpp" line="671"/>
-        <location filename="../save_load_files.cpp" line="531"/>
+        <location filename="../mainwindow.cpp" line="633"/>
+        <location filename="../mainwindow.cpp" line="673"/>
+        <location filename="../save_load_files.cpp" line="533"/>
         <source>Hide WordFinder</source>
         <translation>Hide WordFinder</translation>
     </message>
@@ -422,7 +654,7 @@
       </translation>
     </message>
     <message>
-        <location filename="../mainwindow.ui" line="583"/>
+        <location filename="../mainwindow.ui" line="584"/>
         <source>Reset Window Layout</source>
         <translation>Reset Window Layout</translation>
     </message>
@@ -509,87 +741,87 @@ PNG (*.png)
         <translation>Select a Window Layout Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="622"/>
-        <location filename="../save_load_files.cpp" line="540"/>
+        <location filename="../mainwindow.cpp" line="623"/>
+        <location filename="../save_load_files.cpp" line="543"/>
         <source>Show WordFinder</source>
         <translation>Show WordFinder</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="650"/>
-        <location filename="../save_load_files.cpp" line="562"/>
+        <location filename="../mainwindow.cpp" line="652"/>
+        <location filename="../save_load_files.cpp" line="565"/>
         <source>Show Translation</source>
         <translation>Show Translation</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="661"/>
-        <location filename="../mainwindow.cpp" line="679"/>
-        <location filename="../save_load_files.cpp" line="551"/>
+        <location filename="../mainwindow.cpp" line="663"/>
+        <location filename="../mainwindow.cpp" line="681"/>
+        <location filename="../save_load_files.cpp" line="554"/>
         <source>Hide Translation</source>
         <translation>Hide Translation</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="691"/>
+        <location filename="../mainwindow.cpp" line="693"/>
         <source>Select a Text Edit Color</source>
         <translation>Select a Text Edit Color</translation>
     </message>
     <message>
-        <location filename="../mainwindow.cpp" line="703"/>
+        <location filename="../mainwindow.cpp" line="705"/>
         <source>Select a Highlight Color</source>
         <translation>Select a Highlight Color</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="347"/>
+        <location filename="../save_load_files.cpp" line="348"/>
         <source>All Files (*.*);;Text Files (*.txt)</source>
         <translation>All Files (*.*);;Text Files (*.txt)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="59"/>
+        <location filename="../save_load_files.cpp" line="60"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="59"/>
+        <location filename="../save_load_files.cpp" line="60"/>
         <source>Select a text file</source>
         <translation>Select a text file</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="124"/>
+        <location filename="../save_load_files.cpp" line="125"/>
         <source>Open File Error</source>
         <translation>Open File Error</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="142"/>
-        <location filename="../save_load_files.cpp" line="243"/>
-        <location filename="../save_load_files.cpp" line="398"/>
+        <location filename="../save_load_files.cpp" line="143"/>
+        <location filename="../save_load_files.cpp" line="244"/>
+        <location filename="../save_load_files.cpp" line="399"/>
         <source>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</source>
         <translation>All Files (*.*);;Text Files (*.txt);;Html Files (*.html);;Odf Files (*.odf)</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="142"/>
-        <location filename="../save_load_files.cpp" line="243"/>
-        <location filename="../save_load_files.cpp" line="398"/>
+        <location filename="../save_load_files.cpp" line="143"/>
+        <location filename="../save_load_files.cpp" line="244"/>
+        <location filename="../save_load_files.cpp" line="399"/>
         <source>Save a text file</source>
         <translation>Save a text file</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="220"/>
-        <location filename="../save_load_files.cpp" line="235"/>
-        <location filename="../save_load_files.cpp" line="320"/>
+        <location filename="../save_load_files.cpp" line="221"/>
+        <location filename="../save_load_files.cpp" line="236"/>
+        <location filename="../save_load_files.cpp" line="321"/>
         <source>Save File Error</source>
         <translation>Save File Error</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="235"/>
+        <location filename="../save_load_files.cpp" line="236"/>
         <source>Save canceled</source>
         <translation>Save canceled</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="337"/>
+        <location filename="../save_load_files.cpp" line="338"/>
         <source>Formatting TextFile export</source>
         <translation>Formatting TextFile export</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="337"/>
+        <location filename="../save_load_files.cpp" line="338"/>
         <source>When exporting the formatted text file, you can only open it with Clevit 
 or other software that can read html code. 
 Are you sure you want to continue?
@@ -604,17 +836,17 @@ Are you sure you want to continue?</translation>
         <translation type="vanished">When exporting the formatted text file, you can only open it with Clevit or other software that can read html code. Are you sure you want to continue?</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="347"/>
+        <location filename="../save_load_files.cpp" line="348"/>
         <source>Export File to Formatting Text File</source>
         <translation>Export File to Formatting Text File</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="505"/>
+        <location filename="../save_load_files.cpp" line="506"/>
         <source>Error Saving Settings</source>
         <translation>Error Saving Settings</translation>
     </message>
     <message>
-        <location filename="../save_load_files.cpp" line="505"/>
+        <location filename="../save_load_files.cpp" line="506"/>
         <source>Clevit can&apos;t save your settings</source>
         <translation>Clevit can&apos;t save your settings</translation>
     </message>
