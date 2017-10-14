@@ -328,39 +328,41 @@ IHRE DATEN WURDEN NICHT BERÜHRT.</translation>
     <message>
         <location filename="../encryption.cpp" line="282"/>
         <source>Encrypted File</source>
-        <translation type="unfinished"></translation>
+        <translation>Verschlüsselte Datei</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="282"/>
         <source>File has been Encrypted!</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Datei wurde verschüsselt!</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="297"/>
         <source>Insert your passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Geben sie ihr Passwort ein</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="301"/>
         <source>Error: Inserting passphrase</source>
-        <translation type="unfinished"></translation>
+        <translation>Fehler: Passwort einfügen</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="310"/>
         <source>Decrypted File</source>
-        <translation type="unfinished"></translation>
+        <translation>Entschlüsselte Datei</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="310"/>
         <source>File has been Decrypted!</source>
-        <translation type="unfinished"></translation>
+        <translation>Die Datei wurde Entschlüsselt!</translation>
     </message>
     <message>
         <location filename="../encryption.cpp" line="316"/>
         <source>An error occured.
 Clevit will be closed for safety.
 YOUR DATA HAS NOT BEEN AFFECTED.</source>
-        <translation type="unfinished"></translation>
+        <translation>Es ist ein Fehler aufgetreten.
+Clevit wird aus Sicherheitsgründen geschlossen.
+IHRE DATEN WURDEN NICHT BERÜHRT.</translation>
     </message>
 </context>
 <context>
@@ -649,7 +651,7 @@ YOUR DATA HAS NOT BEEN AFFECTED.</source>
     <message>
         <location filename="../mainwindow.ui" line="594"/>
         <source>Encrypt/Decrypt a file</source>
-        <translation type="unfinished"></translation>
+        <translation>Verschlüsseln/Entschlüsseln einer Datei</translation>
     </message>
     <message>
         <source>Hide/Show Translation
