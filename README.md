@@ -26,6 +26,8 @@ You need install this dependencies before install Clevit
 
 * Qt5 - https://www.qt.io/
 
+* OpenSSL - https://www.openssl.org/ but the easiest but unofficial way is this ->  https://slproweb.com/download/Win32OpenSSL-1_1_0f.exe
+
 ## Installing dependencies on Ubuntu , Linux Mint, Debian ...
 
 `sudo apt-get install build-essential make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
