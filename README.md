@@ -8,7 +8,6 @@
 * Add emojis
 * Line Number
 * Add a tab function so that you can work with different documents at the same time.
-* Add a encryption option to encrypt text files
 
 ### Maybe...
 * Add a smart spell checker
