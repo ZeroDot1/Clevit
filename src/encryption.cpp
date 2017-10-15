@@ -84,8 +84,6 @@ QByteArray Encryption::encryptAES(QByteArray passphrase, QByteArray &data)
 
     if(i != KEYSIZE)
     {
-        QMessageBox::warning(this,tr("Error: Creating Key"),tr("EVP_BytesToKey() error: %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         qCritical() << "EVP_BytesToKey() error: " << ERR_error_string(ERR_get_error(), NULL);
 
         panicMessage();
@@ -98,8 +96,6 @@ QByteArray Encryption::encryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_EncryptInit_ex(en, EVP_aes_256_cbc(),NULL,key, iv))
     {
-        QMessageBox::warning(this,tr("Error: Encrypting"),tr("EVP_EncryptInit_ex() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(2);
@@ -113,8 +109,6 @@ QByteArray Encryption::encryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_EncryptInit_ex(en, NULL, NULL, NULL, NULL))
     {
-        QMessageBox::warning(this,tr("Error: Encrypting"),tr("EVP_EncryptInit_ex() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(3);
@@ -124,8 +118,6 @@ QByteArray Encryption::encryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_EncryptUpdate(en, ciphertext, &c_len,(unsigned char *)input, len))
     {
-        QMessageBox::warning(this,tr("Error: Encrypting"),tr("EVP_EncryptUpdate() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(4);
@@ -133,8 +125,6 @@ QByteArray Encryption::encryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_EncryptFinal(en, ciphertext+c_len, &f_len))
     {
-        QMessageBox::warning(this,tr("Error: Encrypting"),tr("EVP_EncryptFinal_ex() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(5);
@@ -168,7 +158,9 @@ QByteArray Encryption::decryptAES(QByteArray passphrase, QByteArray &data)
     }
     else
     {
-        QMessageBox::warning(this,tr("Error: Salt"),tr("Could not load salt from data!"));
+        QMessageBox::warning(this,tr("Error: Decrypting"),tr("Clevit could not decrypt the file,\n"
+                                                             "because the file aren't encrypted "
+                                                             "or was not well encrypted"));
 
         msalt = randomBytes(SALTSIZE);
     }
@@ -183,8 +175,6 @@ QByteArray Encryption::decryptAES(QByteArray passphrase, QByteArray &data)
 
     if(i != KEYSIZE)
     {
-        QMessageBox::warning(this,tr("Error: Creating Key"),tr("EVP_BytesToKey() error: %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(1);
@@ -195,8 +185,6 @@ QByteArray Encryption::decryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_DecryptInit_ex(de,EVP_aes_256_cbc(), NULL, key,iv ))
     {
-        QMessageBox::warning(this,tr("Error: Decrypting"),tr("EVP_DecryptInit_ex() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(2);
@@ -211,8 +199,6 @@ QByteArray Encryption::decryptAES(QByteArray passphrase, QByteArray &data)
     //May have to do this multiple times for large data???
     if(!EVP_DecryptUpdate(de, plaintext, &p_len, (unsigned char *)input, len))
     {
-        QMessageBox::warning(this,tr("Error: Decrypting"),tr("EVP_DecryptUpdate() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         panicMessage();
 
         exit(3);
@@ -220,8 +206,6 @@ QByteArray Encryption::decryptAES(QByteArray passphrase, QByteArray &data)
 
     if(!EVP_DecryptFinal_ex(de,plaintext+p_len,&f_len))
     {
-        QMessageBox::warning(this,tr("Error: Decrypting"),tr("EVP_DecryptFinal_ex() failed %1").arg(ERR_error_string(ERR_get_error(), NULL)));
-
         QMessageBox::information(this,tr("Wrong passphrase"),tr("Probably your passphrase are wrong.\n"
                                                                 "Clevit will be closed for safety.\n"
                                                                 "YOUR DATA HAS NOT BEEN AFFECTED."));
@@ -259,6 +243,8 @@ void Encryption::on_startBtn_clicked()
     {
         QString filePath = QFileDialog::getOpenFileName(this,tr("Select a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);"));
 
+        qDebug() << QFileInfo(filePath).suffix();
+
         if(QString::compare(filePath,"") == 0)
         {
             QMessageBox::warning(this,tr("Error: Selecting File"),tr("Invalid Path File"));
@@ -277,7 +263,7 @@ void Encryption::on_startBtn_clicked()
 
         QByteArray encrypted = encryptAES(passphrase,data);
 
-        writeFile(filePath,encrypted);
+        writeFile(changeFileName(filePath),encrypted);
 
         QMessageBox::information(this,tr("Encrypted File"),tr("File has been Encrypted!"));
     }
@@ -285,6 +271,8 @@ void Encryption::on_startBtn_clicked()
         if(ui->optionBox->currentIndex() == 1)
         {
             QString filePath = QFileDialog::getOpenFileName(this,tr("Select a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);"));
+
+            qDebug() << QFileInfo(filePath).suffix();
 
             if(QString::compare(filePath,"") == 0)
             {
@@ -309,6 +297,19 @@ void Encryption::on_startBtn_clicked()
 
             QMessageBox::information(this,tr("Decrypted File"),tr("File has been Decrypted!"));
         }
+}
+
+QString Encryption::changeFileName(QString filename)
+{
+    QString ext = QFileInfo(filename).suffix();
+
+    filename.truncate(filename.lastIndexOf('.'));
+
+    filename.append("Encrypted");
+    filename.append(".");
+    filename.append(ext);
+
+    return filename;
 }
 
 void Encryption::panicMessage()
