@@ -19,9 +19,9 @@
 #-----------------------------------------------------------------------------
 # Author: ZeroDot1 https://github.com/ZeroDot1
 # Contact: zerodot1@bk.ru
-# Author Website: https://goo.gl/k3nTZn
+# Author Website: https://goo.gl/ZuWQB2
 # Version: 1.2
-# Date Time: 10.09.2017 13:37
+# Date Time: 16.10.2017 15:03
 # Credits: Thanks to Colin Duquesnoy https://github.com/ColinDuquesnoy
 #-----------------------------------------------------------------------------
 cd
@@ -48,7 +48,7 @@ pushd Clevit-master
 echo 'Compile . . . .'
 sleep 1s
 tput sgr0
-qmake-qt5 PREFIX='/usr' LIBDIR='/usr/lib' Clevit.pro
+cmake -DCMAKE_BUILD_TYPE=RelWithDebInfo -DCMAKE_INSTALL_PREFIX=/usr -DCMAKE_INSTALL_LIBDIR=lib
 make
 tput setaf 2
 popd
