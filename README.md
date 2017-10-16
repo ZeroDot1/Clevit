@@ -29,7 +29,7 @@ You need install this dependencies before install Clevit
 
 ## Installing dependencies on Ubuntu , Linux Mint, Debian ...
 
-`sudo apt-get install build-essential make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
+`sudo apt-get install build-essential libssl-dev make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
 
 ## Installing dependencies on RedHat, Fedora ...
 

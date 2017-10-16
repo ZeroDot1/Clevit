@@ -27,5 +27,5 @@ cd
 clear
 tput setaf 2
 echo 'Installing dependencies on Ubuntu , Linux Mint, Debian'
-sudo apt-get install build-essential make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default openssl
+sudo apt-get install build-essential make libssl-dev cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default openssl
 exit 0
