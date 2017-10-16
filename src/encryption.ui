@@ -15,7 +15,7 @@
   </property>
   <property name="windowIcon">
    <iconset resource="icons.qrc">
-    <normaloff>:/icons/icons/icon.png</normaloff>:/icons/icons/icon.png</iconset>
+    <normaloff>:/icons/icons/Encryption.png</normaloff>:/icons/icons/Encryption.png</iconset>
   </property>
   <widget class="QLabel" name="instruction">
    <property name="geometry">

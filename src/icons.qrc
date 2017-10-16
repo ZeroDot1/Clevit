@@ -22,5 +22,6 @@
         <file>icons/Print.png</file>
         <file>icons/Image.png</file>
         <file>icons/Highlight.png</file>
+        <file>icons/Encryption.png</file>
     </qresource>
 </RCC>

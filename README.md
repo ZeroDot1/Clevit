@@ -8,8 +8,6 @@
 * Add emojis
 * Line Number
 * Add a tab function so that you can work with different documents at the same time.
-
-### Maybe...
 * Add a smart spell checker
 
 # Dependencies
@@ -28,22 +26,11 @@ You need install this dependencies before install Clevit
 `pacaur -Syy cmake qt5-base qt5-translations qt5-graphicaleffects xdg-utils qt5-quickcontrols2 qt5-quickcontrols qt5-declarative libevent openssl`
 
 ## Installing dependencies on Ubuntu , Linux Mint, Debian ...
+`sudo apt-get install build-essential libssl-dev make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default openssl`
 
-`sudo apt-get install build-essential libssl-dev make cmake qtdeclarative5-dev qml-module-qtquick-controls qt5-default`
 
 ## Installing dependencies on RedHat, Fedora ...
-
-`sudo dnf install automake gcc gcc-c++ kernel-devel make cmake qt5 qt5-devel qt5-qtbase qt5-qtbase-devel qt5-qtdeclarative qt5-qtdeclarative-devel`
-
-# Install Clevit - Cmake method
-
-* (1) Open a terminal on the directory where you want install Clevit
-* (2) Clone the repository: `git clone https://github.com/TigaxMT/Clevit.git`
-* (3) Now do a cd into the folder: `cd Clevit/`
-* (4) Write this command on terminal: `cmake .`
-* (5) And after write this too: `make`
-* (6) Now double click on the execuable or yet on this terminal write this: `./Clevit`
-* (7) Enjoy!  
+`sudo dnf install automake gcc gcc-c++ kernel-devel make cmake qt5 qt5-devel qt5-qtbase qt5-qtbase-devel qt5-qtdeclarative qt5-qtdeclarative-devel openssl`
 
 # Install Clevit - Qmake method
 

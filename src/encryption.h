@@ -40,6 +40,7 @@ private:
     Ui::Encryption *ui;
 
     void panicMessage();
+    QString changeFileName(QString filename);
 
     /**
      * @brief Encrypt a byte array with AES 256 CBC

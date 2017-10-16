@@ -590,6 +590,10 @@
    </property>
   </action>
   <action name="actionEncrypt_Decrypt_a_file">
+   <property name="icon">
+    <iconset resource="icons.qrc">
+     <normaloff>:/icons/icons/Encryption.png</normaloff>:/icons/icons/Encryption.png</iconset>
+   </property>
    <property name="text">
     <string>Encrypt/Decrypt a file</string>
    </property>
