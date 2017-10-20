@@ -253,7 +253,7 @@ void Encryption::on_startBtn_clicked()
 
         QByteArray data = readFile(filePath);
 
-        QByteArray passphrase = QInputDialog::getText(this,tr("Passphrase"),tr("Insert a passphrase")).toLocal8Bit();
+        QByteArray passphrase = QInputDialog::getText(this,tr("Passphrase"),tr("Insert a passphrase"),QLineEdit::Password).toLocal8Bit();
 
         if(QString::compare(passphrase,"") == 0)
         {
@@ -272,8 +272,6 @@ void Encryption::on_startBtn_clicked()
         {
             QString filePath = QFileDialog::getOpenFileName(this,tr("Select a text file"),QDir::currentPath(),tr("All Files (*.*);;Text Files (*.txt);"));
 
-            qDebug() << QFileInfo(filePath).suffix();
-
             if(QString::compare(filePath,"") == 0)
             {
                 QMessageBox::warning(this,tr("Error: Selecting File"),tr("Invalid Path File"));
@@ -282,7 +280,7 @@ void Encryption::on_startBtn_clicked()
 
             QByteArray data = readFile(filePath);
 
-            QByteArray passphrase = QInputDialog::getText(this,tr("Passphrase"),tr("Insert your passphrase")).toLocal8Bit();
+            QByteArray passphrase = QInputDialog::getText(this,tr("Passphrase"),tr("Insert your passphrase"),QLineEdit::Password).toLocal8Bit();
 
             if(QString::compare(passphrase,"") == 0)
             {
