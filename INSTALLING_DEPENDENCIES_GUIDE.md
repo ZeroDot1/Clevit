@@ -1,4 +1,4 @@
-# Installing Dependencies
+# Installing Dependencies Guide
 
 Here you can find how to install Clevit dependencies to your Operation System.
 
@@ -10,3 +10,6 @@ Here you can find how to install Clevit dependencies to your Operation System.
 
 ## Installing dependencies on RedHat, Fedora ...
 `sudo dnf install automake gcc gcc-c++ kernel-devel make cmake qt5 qt5-devel qt5-qtbase qt5-qtbase-devel qt5-qtdeclarative qt5-qtdeclarative-devel openssl`
+
+## MacOS & Windows
+Check the official web sites
