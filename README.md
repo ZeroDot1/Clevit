@@ -22,7 +22,7 @@ You need install this dependencies before install Clevit
 
 * OpenSSL - https://www.openssl.org/ but the easiest but unofficial way for Windows is this:  https://slproweb.com/download/Win32OpenSSL-1_1_0f.exe
 
-To see how to install those dependencies to your specific operation system check the [Instalation guide](INSTALLING.md).
+To see how to install those dependencies to your specific operation system check the [Installing Dependences Guide](INSTALLING_DEPENDENCIES_GUIDE.md).
 
 # Install Clevit - Qmake method
 
