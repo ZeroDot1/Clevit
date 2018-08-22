@@ -3,6 +3,10 @@
 - - -
 [![travis build](https://travis-ci.org/TigaxMT/Clevit.svg?branch=master)](https://travis-ci.org/TigaxMT/Clevit)  [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8990879e312a47a7993c2a4c18a26f0b)](https://www.codacy.com/app/TigaxMT/Clevit?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=TigaxMT/Clevit&amp;utm_campaign=Badge_Grade)
 
+# Warning
+
+This project will no longer be continued. Any errors or functionality that you want to correct or implement will be welcome, but I will not work on this project anymore because I am focused on web development. Thanks for everything :)
+
 # Demo Gif
 
 ![Alt Text](https://github.com/TigaxMT/Clevit/blob/master/Clevit.gif)
