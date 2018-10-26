@@ -31,7 +31,7 @@ unix: {
 INCLUDEPATH=/usr/include/openssl
 
 LIBS += -L/usr/lib
-LIBS += -lcrypto -lssl -no-pie
+LIBS += -lcrypto -lssl
 
 linux-g++ {
     system( g++ --version | grep -e "\<7.[0-9]" ) {
