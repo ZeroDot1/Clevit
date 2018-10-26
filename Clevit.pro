@@ -31,7 +31,7 @@ unix: {
 INCLUDEPATH=/usr/include/openssl
 
 LIBS += -L/usr/lib
-LIBS += -lcrypto -lssl
+LIBS += -lcrypto -lssl -no-pie
 
 SOURCES += \
         src/main.cpp \
