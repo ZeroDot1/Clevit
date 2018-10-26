@@ -10,7 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = Clevit
 TEMPLATE = app
-CONFIG += c++17
+CONFIG += c++11
 
 linux-g++ | linux-g++-64 | linux-g++-32 {
     QMAKE_CXX = g++-7.3
