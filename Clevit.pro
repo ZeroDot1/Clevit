@@ -34,11 +34,11 @@ LIBS += -L/usr/lib
 LIBS += -lcrypto -lssl -no-pie
 
 linux-g++ {
-    system( g++ --version | grep -e "\<4.[0-9]" ) {
-        
+    system( g++ --version | grep -e "\<7.[0-9]" ) {
+        LIBS += -no-pie
     }
     else {
-        LIBS += -no-pie
+        
     }
 }
 
