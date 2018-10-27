@@ -43,8 +43,7 @@ To see how to install those dependencies to your specific operation system check
 
 # Donations
 
-* If you liked the project and would like to contribute monetarily, you can make a donation of the amount you want through   Paypal. Thank you so much for everything. I , Tiago Martins, need a new computer because I have a 1.4Ghz Dual core laptop and it's not very powerful for developing my projects neither for my jobs.
-
+* If you liked the project and would like to contribute monetarily, you can make a donation of the amount you want through   Paypal. Thank you so much for everything.
 [![paypal](https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RS4CKRLKDTKFJ)
 
 # Contact
